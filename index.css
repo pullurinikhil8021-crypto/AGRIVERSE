@@ -182,7 +182,7 @@ header{
         height: 100%;
     }
 }
-@media(max-media:1200px){
+@media(max-width:1200px){
     .home_banner_text{
     display: flex;
     justify-content: center; align-items: center;
@@ -288,7 +288,15 @@ header{
     transform: translateY(-8px);
     box-shadow: 0 10px 25px green;
 }
-
+@media(max-width:600px){
+   .review{
+    height: 600px;
+    } 
+    .farmer1, .farmer2, .farmer3, .farmer4{
+        height: 100%; width: 100%;
+        object-fit: cover;
+    }
+}
 .review{
     height: 400px;
 }
