@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Header Dropdown with jQuery</title>
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f8f8f8;
+  }
+
+  /* HEADER */
+  header {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px 0;
+  }
+
+  .nav-item {
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .nav-item:hover {
+    color: #ff006e;
+  }
+
+  /* DROPDOWN MENU */
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    overflow: hidden;
+    min-width: 160px;
+    z-index: 10;
+  }
+
+  .dropdown a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s;
+  }
+
+  .dropdown a:hover {
+    background-color: #ff006e;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-item">
+    Home
+  </div>
+
+  <div class="nav-item">
+    Services
+    <div class="dropdown">
+      <a href="#">Web Development</a>
+      <a href="#">UI/UX Design</a>
+      <a href="#">App Development</a>
+    </div>
+  </div>
+
+  <div class="nav-item">
+    Products
+    <div class="dropdown">
+      <a href="#">Agri Tools</a>
+      <a href="#">Machinery</a>
+      <a href="#">Fertilizers</a>
+    </div>
+  </div>
+
+  <div class="nav-item">
+    About
+    <div class="dropdown">
+      <a href="#">Our Story</a>
+      <a href="#">Team</a>
+      <a href="#">Careers</a>
+    </div>
+  </div>
+
+  <div class="nav-item">
+    Contact
+  </div>
+</header>
+
+<script>
+  // jQuery hover effect for dropdown
+  $(document).ready(function() {
+    $(".nav-item, .dropdown").hover(
+      function() {
+        // Mouse enters
+        $(this).find(".dropdown").stop(true, true).slideDown(200);
+      },
+      function() {
+        // Mouse leaves
+        $(this).find(".dropdown").stop(true, true).slideUp(200);
+      }
+    );
+  });
+</script>
+
+
+
+</body>
+</html>
+
+</body>
+</html>

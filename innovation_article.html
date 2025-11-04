@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        h2{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <header class="container-fluid ">
+        <nav class="navbar navbar-expand-lg mx-auto">
+            <div class="container  ">
+                <div class="logo">
+                    <a href="index.html"><img src="Assets/logo-removebg-preview.png" alt="" class="w-100 h-100"></a>
+                </div>
+                <button class="navbar-toggler" data-bs-target="myNav" data-bs-toggle="collapse">
+                    <a href="#more" data-bs-toggle="offcanvas"><span class="navbar-toggler-icon"></span></a>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="myNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="essentials.html" class="nav-link" id="essentials">Essentials <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header1">
+                                <a href="essentials.html">Seeds & Plants</a>
+                                <a href="fertilizers.html">Fertilizers & Pesticides</a>
+                                <a href="irrigation.html">Irrigation</a>
+                                <a href="machinery.html">Machinery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="organic.html" class="nav-link" id="techniques">Techniques <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header2">
+                                <a href="">organic</a>
+                                <a href="">smart</a>
+                                <a href="">aqua</a>
+                                <a href="">hydro</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="article.html" class="nav-link">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="forum.html" class="nav-link">Farmers Forum</a>
+                        </li>
+                        <li class="nav-item person_icon">
+                            <a href="" class="nav-link" id="person"><i class="bi bi-person-circle" style="font-size: 32px;"></i></a>
+                            <div class="dropdown" id="login">
+                                <a href="">Signup</a>
+                                <a href="">Login</a>
+                            </div>
+                        </li>
+                        <li class="nav-item menu_icon">
+                            <a href="#more" class="nav-link" data-bs-toggle="offcanvas"><i class="bi bi-list" style="font-size: 32px;"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!--script for essentials dropdown starts-->
+    <script>
+        $('#header1').hide();
+
+        $('#essentials').mouseover(() =>{
+            $('#header1').slideDown()
+        })
+        $('#header1').mouseover(() =>{
+            $('#header1').stop()
+        })
+
+        $('#essentials, #header1').mouseleave(() =>{
+            $('#header1').slideUp()
+        })
+        $('#header1').mouseenter(() =>{
+            $('#header1').slideUp()
+        })
+    </script>
+    <!--script for essentials dropdown ended-->
+
+    <!--script for techniques dropdown starts-->
+    <script>
+        $('#header2').hide();
+
+        $('#techniques').mouseover(() =>{
+            $('#header2').slideDown()
+        })
+        $('#header2').mouseover(() =>{
+            $('#header2').stop()
+        })
+        $('#techniques, #header2').mouseleave(() =>{
+            $('#header2').slideUp()
+        })
+        $('#header2').mouseenter(() =>{
+            $('#header2').slideUp()
+        })
+    </script>
+    <!--script for techniques dropdown ended-->
+
+    <!--script for login dropdown starts-->
+    <script>
+        $('#login').hide();
+
+        $('#person').mouseover(() =>{
+            $('#login').slideDown()
+        })
+        $('#login').mouseover(() =>{
+            $('#login').stop()
+        })
+        $('#person, #login').mouseleave(() =>{
+            $('#login').slideUp()
+        })
+        $('#login').mouseenter(() =>{
+            $('#login').slideUp()
+        })
+    </script>
+    <!--script for login dropdown ended-->
+
+    <!--offcanvas for menubar starts-->
+    <div class="offcanvas offcanvas-start" id="more" data-bs-backdrop="static">
+        <div class="offcanvas-header" style="border-bottom: 1px solid green;">
+            <div class="row p-2 pt-3" >
+                    <div class="col-5">
+                        <div class="profile_photo">
+                            <img src="Assets/Forum/profile_photo_img.jpg" alt="" class="w-100 h-100" style="border-radius: 60px;">
+                        </div>
+                    </div>
+                    <div class="col-7 p-3">
+                        <p class="fw-bold m-0 p-0">Dr. Kavita Deshmukh</p>
+                        <p class="m-0 p-0">Organic Farming Trainer</p>
+                        <p >Telangana</p>
+                    </div>
+                </div>
+            <button class="btn-close text-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="px-5 py-2">
+                <a href=""><p>Signup</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href=""><p>Login</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="index.html"><p>Home</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Essentials</p></summary>
+                    <a href="essentials.html"><button>Seeds & Plants</button></a>
+                    <a href="fertilizers.html"><button>Fertilizers</button></a>
+                    <a href="irrigation.html"><button>Irrigation</button></a>
+                    <a href="machinery.html"><button>Machinery</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Techniques</p></summary>
+                    <a href="organic.html"><button>Organic Farming</button></a>
+                    <a href="hydroponics.html"><button>Hydroponics</button></a>
+                    <a href="aquaponics.html"><button>Aquaponic </button></a>
+                    <a href="vertical.html"><button>Vertical Farming</button></a>
+                    <a href="traditional.html"><button>Traditional Farming</button></a>
+                    <a href="smartfarming.html"><button>Smart Farming</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <a href="article.html"><p>Articles</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="forum.html"><p>Farmers Forum</p></a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvas for menubar ended-->
+
+    <!-- article on crop management starts-->
+    <div class="container text-bg-light p-5">
+        <div class="px-3 py-4">
+            <h1 class=" fw-bold" style="font-family: Georgia, 'Times New Roman', Times, serif;">Precision Agriculture: Revolutionizing Indian Farms with Smart Technologies</h1>
+            <p class="fw-bold m-0">K. V. Hirapara1*, T. D. Kapuriya2 and V. K. Dobariya3</p>
+            <p style="font-size: 14px;">Assistant Professor, Junagadh Agricultural University, Junagadh, Gujarat-362001</p>
+        </div>
+        <div style="width: 100%; height: 75vh;">
+            <img src="Assets/articles/tech_innovation_img.jpg" alt="" class="w-100 h-100">
+        </div>
+        <h2 class="fw-bold pt-4">ABSTRACT</h2>
+        <p>Indian agriculture is at a critical juncture, facing growing challenges from climate variability, water
+            scarcity, and declining soil health, all while needing to feed a rapidly growing population. Precision
+            Agriculture (PA) offers a data-driven, technology-enabled approach to transform farming practices.
+            This article explores the role of smart technologies such as IoT sensors, drones, artificial intelligence
+            (AI), and Geographic Information Systems (GIS) in enhancing resource use efficiency, productivity,
+            and farm profitability. Through real-time monitoring and precise input application, PA enables
+            optimized irrigation, nutrient management, and pest control. Despite adoption challenges, including
+            high initial investment and limited digital literacy, strategic policy support, digital infrastructure
+            development, and farmer training can accelerate PA integration across Indian farms. Precision
+            Agriculture stands as a promising solution for sustainable, climate-resilient, and profitable farming
+            in India.
+        </p>
+        <p><strong>Key words:</strong> Artificial Intelligence, GIS, IoT sensors, Precision Agriculture, Smart Farming</p>
+        <h2 class="fw-bold pt-3"> INTRODUCTION</h2>
+        <p>Indian agriculture, despite its vital role in the national economy and food security, faces an
+            array of formidable challenges. Water resources are under severe stress, with declining groundwater
+            tables and increasing competition for water across sectors. Climate change manifests through
+            unpredictable monsoons, extended dry spells, sudden heatwaves, and unseasonal rains, directly
+            impacting crop cycles and yields. Pests and diseases continue to cause significant crop losses, often
+            requiring extensive, and sometimes indiscriminate, use of chemical inputs. Furthermore, the
+            imperative to feed a burgeoning population necessitates a substantial increase in agricultural output,
+            while also ensuring sustainability and minimizing environmental degradation. These pressures
+            collectively demand innovative and efficient farming methodologies.</p>
+        <p>Precision Agriculture (PA) emerges as a transformative solution to these complex challenges.
+            It is not merely a collection of new technologies but a holistic, data-driven management approach
+            to farming. At its core, PA involves observing, measuring, and responding to inter- and intra-field 
+            variability in crops, soil, and environmental conditions. It leverages advanced digital technologies
+            like sensors, drones, Artificial Intelligence (AI), and Geographic Information Systems (GIS) to collect
+            highly specific data. This data is then meticulously analyzed to inform precise decisions regarding
+            input application (water, fertilizers, pesticides), crop management, and resource allocation. The
+            fundamental principle is to "do more with less"—optimizing every input to achieve higher outputs,
+            reduce waste, enhance profitability, and promote ecological balance.
+        </p>
+        <p>The adoption of Precision Agriculture holds immense promise for Indian farms. It can
+            revolutionize traditional farming practices by introducing unprecedented levels of efficiency,
+            accuracy, and predictability. By enabling farmers to make informed decisions based on real-time,
+            hyper-local data, PA can significantly boost farm profitability through reduced input costs and
+            increased yields. It fosters the creation of more resilient agricultural systems capable of better
+            withstanding climate shocks and market fluctuations. Ultimately, by empowering farmers with
+            cutting-edge tools and knowledge, Precision Agriculture is poised to improve the livelihoods of
+            millions, contributing substantially to rural prosperity and national food security.</p>
+        <h2 class="fw-bold pt-3"> Key Technologies Driving Precision Agriculture in India</h2>
+        <p>Internet of Things (IoT) sensors form the foundational layer of data collection in precision
+            agriculture, providing a continuous, granular "health check" of the farm environment. Various types
+            of IoT sensors are deployed to monitor critical farm parameters. Soil moisture sensors (e.g.,
+            tensiometers, TDR sensors) are strategically placed at different depths to accurately measure the
+            water content in the soil, indicating when and how much irrigation is needed. Nutrient sensors
+            (e.g., optical sensors) can assess the levels of essential macro and micronutrients in the soil, guiding
+            precise fertilizer application. Environmental sensors capture real-time data on air temperature,
+            humidity, wind speed, and solar radiation, which are crucial for disease prediction and irrigation
+            scheduling. Beyond the field, livestock sensors (e.g., wearables) can monitor animal health,
+            activity, and even reproductive cycles in dairy and poultry farming. These sensors are integrated
+            into smart farming systems that transmit data wirelessly to a central platform or farmer's
+            smartphone. For example, a smart irrigation system, armed with data from soil moisture sensors
+            and weather forecasts, can automatically trigger irrigation only when soil moisture drops below a
+            pre-set threshold and rainfall is not expected. This capability dramatically reduces water wastage,
+            often by 30-50% compared to traditional flood or scheduled irrigation. Similarly, nutrient sensors
+            enable variable rate fertilization, ensuring that only deficient areas receive specific nutrients,
+            preventing overuse, reducing input costs, and minimizing nutrient runoff into water bodies. The
+            continuous monitoring also facilitates early detection of anomalies, allowing for proactive
+            intervention.</p>
+            <div style="width: 80%; height: 55vh; margin: auto;">
+                <img src="Assets/drone.jpg" alt="" class="w-100 h-100">
+            </div>
+        <p>Drones (Unmanned Aerial Vehicles - UAVs) offer a versatile and dynamic aerial perspective
+            for comprehensive farm management. Agricultural drones are equipped with sophisticated cameras
+            and sensors, including multispectral cameras (to measure light reflected by plants at different
+            wavelengths, revealing health issues invisible to the human eye), thermal cameras (to detect
+            water stress or disease through temperature variations), and RGB cameras (for high-resolution
+            visual imaging). These drones can rapidly survey vast agricultural areas, collecting data to generate
+            high-resolution maps. These maps can precisely identify variations in crop vigor, pinpoint areas
+            affected by pests or diseases, detect nutrient deficiencies, assess weed density, and even estimate
+            crop stand count and yield potential long before manual inspections could. The actionable insights
+            derived from drone data lead to highly efficient resource application. For instance, drones can be
+            used for targeted spraying of pesticides, herbicides, or fertilizers, delivering chemicals only to
+            affected areas or specific plants, rather than broadcast application across the entire field. This
+            significantly reduces the volume of chemicals used (and thus environmental impact), lowers labor
+            costs, and minimizes health risks to farmers. Furthermore, drones can monitor crop growth progress
+            over time, allowing farmers to track the effectiveness of interventions and make timely adjustments
+            to their management strategies.</p>
+        <p>Artificial Intelligence (AI) and Machine Learning (ML) algorithms serve as the analytical
+            "brain" of precision agriculture, transforming raw data into actionable insights. AI and ML models
+            are trained on vast datasets collected from sensors, drones, satellites, historical yield records,
+            weather patterns, soil test results, and even commodity market prices. These algorithms excel at
+            identifying complex patterns, correlations, and anomalies within this massive influx of information
+            that would be impossible for humans to discern. The true power of AI lies in its predictive capabilities.
+            For example, AI can analyze historical yield data in conjunction with current weather forecasts and
+            soil conditions to predict crop yields with remarkable accuracy, aiding in market planning. It can also
+            forecast the likely onset of specific diseases or pest outbreaks based on environmental conditions
+            (e.g., humidity, temperature, wind direction), allowing farmers to implement preventive measures
+            or targeted treatments before widespread damage occurs. Furthermore, AI can recommend optimal
+            planting and harvesting times, suggest the best crop varieties suited for specific soil types and
+            microclimates, and even optimize irrigation schedules by integrating real-time weather and soil
+            moisture data with crop-specific water requirements. AI-powered image recognition can also
+            differentiate between weeds and crops for precise herbicide application.
+        </p>
+        <h2 class="fw-bold pt-3">Benefits of Adopting Precision Agriculture for Indian Farmers</h2>
+        <p>The fundamental advantage of PA is its ability to boost agricultural productivity. By precisely
+        managing inputs, effectively controlling pests and diseases, and optimizing every aspect of crop
+        growth, farmers can achieve significantly higher crop yields and better quality produce. This direct
+        correlation between optimized practices and enhanced output translates into increased income and
+        greater food security.</p>
+        <p>Precision Agriculture embodies the principle of resource efficiency. It leads to substantial
+        reductions in the consumption of vital resources. Smart irrigation systems, guided by IoT sensors,
+        can cut water usage by as much as 30-50%. Similarly, targeted application methods (via drones or
+        VRA equipment) can drastically lower the amount of fertilizers and pesticides applied, often by 15-
+        30%, without compromising effectiveness. This optimization is crucial in a country grappling with
+        water scarcity and the environmental impact of chemical overuse.</p>
+        <p>The direct consequence of resource optimization is a significant reduction in operational costs
+        for farmers. Less money is spent on excessive fertilizers, pesticides, and water. Furthermore, the
+        automation provided by PA technologies (e.g., autonomous machinery, drone spraying) reduces
+        labor requirements, leading to lower wage expenses. Reduced fuel consumption for machinery due
+        to optimized field operations also contributes to overall cost savings, directly enhancing the farmer's
+        profit margins.</p>
+        <p>One of the most empowering aspects of PA is its ability to provide farmers with data-backed
+        insights. Instead of relying solely on traditional knowledge, intuition, or generalized
+        recommendations, farmers gain access to real-time, actionable intelligence about their specific
+        fields. This empowers them to make more informed, timely, and strategic decisions regarding
+        planting, irrigation, fertilization, pest control, and harvesting, leading to more efficient and profitable
+        farming operations.</p>
+        <h2 class="fw-bold pt-3">Challenges and Way Forward</h2>
+        <p>Despite its immense potential, the widespread adoption of Precision Agriculture in India faces
+        several significant hurdles. The initial capital investment for PA equipment (sensors, drones, VRA
+        machinery, software platforms) can be substantial, posing a major barrier for small and marginal
+        farmers who constitute the majority of Indian agriculturalists. There is a pressing need for enhanced
+        digital literacy and technical training among the farming community to effectively operate and
+        interpret data from these advanced technologies. The highly fragmented nature of landholdings in
+        India can make it challenging to implement large-scale PA solutions. Furthermore, ensuring reliable
+        and affordable internet connectivity in remote rural areas remains a critical infrastructure challenge.</p>
+        <p>Overcoming these challenges necessitates robust government intervention and supportive
+        policies. This includes offering targeted subsidies for PA equipment and technologies, making them
+        more accessible to a wider spectrum of farmers. The promotion and strengthening of Farmer
+        Producer Organizations (FPOs) can play a crucial role by enabling collective purchasing of PA
+        technologies and sharing of resources, making high-tech farming affordable through a communitybased approach. Establishing Custom Hiring Centers that provide access to expensive PA
+        machinery on a rental basis can democratize access to these tools. Significant investment in rural
+        digital infrastructure, including reliable broadband internet and cellular networks, is paramount to
+        facilitate data transfer and connectivity.</p>
+        <p>Comprehensive training and capacity-building programs are absolutely critical for successful
+        PA adoption. These programs, ideally delivered through agricultural universities, Krishi Vigyan
+        Kendras (KVKs), and private sector partnerships, should focus not only on the technical operation
+        of PA tools but also on developing farmers' understanding of data interpretation and data-driven
+        decision-making. Practical, hands-on workshops that demonstrate the benefits and ease of use of
+        PA technologies, coupled with field demonstrations, can bridge the knowledge gap and foster
+        confidence among farmers. Creating local champions who can train and inspire their peers will also
+        be vital.</p>
+        <h2 class="fw-bold pt-3">CONCLUSION</h2>
+        <p>Precision Agriculture represents a paradigm shift in farming, offering a powerful pathway to
+        transform Indian agriculture into a more productive, profitable, and environmentally responsible
+        sector. By leveraging the power of data and advanced technologies, it promises to enhance yields,
+        optimize resource utilization, reduce costs, and build greater resilience against climate change. While
+        challenges such as initial investment, digital literacy, and infrastructure exist, these can be
+        effectively addressed through collaborative efforts. A concerted push by farmers embracing
+        innovation, supportive governmental policies, continued research from academic institutions, and
+        affordable, user-friendly solutions from technology providers are essential. The future of Indian
+        agriculture, thriving and prosperous, undoubtedly lies in the strategic adoption and widespread
+        integration of smart, precise farming technologies.</p>
+        <h2 class="fw-bold pt-3">REFERENCES</h2>
+        <p>Jat ML, Saharawat YS and Gupta R (2011). Conservation agriculture in India: Problems, prospects
+        and policy issues. International Journal of Agricultural Sustainability, 9(1): 76–92.</p>
+        <p>Mulla DJ (2013). Twenty five years of remote sensing in precision agriculture: Key advances and
+        remaining knowledge gaps. Biosystems Engineering, 114(4): 358–371.
+        </p>
+        <p>Patil V and Mahajan R (2014). Precision farming for sustainable agriculture in India. International
+        Journal of Agriculture Innovations and Research, 2(6): 1024–1027.
+        </p>
+    </div>
+    <!-- article on crop management ended-->
+     <!--footer section starts-->
+    <footer>
+        <div class="p-5">
+            <div class="footer_div1 row pb-3 text-center ">
+                <div class="ft_div_1 col-lg-3">
+                    <div class="logo_div p-3">
+                        <div>
+                        <a href="index.html" class="navbar-brand"><img src="Assets/logo-removebg-preview.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p>Your one-stop platform for seeds, plants, fertilizers, machinery, and all farming needs. 
+                        Empowering farmers with products, knowledge, and support for a better tomorrow.</p>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 ">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Quick Links</h5>
+                        
+                        <a href=""><p>Home</p></a>
+                        <a href=""><p>About Us</p></a>
+                        <a href=""><p>Agri Essentials</p></a>
+                        <a href=""><p>Agri Techniques</p></a>
+                        <a href=""><p>Agri Services</p></a>
+                        <a href=""><p>Agri Gyaan</p></a>
+                        <a href=""><p>Farmer Forum</p></a>
+                        <a href=""><p>Agri Articles</p></a>
+                        <a href=""><p>Get Support</p></a>
+                        
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2">
+                    <div>
+                        <div>
+                            <h5 class="text-decoration-underline pb-3">Products & Solutions</h5>
+                            <p>Seeds & Plants</p>
+                            <p>Fertilizers</p>
+                            <p>Machinery & Tools</p>
+                            <p>Irrigation Solutions</p>
+                            <p>Farming Ways</p>
+                            <p>Animal Husbandry Essentials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2"> 
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Knowledge Hub</h5>
+                        <p>Articles & Guides</p>
+                        <p>Announcements & Updates</p>
+                        <p>Success Stories</p>
+                        <p>Farming Methods</p>
+                        <p>Best Practices</p>
+                        <p>Market Updates & Insights</p>
+                        <p>Farmer Training & Workshops</p>
+                        <p>Govt Schemes Guidance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-start p-5 pt-0">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Get Support</h5>
+                        <div>
+                            <p><i class="bi bi-telephone"></i>  <a href="">1800-555-6666</a></p>
+                            <p><i class="bi bi-whatsapp"></i>   <a href="">+91-8666555444</a></p>
+                            <p><i class="bi bi-envelope"></i>   <a href="">Email: support@agriverse.com</a></p>
+                            <p><i class="bi bi-alarm"></i>  24/7 availability</p>
+                            <p><i class="bi bi-chat"></i>   <a href="">Chat with Us</a></p>
+                            <p><i class="bi bi-google-play"></i>    <a href="">Download App</a></p>
+                            <p>🌾 <a href=""> Ask Forum</a></p>
+                            <p><i class="bi bi-geo-alt"></i>    <a href="">Nearest Agriverse center</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="footer_div1 row p-5 pt-0 m-0 p-0">
+                <div class="col-lg-4">
+                    <h5>Follow Us:</h5>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-youtube"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <h5>Download App</h5>
+                        <div class="icons">
+                            <a href="" class="p-3"><i class="bi bi-google-play"></i></a>
+                            <a href="" class="p-3"><i class="bi bi-apple"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <div>
+                            <p>Enter your email to get free farming tips & market updates.</p>
+                            <div class="row">
+                                <div class="col-lg-8 justify-content-end">
+                                    <div >
+                                        <input type="email" placeholder="Enter Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div >
+                                        <button class="btn btn-primary p-2 rounded-5">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="p-4 text-center">
+            <p>&copy;designed and developed by Pulluri Govardhan</p>
+            <a href="" ><div class="whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            </div></a>
+        </div>    
+    </footer>
+    <!--footer section ended-->
+
+    
+</body>
+</html>

@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="essentials.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        body{
+            padding: 0%; margin: 0%;
+        }
+    </style>
+</head>
+<body>
+    <header class="container-fluid ">
+        <nav class="navbar navbar-expand-lg mx-auto">
+            <div class="container  ">
+                <div class="logo">
+                    <a href="index.html"><img src="Assets/logo-removebg-preview.png" alt="" class="w-100 h-100"></a>
+                </div>
+                <button class="navbar-toggler" data-bs-target="myNav" data-bs-toggle="collapse">
+                    <a href="#more" data-bs-toggle="offcanvas"><span class="navbar-toggler-icon"></span></a>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="myNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link" id="essentials">Essentials <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header1">
+                                <a href="essentials.html">Seeds & Plants</a>
+                                <a href="fertilizers.html">Fertilizers & Pesticides</a>
+                                <a href="irrigation.html">Irrigation</a>
+                                <a href="machinery.html">Machinery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="organic.html" class="nav-link" id="techniques">Techniques <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header2">
+                                <a href="organic.html">Organic Farming</a>
+                                <a href="hydroponics.html">Hydroponics</a>
+                                <a href="aquaponics.html">Aquaponic</a>
+                                <a href="vertical.html">Vertical Farming</a>
+                                <a href="traditional.html">Traditional Farming</a>
+                                <a href="smartfarming.html">Smart Farming</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="article.html" class="nav-link">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="forum.html" class="nav-link">Farmers Forum</a>
+                        </li>
+                        <li class="nav-item person_icon">
+                            <a href="" class="nav-link" id="person"><i class="bi bi-person-circle" style="font-size: 32px;"></i></a>
+                            <div class="dropdown" id="login">
+                                <a href="">Signup</a>
+                                <a href="">Login</a>
+                            </div>
+                        </li>
+                        <li class="nav-item menu_icon">
+                            <a href="#more" class="nav-link" data-bs-toggle="offcanvas"><i class="bi bi-list" style="font-size: 32px;"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!--script for essentials dropdown starts-->
+    <script>
+        $('#header1').hide();
+
+        $('#essentials').mouseover(() =>{
+            $('#header1').slideDown()
+        })
+        $('#header1').mouseover(() =>{
+            $('#header1').stop()
+        })
+
+        $('#essentials, #header1').mouseleave(() =>{
+            $('#header1').slideUp()
+        })
+        $('#header1').click(() =>{
+            $('#header1').slideUp()
+        })
+    </script>
+    <!--script for essentials dropdown ended-->
+
+    <!--script for techniques dropdown starts-->
+    <script>
+        $('#header2').hide();
+
+        $('#techniques').mouseover(() =>{
+            $('#header2').slideDown()
+        })
+        $('#header2').mouseover(() =>{
+            $('#header2').stop()
+        })
+        $('#techniques, #header2').mouseleave(() =>{
+            $('#header2').slideUp()
+        })
+        $('#header2').click(() =>{
+            $('#header2').slideUp()
+        })
+    </script>
+    <!--script for techniques dropdown ended-->
+
+    <!--script for login dropdown starts-->
+    <script>
+        $('#login').hide();
+
+        $('#person').mouseover(() =>{
+            $('#login').slideDown()
+        })
+        $('#login').mouseover(() =>{
+            $('#login').stop()
+        })
+        $('#person, #login').mouseleave(() =>{
+            $('#login').slideUp()
+        })
+        $('#login').click(() =>{
+            $('#login').slideUp()
+        })
+    </script>
+    <!--script for login dropdown ended-->
+
+    <!--offcanvas for menubar starts-->
+    <div class="offcanvas offcanvas-start" id="more" data-bs-backdrop="static">
+        <div class="offcanvas-header" style="border-bottom: 1px solid green;">
+            <div class="row p-2 pt-3" >
+                    <div class="col-5">
+                        <div class="profile_photo">
+                            <img src="Assets/Forum/profile_photo_img.jpg" alt="" class="w-100 h-100" style="border-radius: 60px;">
+                        </div>
+                    </div>
+                    <div class="col-7 p-3">
+                        <p class="fw-bold m-0 p-0">Dr. Kavita Deshmukh</p>
+                        <p class="m-0 p-0">Organic Farming Trainer</p>
+                        <p >Telangana</p>
+                    </div>
+                </div>
+            <button class="btn-close text-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="px-5 py-2">
+                <a href=""><p>Signup</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href=""><p>Login</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="index.html"><p>Home</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Essentials</p></summary>
+                    <a href="essentials.html"><button>Seeds & Plants</button></a>
+                    <a href="fertilizers.html"><button>Fertilizers</button></a>
+                    <a href="irrigation.html"><button>Irrigation</button></a>
+                    <a href="machinery.html"><button>Machinery</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Techniques</p></summary>
+                    <a href="organic.html"><button>Organic Farming</button></a>
+                    <a href="hydroponics.html"><button>Hydroponics</button></a>
+                    <a href="aquaponics.html"><button>Aquaponic </button></a>
+                    <a href="vertical.html"><button>Vertical Farming</button></a>
+                    <a href="traditional.html"><button>Traditional Farming</button></a>
+                    <a href="smartfarming.html"><button>Smart Farming</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <a href="article.html"><p>Articles</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="forum.html"><p>Farmers Forum</p></a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvas for menubar ended-->
+
+    <!--carousel banner section starts-->
+    <section>
+        <div class="carousel slide" data-bs-ride="carousel" id="ferti_sliders">
+            <div class="carousel-indicators">
+                <button data-bs-target="#ferti_sliders" data-bs-slide-to="0" class="active"></button>
+                <button data-bs-target="#ferti_sliders" data-bs-slide-to="1" ></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="background_img">
+                        <div class="row m-0 p-0">
+                            <div class="col-lg-6 col-sm-12 text-light p-5 m-0 p-0">
+                                <div class="pt-5 text-center">
+                                    <h1>FERTILIZERS</h1>
+                                </div>
+                                <h2 class="fw-bold">Balanced Fertility, Bountiful Harvests</h2>
+                                <p>Optimize growth and reduce waste with scientifically tested fertilizer solutions</p>
+                                <p>Give your crops the nutrients they deserve with our range of organic and chemical fertilizers.
+                                    Boost soil fertility and sustainability with eco-friendly composts and bio-fertilizers.
+                                </p>
+                                <div class="text-center">
+                                    <p style="font-style: italic;">"Optimize growth and reduce waste with scientifically tested fertilizer solutions."</p>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6 col-sm-12 justify-content-center align-items-center " >
+                                <div  style="width: 85%; height: 95%; padding-top: 100px; border-radius: 10px;">
+                                    <img src="Assets/fertilizers/fertilizer_banner_img.jpg" alt="" class="w-100 h-100 rounded-4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="carousel-item">
+                    <div class="background_img">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12 text-light p-5">
+                                <div class="pt-5 text-center">
+                                    <h1>PESTICIDES</h1>
+                                </div>
+                                <h2 class="fw-bold">Smart Protection, Safer Harvests</h2>
+                                <p>From insects to fungi — safeguard your harvest with trusted, effective pesticides.</p>
+                                <p>Use scientifically approved pesticides that protect crops without harming the soil or environment.
+                                    Explore bio-pesticides and eco-safe solutions to control pests without chemicals.
+                                </p>
+                                <div class="text-center">
+                                    <p style="font-style: italic;">"Early detection and the right pesticide choice can save your entire season’s effort."</p>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6 col-sm-12 justify-content-center align-items-center" >
+                                <div  style="width: 85%; height: 95%; padding-top: 100px; border-radius: 10px;">
+                                    <img src="Assets/fertilizers/pesticides_banner_img1.jpg" alt="" class="w-100 h-100 rounded-4">
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--carousel banner section ended-->
+
+    <!--types of fertilizers section starts-->
+    <section style="background-color: #b6b4a9;">
+        <div class="container text-bg-light">
+            <div class="text-center pt-5 mb-3">
+                <h2>Feed the Soil, Grow the Future</h2>
+            </div>
+            <div class="px-3">
+                <p>Fertilizers play a crucial role in boosting soil fertility and crop yield by providing essential 
+                    nutrients like Nitrogen, Phosphorus, Potassium, and trace minerals. 
+                    AGRIVERSE brings you a diverse range of organic, inorganic, and bio-based fertilizers tailored to every crop and soil type.</p>
+            </div>
+            <div class="row p-3">
+                <div class="col-lg-4 mb-3">
+                    <div class="card ferti_card">
+                        <img src="Assets/fertilizers/organic_fertilizers.jpg" alt="" style="width: 100%; height: 300px;">
+                        <div class="card-body">
+                            <h5 class="fw-bold ">Organic Fertilizers</h5>
+                            <p>Natural materials derived from plants and animals that enrich the soil ecosystem.</p>
+                            <a href=""><button class="btn btn-primary w-100">Explore Products</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="card ferti_card">
+                        <img src="Assets/fertilizers/chemical_fertilizers.jpg" alt="" style="width: 100%; height: 300px;">
+                        <div class="card-body">
+                            <h5 class="fw-bold ">Chemical Fertilizers</h5>
+                            <p>Synthetic fertilizers that provide quick and targeted nutrient delivery to crops.</p>
+                            <a href=""><button class="btn btn-primary w-100">Explore Products</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="card ferti_card">
+                        <img src="Assets/fertilizers/bio_fertilizers.jpg" alt="" style="width: 100%; height: 300px;">
+                        <div class="card-body">
+                            <h5 class="fw-bold ">Biofertilizers</h5>
+                            <p>Living microorganisms that improve soil fertility and nutrient uptake naturally.</p>
+                            <a href=""><button class="btn btn-primary w-100">Explore Products</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="card ferti_card">
+                        <img src="Assets/fertilizers/liquid_fertilizers.jpg" alt="" style="width: 100%; height: 300px;">
+                        <div class="card-body">
+                            <h5 class="fw-bold ">Liquid Fertilizers</h5>
+                            <p>Nutrient solutions directly sprayed on crops or applied via drip irrigation for rapid absorption.</p>
+                            <a href=""><button class="btn btn-primary w-100">Explore Products</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="card ferti_card">
+                        <img src="Assets/fertilizers/micro_nutritions.jpg" alt="" style="width: 100%; height: 300px;">
+                        <div class="card-body">
+                            <h5 class="fw-bold ">Micronutrients & Soil Conditioners</h5>
+                            <p>Essential trace elements and conditioners that correct soil imbalances.</p>
+                            <a href=""><button class="btn btn-primary w-100">Explore Products</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="card ferti_card">
+                        <img src="Assets/fertilizers/controlled_fertilizers.jpg" alt="" style="width: 100%; height: 300px;">
+                        <div class="card-body">
+                            <h5 class="fw-bold ">Specialty &Controlled-Release Fertilizers</h5>
+                            <p>Advanced nutrient systems designed for precision farming.</p>
+                            <a href=""><button class="btn btn-primary w-100">Explore Products</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--types of fertilizers section ended-->
+
+    <!--comparision table section starts-->
+    <section style="background-color: #b8b396; border-top: 1px solid #b8b396;" >
+        <div class="container py-5 text-bg-light p-3" >
+            <div class="col-lg-12 col-sm-12 col-md-12">
+                <div class="text-center">
+                    <h2>Fertilizer Comparison Table</h2>
+                </div>
+                <div class="p-4">
+                    <p>Choosing the right fertilizer can make all the difference in your crop’s health and yield. 
+                        The table below provides a quick comparison of different fertilizer types — including their composition, 
+                        application method, and ideal use cases — to help you select the best solution for your soil and farming needs.</p>
+                </div>
+                <table  class="table  text-center w-100" cellspacing="10px"  cellpadding="10px" border="2px">
+                    <thead>
+                        <tr>
+                            <th class="text-bg-success">Type</th>
+                            <th>Example</th>
+                            <th>Nutrient Delivery</th>
+                            <th>Application</th>
+                            <th>Best For</th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                        <tr>
+                            <td data-label="Type">Organic</td>
+                            <td data-label="Example">Compost, Neem Cake</td>
+                            <td data-label="Nutrient Delivery">Slow & steady</td>
+                            <td data-label="Application" >Soil</td>
+                            <td data-label="Best For">Sustainable farms</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Type">Inorganic</td>
+                            <td data-label="Example">Urea, DAP</td>
+                            <td data-label="Nutrient Delivery">Fast-acting</td>
+                            <td data-label="Application">Soil/Drip</td>
+                            <td data-label="Best For">Intensive farming</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Type">Biofertilizer</td>
+                            <td data-label="Example">Rhizobium</td>
+                            <td data-label="Nutrient Delivery">Microbial action</td>
+                            <td data-label="Application">Seed/Soil</td>
+                            <td data-label="Best For">Natural enrichment</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Type">Liquid</td>
+                            <td data-label="Example">NPK Liquid</td>
+                            <td data-label="Nutrient Delivery">Instant</td>
+                            <td data-label="Application">Foliar/Drip</td>
+                            <td data-label="Best For">Hydroponics</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Type">Micronutrient</td>
+                            <td data-label="Example">Zinc, Boron</td>
+                            <td data-label="Nutrient Delivery">Targeted</td>
+                            <td data-label="Application">Foliar/Soil</td>
+                            <td data-label="Best For">Specific deficiency</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Type">Specialty</td>
+                            <td data-label="Example">WSF, Coated Urea</td>
+                            <td data-label="Nutrient Delivery">Controlled</td>
+                            <td data-label="Application">Soil/Drip</td>
+                            <td data-label="Best For">High-value crops</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <div class="p-3 text-center" style="background-color: rgb(191, 206, 206); font-style: italic;">
+                    <p>💡 Tip: For best results, test your soil before fertilizer application. 
+                        Balanced nutrition ensures sustainable growth and long-term soil fertility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--comparision table section ended-->
+
+    <!--pesticides starts-->
+    <!--pesticides products section starts-->
+    <section style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light pt-5 ">
+            <div class="text-center">
+                <h2>Shield Your Crops, Secure Your Harvest</h2>
+            </div>
+            <div class="p-4">
+                <p>Protect your fields with AGRIVERSE’s advanced range of <strong>eco-safe pesticides and crop protection products,</strong>
+                    engineered to defend your crops from insects, weeds, and diseases — while preserving soil health and environmental balance.</p>
+            </div>
+            <div class="text-center">
+                <p><strong>“Healthy crops don’t just grow — they’re protected, cared for, and supported every day.”</strong></p>
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-lg-3 p-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/fertilizers/pesticides_img.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold">Insecticides</h5>
+                                <p>Insecticides are formulated to control harmful insects that feed on plant tissues and reduce yields.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="" ><button class="btn btn-primary w-100">Explore Products</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 p-3  mb-3">
+                        <div class="card">
+                            <img src="Assets/fertilizers/fungicides.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold">Fungicides</h5>
+                                <p>Fungicides prevent and cure fungal infections that affect leaves, stems, roots, and fruits. Protect Against Crop Diseases</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="" ><button class="btn btn-primary w-100">Explore Products</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 p-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/fertilizers/herbiside_img.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold">Herbicides / Weedicides</h5>
+                                <p>Helps to eliminate unwanted plants efficiently, saving time, labor, and resources.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="" ><button class="btn btn-primary w-100">Explore Products</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 p-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/fertilizers/bio-fertilizers_img.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold">Bio-Pesticides</h5>
+                                <p>Bio-pesticides are derived from natural organisms — bacteria, fungi, viruses, or plant extracts.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="" ><button class="btn btn-primary w-100">Explore Products</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--pesticides products section ended-->
+
+    <!--pesticides comparision table section starts-->
+    <section style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container pt-5 text-bg-light pb-4">
+            <div class="text-center">
+                <h2>Pesticide Comparison Table</h2>
+            </div>
+            <div class="p-4">
+            <p>With so many pesticide options available, choosing the right one for your crop can be challenging. 
+                The table below provides a quick comparison of different pesticide types, highlighting what each controls, how it’s applied, and which crops it suits best. 
+                Use it as a guide to make informed decisions for safer and more effective crop protection.</p>
+        
+            </div>
+            <div>
+                <table class="table  text-center w-100" cellspacing ="10px"  cellpadding ="10px" border="2px">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Controls</th>
+                            <th>Example</th>
+                            <th>Products</th>
+                            <th>Application Suited For</th>		 	
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Type">Insecticide</td>
+                            <td data-label="Controls">Insects & pests</td>
+                            <td data-label="Example">Imidacloprid, Neem Oil</td>
+                            <td data-label="Products">Spray / Dust</td>
+                            <td data-label="Application Suited For">All crops</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Type">Fungicide</td>
+                            <td data-label="Controls">Fungal infections</td>
+                            <td data-label="Example">Mancozeb, Trichoderma</td>
+                            <td data-label="Products">Spray / Seed treatment</td>
+                            <td data-label="Application Suited For">Leafy & fruit crops</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Type">Herbicide</td>
+                            <td data-label="Controls">Weeds & grasses</td>
+                            <td data-label="Example">Glyphosate, Atrazine</td>
+                            <td data-label="Products">Soil / Foliar</td>
+                            <td data-label="Application Suited For">Field & row crops</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Type">Bio-pesticide</td>
+                            <td data-label="Controls">Eco-safe pest control</td>
+                            <td data-label="Example">Bt, Beauveria</td>
+                            <td data-label="Products">Spray / Soil</td>
+                            <td data-label="Application Suited For">Organic farms</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="p-3 pt-3 text-center" style="background-color: rgb(191, 206, 206); font-style: italic;">
+                <p>💡 Did You Know? Combining bio-pesticides with natural fertilizers creates a balanced soil 
+                    ecosystem — promoting sustainable, long-term crop health.</p>
+            </div>
+        </div>
+    </section>
+    <!--pesticides comparision table section ended-->
+    <!--pesticides ended-->
+
+    <!--product use guidelines section starts-->
+    <section style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <div class="text-center p-5 pb-0">
+                <h2 class="fw-bold m-0">Safe Use & Application Guidelines</h2>
+                <p>Smart Protection Begins with Safe Practice</p>
+            </div>
+            <div class="px-4 pt-0">
+                <p>Proper use of fertilizers and pesticides not only ensures your crops but also protects your health, your crops, and the environment. 
+                Follow these simple yet essential safety measures to make every application efficient, responsible, and safe for everyone on your farm.</p>
+            </div>
+            <div>
+                <div class="row p-3 guidelines">
+                    <div class="col-lg-6 p-3 " >
+                        <div class="p-4 guide" style="background-color: rgb(208, 224, 224);">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <h2 style="font-size: 54px;"><i class="bi bi-tags"></i></h2>
+                                </div>
+                                <div class="col-lg-9">
+                                    <h3 class="fw-bold"\>Know your product</h3>
+                                    <p>Always read and follow the label instructions carefully before mixing or spraying.</p>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="col-lg-6 p-3 ">
+                        <div class="p-4 guide" style="background-color: rgb(208, 224, 224);">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <h3  style="font-size: 54px;"><i class="bi bi-hand-index-thumb-fill"></i></h3>
+                                </div>
+                                <div class="col-lg-9">
+                                    <h3 class="fw-bold">Wear Protective Gear</h3>
+                                    <p>Use gloves, masks, and goggles to prevent skin or inhalation exposure.</p>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="col-lg-6 p-3 ">
+                        <div class="p-4 guide" style="background-color: rgb(208, 224, 224);">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <h3 style="font-size: 54px;"><i class="bi bi-cloud-drizzle"></i></h3>
+                                </div>
+                                <div class="col-lg-9">
+                                    <h3 class="fw-bold">Weather</h3>
+                                    <p>Avoid spraying during high wind or rain to prevent drift and wastage.</p>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="col-lg-6 p-3 ">
+                        <div class="p-4 guide" style="background-color: rgb(208, 224, 224);">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <h3 style="font-size: 54px;"><i class="bi bi-measuring-cup"></i></h3>
+                                </div>
+                                <div class="col-lg-9">
+                                    <h3 class="fw-bold">Use the Right Dosage</h3>
+                                    <p>Use gloves, masks, and goggles to prevent skin or inhalation exposure.</p>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="col-lg-6 p-3 ">
+                        <div class="p-4 guide" style="background-color: rgb(208, 224, 224);">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <h3 style="font-size: 54px;"><i class="bi bi-droplet"></i></h3>
+                                </div>
+                                <div class="col-lg-9">
+                                    <h3 class="fw-bold">Clean Equipment</h3>
+                                    <p>Wash sprayers and containers thoroughly after each application.</p>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="col-lg-6 p-3 ">
+                        <div class="p-4 guide" style="background-color: rgb(208, 224, 224);">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <h2 style="font-size: 54px;"><i class="bi bi-box-seam"></i></h2>
+                                </div>
+                                <div class="col-lg-9">
+                                    <h3 class="fw-bold">Store Safely</h3>
+                                    <p>Keep pesticides in their original containers, away from children, animals, and food.</p>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pb-3">
+                <h5 class="py-3" style="font-style: italic;">Get Expert Advice on Safe Spraying Practices</h5>
+                <button class="btn btn-primary rounded-3">Ask Agri Expert</button>
+            </div>
+        </div>
+        
+    </section>
+    <!--product use guidelines section ended-->
+
+    <!--footer section starts-->
+    <footer>
+        <div class=" container-fluid p-5">
+            <div class="footer_div1 row pb-3 text-center ">
+                <div class="ft_div_1 col-lg-3">
+                    <div class="logo_div p-3">
+                        <div>
+                        <a href="index.html" class="navbar-brand"><img src="Assets/logo-removebg-preview.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p>Your one-stop platform for seeds, plants, fertilizers, machinery, and all farming needs. 
+                        Empowering farmers with products, knowledge, and support for a better tomorrow.</p>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 ">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Quick Links</h5>
+                        <nav>
+                        <a href=""><p>Home</p></a>
+                        <a href=""><p>About Us</p></a>
+                        <a href=""><p>Agri Essentials</p></a>
+                        <a href=""><p>Agri Techniques</p></a>
+                        <a href=""><p>Agri Services</p></a>
+                        <a href=""><p>Agri Gyaan</p></a>
+                        <a href=""><p>Farmer Forum</p></a>
+                        <a href=""><p>Agri Articles</p></a>
+                        <a href=""><p>Get Support</p></a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2">
+                    <div>
+                        <div>
+                            <h5 class="text-decoration-underline pb-3">Products & Solutions</h5>
+                            <p>Seeds & Plants</p>
+                            <p>Fertilizers</p>
+                            <p>Machinery & Tools</p>
+                            <p>Irrigation Solutions</p>
+                            <p>Farming Ways</p>
+                            <p>Animal Husbandry Essentials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2"> 
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Knowledge Hub</h5>
+                        <p>Articles & Guides</p>
+                        <p>Announcements & Updates</p>
+                        <p>Success Stories</p>
+                        <p>Farming Methods</p>
+                        <p>Best Practices</p>
+                        <p>Market Updates & Insights</p>
+                        <p>Farmer Training & Workshops</p>
+                        <p>Govt Schemes Guidance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-start p-5 pt-0">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Get Support</h5>
+                        <div>
+                            <p><i class="bi bi-telephone"></i>  <a href="">1800-555-6666</a></p>
+                            <p><i class="bi bi-whatsapp"></i>   <a href="">+91-8666555444</a></p>
+                            <p><i class="bi bi-envelope"></i>   <a href="">Email: support@agriverse.com</a></p>
+                            <p><i class="bi bi-alarm"></i>  <a href="">24/7 availability</a></p>
+                            <p><i class="bi bi-chat"></i>   <a href="">Chat with Us</a></p>
+                            <p><i class="bi bi-google-play"></i>    <a href="">Download App</a></p>
+                            <p>🌾 <a href=""> Ask Forum</a></p>
+                            <p><i class="bi bi-geo-alt"></i>    <a href="">Nearest Agriverse center</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="footer_div1 row p-5 pt-0 m-0 p-0">
+                <div class="col-lg-4">
+                    <h5>Follow Us:</h5>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-youtube"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <h5>Download App</h5>
+                        <div class="icons">
+                            <a href="" class="p-3"><i class="bi bi-google-play"></i></a>
+                            <a href="" class="p-3"><i class="bi bi-apple"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <div>
+                            <p>Enter your email to get free farming tips & market updates.</p>
+                            <div class="row">
+                                <div class="col-lg-8 justify-content-end">
+                                    <div >
+                                        <input type="email" placeholder="Enter Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div >
+                                        <button class="btn btn-primary p-2 rounded-5">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="p-4 text-center">
+            <p>&copy;designed and developed by Pulluri Govardhan</p>
+            <a href="" ><div class="whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            </div></a>
+        </div>    
+    </footer>
+    <!--footer section ended-->
+
+
+
+
+    
+</body>
+</html>

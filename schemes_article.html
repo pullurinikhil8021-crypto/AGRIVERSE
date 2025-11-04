@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        h2{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <header class="container-fluid ">
+        <nav class="navbar navbar-expand-lg mx-auto">
+            <div class="container  ">
+                <div class="logo">
+                    <a href="index.html"><img src="Assets/logo-removebg-preview.png" alt="" class="w-100 h-100"></a>
+                </div>
+                <button class="navbar-toggler" data-bs-target="myNav" data-bs-toggle="collapse">
+                    <a href="#more" data-bs-toggle="offcanvas"><span class="navbar-toggler-icon"></span></a>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="myNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="essentials.html" class="nav-link" id="essentials">Essentials <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header1">
+                                <a href="essentials.html">Seeds & Plants</a>
+                                <a href="fertilizers.html">Fertilizers & Pesticides</a>
+                                <a href="irrigation.html">Irrigation</a>
+                                <a href="machinery.html">Machinery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="organic.html" class="nav-link" id="techniques">Techniques <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header2">
+                                <a href="">organic</a>
+                                <a href="">smart</a>
+                                <a href="">aqua</a>
+                                <a href="">hydro</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="article.html" class="nav-link">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="forum.html" class="nav-link">Farmers Forum</a>
+                        </li>
+                        <li class="nav-item person_icon">
+                            <a href="" class="nav-link" id="person"><i class="bi bi-person-circle" style="font-size: 32px;"></i></a>
+                            <div class="dropdown" id="login">
+                                <a href="">Signup</a>
+                                <a href="">Login</a>
+                            </div>
+                        </li>
+                        <li class="nav-item menu_icon">
+                            <a href="#more" class="nav-link" data-bs-toggle="offcanvas"><i class="bi bi-list" style="font-size: 32px;"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!--script for essentials dropdown starts-->
+    <script>
+        $('#header1').hide();
+
+        $('#essentials').mouseover(() =>{
+            $('#header1').slideDown()
+        })
+        $('#header1').mouseover(() =>{
+            $('#header1').stop()
+        })
+
+        $('#essentials, #header1').mouseleave(() =>{
+            $('#header1').slideUp()
+        })
+        $('#header1').click(() =>{
+            $('#header1').slideUp()
+        })
+    </script>
+    <!--script for essentials dropdown ended-->
+
+    <!--script for techniques dropdown starts-->
+    <script>
+        $('#header2').hide();
+
+        $('#techniques').mouseover(() =>{
+            $('#header2').slideDown()
+        })
+        $('#header2').mouseover(() =>{
+            $('#header2').stop()
+        })
+        $('#techniques, #header2').mouseleave(() =>{
+            $('#header2').slideUp()
+        })
+        $('#header2').click(() =>{
+            $('#header2').slideUp()
+        })
+    </script>
+    <!--script for techniques dropdown ended-->
+
+    <!--script for login dropdown starts-->
+    <script>
+        $('#login').hide();
+
+        $('#person').mouseover(() =>{
+            $('#login').slideDown()
+        })
+        $('#login').mouseover(() =>{
+            $('#login').stop()
+        })
+        $('#person, #login').mouseleave(() =>{
+            $('#login').slideUp()
+        })
+        $('#login').click(() =>{
+            $('#login').slideUp()
+        })
+    </script>
+    <!--script for login dropdown ended-->
+
+    <!--offcanvas for menubar starts-->
+    <div class="offcanvas offcanvas-start" id="more" data-bs-backdrop="static">
+        <div class="offcanvas-header" style="border-bottom: 1px solid green;">
+            <div class="row p-2 pt-3" >
+                    <div class="col-5">
+                        <div class="profile_photo">
+                            <img src="Assets/Forum/profile_photo_img.jpg" alt="" class="w-100 h-100" style="border-radius: 60px;">
+                        </div>
+                    </div>
+                    <div class="col-7 p-3">
+                        <p class="fw-bold m-0 p-0">Dr. Kavita Deshmukh</p>
+                        <p class="m-0 p-0">Organic Farming Trainer</p>
+                        <p >Telangana</p>
+                    </div>
+                </div>
+            <button class="btn-close text-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="px-5 py-2">
+                <a href=""><p>Signup</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href=""><p>Login</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="index.html"><p>Home</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Essentials</p></summary>
+                    <a href="essentials.html"><button>Seeds & Plants</button></a>
+                    <a href="fertilizers.html"><button>Fertilizers</button></a>
+                    <a href="irrigation.html"><button>Irrigation</button></a>
+                    <a href="machinery.html"><button>Machinery</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Techniques</p></summary>
+                    <a href="organic.html"><button>Organic Farming</button></a>
+                    <a href="hydroponics.html"><button>Hydroponics</button></a>
+                    <a href="aquaponics.html"><button>Aquaponic </button></a>
+                    <a href="vertical.html"><button>Vertical Farming</button></a>
+                    <a href="traditional.html"><button>Traditional Farming</button></a>
+                    <a href="smartfarming.html"><button>Smart Farming</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <a href="article.html"><p>Articles</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="forum.html"><p>Farmers Forum</p></a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvas for menubar ended-->
+
+    <!-- article on schemes starts-->
+    <div class="container  p-5 text-bg-light">
+        <h1 class=" fw-bold pb-3" style="font-family: Georgia, 'Times New Roman', Times, serif;">India New Agricultural Policy 2025: Key Reforms Explained</h1>
+        <div style="width: 80%; height: 60vh; margin: auto;">
+            <img src="Assets/articles/govtschemes_article_img.jpg" alt="" class="w-100 h-100">
+        </div>
+        <h1 class="p-5 " style="font-size: 38px;">“India’s 2025 agricultural policy targets a 30% increase in sustainable farming practices nationwide by 2030.”</h1>
+        <h2 class="fw-bold pt-4">Summary: India’s New Agricultural Policy 2025—A Progressive Leap for Sustainable Farming</h2>
+        <p>In 2025, the Government of India unveiled the India New Agricultural Policy 2025, marking a significant milestone in transforming the
+            nation’s agriculture ecosystem. This new agricultural policy in India aims to drive a progressive leap by focusing on sustainable 
+            farming, advancing climate resilience, and integrating cutting-edge technology to enhance both farmers’ income and national food security. 
+            The policy, reflective of India’s ambitious vision to double farmers’ income, triggers sector-wide reforms—addressing multifaceted challenges 
+            faced by the rural community and forestry sector, and positioning India as a global leader in sustainable, resilient agriculture.</p>
+        <h2 class="fw-bold pt-3">India New Agricultural Policy 2025: Foundations & Vision</h2>
+        <p>The India new agricultural policy 2025 emerges as a comprehensive response to the dynamic challenges within the nation’s farming sector. It is designed to catalyze a transformation across the Indian agricultural 
+            landscape by embedding sustainability, environmental stewardship, and technological innovation into the very core of farm management.</p>
+        <p><i class="bi bi-dot"></i> <strong>Foundation:</strong> Built on learnings from earlier agricultural reforms and programmes.</p>
+        <p><i class="bi bi-dot"></i> <strong>Vision:</strong> Creating a forward-looking, technology-enabled, inclusive, and sustainable agricultural sector in India while ensuring food and nutritional security for all.</p>
+        <p><i class="bi bi-dot"></i> <strong>Timeline:</strong> The policy sets clear targets for achievement by 2030 and beyond.</p>
+        <p>The new agriculture policy India 2025 fully recognizes India’s unique socioeconomic and environmental conditions. As a country heavily dependent on monsoon rains, with millions of small and marginal farmers, the policy aims to balance increased productivity with efficient resource utilization and environmental conservation.</p>
+
+        <h2 class="fw-bold pt-3 pb-3">Key Objectives of the India New Agricultural Policy 2025</h2>
+        <p><i class="bi bi-dot"></i> <strong>Increasing agricultural productivity and profitability:</strong> Empowering farmers to achieve higher crop 
+            yields and incomes without compromising environmental sustainability.</p>
+        <p><i class="bi bi-dot"></i> <strong>Integrating modern technology with traditional wisdom:</strong> Promoting digital & precision farming for better 
+            crop management, resource efficiency, and transparency.</p>
+        <p><i class="bi bi-dot"></i> <strong>Climate resilience & sustainability:</strong> Adapting agriculture to climate change impacts and promoting environment-friendly practices.</p>
+        <p><i class="bi bi-dot"></i> <strong>Enhancing food security:</strong> Ensuring the nation’s food demands are met through diversified crops and robust supply chains.</p>
+        <p><i class="bi bi-dot"></i> <strong>Farmer empowerment & welfare:</strong> Improving access to credit, markets, extension services, and safety nets.</p>
+        <p><i class="bi bi-dot"></i> <strong>Water and resource conservation:</strong> Promoting efficient use of natural resources such as water, soils, 
+            and biodiversity, addressing challenges of water scarcity and environmental degradation.</p>
+        <p><i class="bi bi-dot"></i> <strong>Strengthening market linkages:</strong> Minimizing dependence on intermediaries, empowering Farmer Producer Organizations (FPOs), and boosting direct & digital market channels.</p>
+        <p><i class="bi bi-dot"></i> <strong> Promoting crop diversification:</strong> Reducing risks associated with mono-cropping and expanding the cultivation of climate-resilient crops, pulses, horticulture, and forestry.</p>
+    
+        <h2 class="fw-bold pt-3 pb-3">Farmonaut Subscription Plans: Bringing Precision Agriculture to Every Indian Farmer</h2>
+        <p>To support the inclusive implementation of India new agricultural policy 2025, we offer scalable subscription plans for individual farmers, FPOs, enterprises, and institutions—empowering every stakeholder with affordable, 
+            real-time crop health monitoring, resource management, carbon tracking, and supply chain traceability solutions.</p>
+        <h2 class="fw-bold pt-3 pb-3">Role of Farmonaut in Supporting India’s New Agricultural Policy 2025</h2>
+        <p>As a pioneering agritech company that specializes in satellite-based farm management solutions, we at Farmonaut are fully aligned with the core objectives of the India new agricultural policy 2025.</p>
+        <p>Our mission is to make precision agriculture affordable, accessible, and impactful for all Indian farmers—regardless of scale or location.</p>
+        
+        <h2 class="fw-bold pt-3 pb-3">Conclusion: The Road Ahead for Indian Agriculture</h2>
+        <p>The India New Agricultural Policy 2025 represents a decisive step forward, marking a new era of sustainability, technology integration, and inclusive growth for the Indian agriculture sector. As the backbone of the nation’s rural economy, Indian 
+            farmers will benefit from a robust safety net, skill upgradation, and digital empowerment, ensuring long-term food and livelihood security.</p>
+        <p>The reforms outlined will not only enhance productivity and profits but will also make Indian agriculture resilient to the challenges posed by climate change, global market volatility, and resource constraints. By embracing the path laid out by the policy—and leveraging smart solutions like those offered by 
+            Farmonaut—the Indian agriculture sector stands poised for a future that is green, prosperous, and globally competitive.</p>
+    
+    </div>
+    <!-- article on schemes ended-->
+
+    <!--footer section starts-->
+    <footer>
+        <div class="p-5">
+            <div class="footer_div1 row pb-3 text-center ">
+                <div class="ft_div_1 col-lg-3">
+                    <div class="logo_div p-3">
+                        <div>
+                        <a href="index.html" class="navbar-brand"><img src="Assets/logo-removebg-preview.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p>Your one-stop platform for seeds, plants, fertilizers, machinery, and all farming needs. 
+                        Empowering farmers with products, knowledge, and support for a better tomorrow.</p>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 ">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Quick Links</h5>
+                    
+                        <a href=""><p>Home</p></a>
+                        <a href=""><p>About Us</p></a>
+                        <a href=""><p>Agri Essentials</p></a>
+                        <a href=""><p>Agri Techniques</p></a>
+                        <a href=""><p>Agri Services</p></a>
+                        <a href=""><p>Agri Gyaan</p></a>
+                        <a href=""><p>Farmer Forum</p></a>
+                        <a href=""><p>Agri Articles</p></a>
+                        <a href=""><p>Get Support</p></a>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2">
+                    <div>
+                        <div>
+                            <h5 class="text-decoration-underline pb-3">Products & Solutions</h5>
+                            <p>Seeds & Plants</p>
+                            <p>Fertilizers</p>
+                            <p>Machinery & Tools</p>
+                            <p>Irrigation Solutions</p>
+                            <p>Farming Ways</p>
+                            <p>Animal Husbandry Essentials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2"> 
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Knowledge Hub</h5>
+                        <p>Articles & Guides</p>
+                        <p>Announcements & Updates</p>
+                        <p>Success Stories</p>
+                        <p>Farming Methods</p>
+                        <p>Best Practices</p>
+                        <p>Market Updates & Insights</p>
+                        <p>Farmer Training & Workshops</p>
+                        <p>Govt Schemes Guidance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-start p-5 pt-0">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Get Support</h5>
+                        <div>
+                            <p><i class="bi bi-telephone"></i>  <a href="">1800-555-6666</a></p>
+                            <p><i class="bi bi-whatsapp"></i>   <a href="">+91-8666555444</a></p>
+                            <p><i class="bi bi-envelope"></i>   <a href="">Email: support@agriverse.com</a></p>
+                            <p><i class="bi bi-alarm"></i>  <a href="">24/7 availability</a></p>
+                            <p><i class="bi bi-chat"></i>   <a href="">Chat with Us</a></p>
+                            <p><i class="bi bi-google-play"></i>    <a href="">Download App</a></p>
+                            <p>🌾 <a href=""> Ask Forum</a></p>
+                            <p><i class="bi bi-geo-alt"></i>    <a href="">Nearest Agriverse center</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="footer_div1 row p-5 pt-0 m-0 p-0">
+                <div class="col-lg-4">
+                    <h5>Follow Us:</h5>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-youtube"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <h5>Download App</h5>
+                        <div class="icons">
+                            <a href="" class="p-3"><i class="bi bi-google-play"></i></a>
+                            <a href="" class="p-3"><i class="bi bi-apple"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <div>
+                            <p>Enter your email to get free farming tips & market updates.</p>
+                            <div class="row">
+                                <div class="col-lg-8 justify-content-end">
+                                    <div >
+                                        <input type="email" placeholder="Enter Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div >
+                                        <button class="btn btn-primary p-2 rounded-5">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="p-4 text-center">
+            <p>&copy;designed and developed by Pulluri Govardhan</p>
+            <a href="" ><div class="whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            </div></a>
+        </div>    
+    </footer>
+    <!--footer section ended-->
+
+</body>
+</html>

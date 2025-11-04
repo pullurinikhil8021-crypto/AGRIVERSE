@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="techniques.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="dist/assets/owl.theme.default.min.css">
+</head>
+<body>
+    <header class="container-fluid ">
+        <nav class="navbar navbar-expand-lg mx-auto">
+            <div class="container  ">
+                <div class="logo">
+                    <a href="index.html"><img src="Assets/logo-removebg-preview.png" alt="" class="w-100 h-100"></a>
+                </div>
+                <button class="navbar-toggler" data-bs-target="myNav" data-bs-toggle="collapse">
+                    <a href="#more" data-bs-toggle="offcanvas"><span class="navbar-toggler-icon"></span></a>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="myNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="essentials.html" class="nav-link" id="essentials">Essentials <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header1">
+                                <a href="essentials.html">Seeds & Plants</a>
+                                <a href="fertilizers.html">Fertilizers & Pesticides</a>
+                                <a href="irrigation.html">Irrigation</a>
+                                <a href="machinery.html">Machinery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="organic.html" class="nav-link" id="techniques">Techniques <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header2">
+                                <a href="organic.html">Organic Farming</a>
+                                <a href="hydroponics.html">Hydroponics</a>
+                                <a href="aquaponics.html">Aquaponic</a>
+                                <a href="vertical.html">Vertical Farming</a>
+                                <a href="traditional.html">Traditional Farming</a>
+                                <a href="smartfarming.html">Smart Farming</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="article.html" class="nav-link">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="forum.html" class="nav-link">Farmers Forum</a>
+                        </li>
+                        <li class="nav-item person_icon">
+                            <a href="" class="nav-link" id="person"><i class="bi bi-person-circle" style="font-size: 32px;"></i></a>
+                            <div class="dropdown" id="login">
+                                <a href="">Signup</a>
+                                <a href="">Login</a>
+                            </div>
+                        </li>
+                        <li class="nav-item menu_icon">
+                            <a href="#more" class="nav-link" data-bs-toggle="offcanvas"><i class="bi bi-list" style="font-size: 32px;"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!--script for essentials dropdown starts-->
+    <script>
+        $('#header1').hide();
+
+        $('#essentials').mouseover(() =>{
+            $('#header1').slideDown()
+        })
+        $('#header1').mouseover(() =>{
+            $('#header1').stop()
+        })
+
+        $('#essentials, #header1').mouseleave(() =>{
+            $('#header1').slideUp()
+        })
+        $('#header1').click(() =>{
+            $('#header1').slideUp()
+        })
+    </script>
+    <!--script for essentials dropdown ended-->
+
+    <!--script for techniques dropdown starts-->
+    <script>
+        $('#header2').hide();
+
+        $('#techniques').mouseover(() =>{
+            $('#header2').slideDown()
+        })
+        $('#header2').mouseover(() =>{
+            $('#header2').stop()
+        })
+        $('#techniques, #header2').mouseleave(() =>{
+            $('#header2').slideUp()
+        })
+        $('#header2').click(() =>{
+            $('#header2').slideUp()
+        })
+    </script>
+    <!--script for techniques dropdown ended-->
+
+    <!--script for login dropdown starts-->
+    <script>
+        $('#login').hide();
+
+        $('#person').mouseover(() =>{
+            $('#login').slideDown()
+        })
+        $('#login').mouseover(() =>{
+            $('#login').stop()
+        })
+        $('#person, #login').mouseleave(() =>{
+            $('#login').slideUp()
+        })
+        $('#login').click(() =>{
+            $('#login').slideUp()
+        })
+    </script>
+    <!--script for login dropdown ended-->
+
+    <!--offcanvas for menubar starts-->
+    <div class="offcanvas offcanvas-start" id="more" data-bs-backdrop="static">
+        <div class="offcanvas-header" style="border-bottom: 1px solid green;">
+            <div class="row p-2 pt-3" >
+                    <div class="col-5">
+                        <div class="profile_photo">
+                            <img src="Assets/Forum/profile_photo_img.jpg" alt="" class="w-100 h-100" style="border-radius: 60px;">
+                        </div>
+                    </div>
+                    <div class="col-7 p-3">
+                        <p class="fw-bold m-0 p-0">Dr. Kavita Deshmukh</p>
+                        <p class="m-0 p-0">Organic Farming Trainer</p>
+                        <p >Telangana</p>
+                    </div>
+                </div>
+            <button class="btn-close text-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="px-5 py-2">
+                <a href=""><p>Signup</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href=""><p>Login</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="index.html"><p>Home</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Essentials</p></summary>
+                    <a href="essentials.html"><button>Seeds & Plants</button></a>
+                    <a href="fertilizers.html"><button>Fertilizers</button></a>
+                    <a href="irrigation.html"><button>Irrigation</button></a>
+                    <a href="machinery.html"><button>Machinery</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Techniques</p></summary>
+                    <a href="organic.html"><button>Organic Farming</button></a>
+                    <a href="hydroponics.html"><button>Hydroponics</button></a>
+                    <a href="aquaponics.html"><button>Aquaponic </button></a>
+                    <a href="vertical.html"><button>Vertical Farming</button></a>
+                    <a href="traditional.html"><button>Traditional Farming</button></a>
+                    <a href="smartfarming.html"><button>Smart Farming</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <a href="article.html"><p>Articles</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="forum.html"><p>Farmers Forum</p></a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvas for menubar ended-->
+
+    <!--banner section starts-->
+    <div class="farm_bg justify-content-center">
+        <div class="row text-light m-0 p-0 text-center">
+            <div class="col-lg-5 p-4">
+                <h1 class="fw-bold pt-4 m-0 p-0">SMART FARMING</h1>
+                <p>The Future of Indian Agriculture</p>
+                <div class="px-5 pt-3">
+                    <p class=" fst-italic">“Empowering farmers with innovation, precision, and intelligence.”</p>
+                    <p>AGRIVERSE brings together technology, science, and sustainability to help farmers grow smarter.
+                        From IoT-based irrigation systems to AI-powered crop monitoring, we’re transforming how farming is planned, managed, and optimized — one field at a time.</p>
+                    <h5>“From soil to cloud: digital solutions for real-world results.”</h5>
+                    
+                    
+                    <div class=" pt-4 px-4 text-center">
+                        <a href="" ><button class="btn btn-primary rounded-5 p-2 px-4">Get Started with AGRIVERSE Tech</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 m-0 p-0">
+                <div class="p-5" style="width: 100%; height: 80vh;">
+                    <img src="Assets/Techniques/smart_banner_img.jpg" alt="" class="w-100 h-100">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--banner section ended-->
+   <!--introduction section starts-->
+   <div style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+    <div class="container text-bg-light">
+        <div class="row m-0 p-0">
+                <div class="col-lg-6 col-sm-12 p-5">
+                    <h2>What is Smart Farming?</h2>
+                    <p>Smart farming (also known as precision agriculture) uses digital technologies and intelligent 
+                        systems to make farming more efficient, profitable, and sustainable.</p>
+                    <p>By combining real-time data, automated tools, and AI insights, farmers can monitor crops, manage resources, 
+                        and make better decisions to maximize yield and minimize waste.</p>
+                    <p>Data-driven farming for better decisions and higher productivity.</p>
+                    <p class="fst-italic">“Transforming farms into future-ready ecosystems.”</p>
+                </div>
+                <div class="col-lg-6 col-sm-12 p-5">
+                    <div style="width: 100%; height: 100%;">
+                        <img src="Assets/Techniques/smart_intro_img.jpg" alt="" class="w-100 h-100">
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-center">Benefits of Smart Farming</h2>
+            <div class="row p-4 text-center">
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                    <h5>Higher Productivity</h5>
+                    <p>🌾 Real-time decisions boost crop yields.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Water Efficiency</h5>
+                        <p>💧 Smart irrigation cuts water usage by up to 40%.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Sustainability</h5>
+                    <p>🌎 Reduced fertilizer and pesticide dependency.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Cost Reduction</h5>
+                    <p>💰 Data-driven operations minimize waste.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Data Insights</h5>
+                    <p>📈 Every decision backed by analytics.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Precision Farming</h5>
+                    <p>🧠 Right crop, right time, right method.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--introduction section ended-->
+    
+    <!--principles secton starts-->
+    <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <h2 class="text-center p-5 m-0">Core Technologies in Smart Farming</h2>
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="p-3 text-center">
+                        <div class="principle pb-5 pt-3 rounded-3">
+                            <div class="icons p-3">
+                                <div class="princi_icon pb-3">
+                                    <p><i class="bi bi-broadcast"></i></p>
+                                </div>
+                            </div>
+                            <h5>IoT Sensors</h5>
+                            <p>Measure soil moisture, temperature, and humidity to optimize watering schedules.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class=" p-3 text-center">
+                        <div class="principle pb-5 pt-3 p-3 rounded-3">
+                            <div class="icons p-3">
+                                <div class="princi_icon pb-3">
+                                    <p><i class="bi bi-diagram-3"></i></p>
+                                </div>
+                            </div>
+                            <h5>Drones</h5>
+                            <p>Capture high-resolution images for crop health and growth monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="p-3 text-center">
+                        <div class="principle pb-5 pt-3 p-3 rounded-3">
+                            <div class="icons p-3">
+                                <div class="princi_icon pb-3">
+                                    <p><i class="bi bi-robot"></i></p>
+                                </div>
+                            </div>
+                            <h5>Automation & Robotics</h5>
+                            <p>Robots for seeding, weeding, and also for harvesting to reduce labor time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="p-3 text-center">
+                        <div class="principle pb-5 pt-3 p-3 rounded-3">
+                            <div class="icons p-3">
+                                <div class="princi_icon pb-3">
+                                    <p><i class="bi bi-phone"></i></p>
+                                </div>
+                            </div>
+                            <h5>Mobile Apps</h5>
+                            <p>Track farm data, receive alerts, and we can manage fields remotely.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="p-3 text-center">
+                        <div class="principle pb-5 pt-3 p-3 rounded-3">
+                            <div class="icons p-3">
+                                <div class="princi_icon pb-3">
+                                    <p><i class="bi bi-cpu"></i></p>
+                                </div>
+                            </div>
+                            <h5>AI & Data Analytics</h5>
+                            <p>Predict crop diseases, forecast yields, and AI can guide fertilizer use.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="p-3 text-center">
+                        <div class="principle pb-5 pt-3 p-3 rounded-3">
+                            <div class="icons p-3">
+                                <div class="princi_icon pb-3">
+                                    <p><i class="bi bi-droplet-half"></i></p>
+                                </div>
+                            </div>
+                            <h5>Smart Irrigation</h5>
+                            <p>Automated water control based on sensor data to reduce water wastage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="dist/jquery-3.7.1.min.js"></script>
+        <script src="dist/owl.carousel.min.js"></script>
+
+        <script>
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1000:{
+                        items:4
+                    }
+                }
+            })
+        </script>
+    </div>
+    <!--principles secton starts-->
+
+    <!--getting started section starts-->
+    <div style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light text-center pb-3">
+            <div class="p-5">
+                <h2 class="fw-bold">How AGRIVERSE Empowers Smart Farming?</h2>
+               <p>AGRIVERSE provides a unified platform that connects farmers, agri-tech startups, and equipment providers.</p>
+            </div>
+            <p class="px-5">Our Smart Agri Tools integrate with your fields to offer:</p>
+            <div class="col-7 p-3 shadow mx-auto mb-3" style="background-color: rgba(144, 238, 144, 0.747);">
+                <div class="icons pb-3">
+                    <div class="princi_icon pb-3">
+                        <p>🌾</p>
+                    </div>
+                </div>
+                <p>Real-time soil and weather tracking.</p>
+            </div>
+            <div class="col-7 p-3 shadow mx-auto mb-3" style="background-color: rgba(144, 238, 144, 0.747);">
+                <div class="icons pb-3">
+                    <div class="princi_icon pb-3">
+                        <p>🌾</p>
+                    </div>
+                </div>
+                <p>Real-time soil and weather tracking</p>
+            </div>
+            <div class="col-7 p-3 shadow mx-auto mb-3" style="background-color: rgba(144, 238, 144, 0.747);">
+                <div class="icons pb-3">
+                    <div class="princi_icon pb-3">
+                        <p>💧</p>
+                    </div>
+                </div>
+                <p>Automated irrigation scheduling</p>
+            </div>
+            <div class="col-7 p-3 shadow mx-auto mb-3" style="background-color: rgba(144, 238, 144, 0.747);">
+                <div class="icons pb-3">
+                    <div class="princi_icon pb-3">
+                        <p><i class="bi bi-cpu"></i></p>
+                    </div>
+                </div>
+                <p>AI-based pest and disease detection</p>
+            </div>
+            <div class="col-7 p-3 shadow mx-auto mb-3" style="background-color: rgba(144, 238, 144, 0.747);">
+                <div class="icons pb-3">
+                    <div class="princi_icon pb-3">
+                        <p>🛰️</p>
+                    </div>
+                </div>
+                <p>Satellite crop monitoring</p>
+            </div>
+            <div class="col-7 p-3 shadow mx-auto mb-3" style="background-color: rgba(144, 238, 144, 0.747);">
+                <div class="icons pb-3">
+                    <div class="princi_icon pb-3">
+                        <p>📊</p>
+                    </div>
+                </div>
+                <p>Farm data analytics dashboard</p>
+            </div>
+            
+        </div>
+    </div>
+    <!--getting started section ended-->
+
+    <!--success stories section starts-->
+    <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <div class="text-center fw-bold pt-4">
+                <h2>Success Stories</h2>
+                <p>Farmers Who Thrived with Smart Farming</p>
+            </div>
+            <div class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg-6 ">
+                                <div class="text-bg-light p-4 review">
+                                    <h3><strong>Youth-Led Innovation</strong></h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-4">  
+                                            <p>After installing IoT soil moisture sensors and using AGRIVERSE’s Smart Irrigation System, Satish reduced water waste by 40% and fertilizer costs by 25%. 
+                                                His cotton and maize fields are now monitored via mobile app, giving him full control even when he’s away from the farm.</p>
+                                        </div>
+                                        <div class="col-lg-6 p-4">
+                                            <div class="farmer1">
+                                            </div>
+                                            <div class="text-center pt-2">
+                                                <h6>– Satish Kumar, Telangana</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-bg-light p-4 review">
+                                    <h3><strong>Drone Insights Save Time and Crops</strong></h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-4 ">  
+                                            <p>By using AGRIVERSE drone mapping and NDVI imaging, she identified early-stage infections across her 12-acre field. 
+                                                This early intervention saved nearly ₹1.2 lakh in potential losses and improved yield by 18%.</p>
+                                        </div>
+                                        <div class="col-lg-6 p-4">
+                                            <div class="farmer2">
+                                            </div>
+                                            <div class="text-center pt-2">
+                                                <h6>– Priya Deshmukh, Maharashtra</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="carousel-item ">    
+                        <div class="row">
+                            <div class="col-lg-6 ">
+                                <div class="text-bg-light p-4 review">
+                                    <h3><strong>Data-Driven Decisions Boost Profit</strong></h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-4">  
+                                            <p>He adopted AI-based crop analytics and automated weather prediction tools from AGRIVERSE. 
+                                                Within a single season, his pesticide use dropped by 30%, while yield improved by 22%.The AGRIVERSE app now sends him personalized alerts 
+                                                about humidity, rainfall, and disease risks.</p>
+                                        </div>
+                                        <div class="col-lg-6 p-4">
+                                            <div class="farmer3">
+                                            </div>
+                                            <div class="text-center pt-2">
+                                                <h6>– Rajveer Singh, Punjab</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-bg-light p-4 review">
+                                    <h3><strong>Grow Smarter with AGRIVERSE</strong></h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-4 ">  
+                                            <p>Switching to Smart Drip Automation through AGRIVERSE helped her reduce water usage by 50% and 
+                                                boost her tomato yield by 35%. She now controls irrigation via smartphone and tracks crop moisture levels in real-time.</p>
+                                        </div>
+                                        <div class="col-lg-6 p-4">
+                                            <div class="farmer4">
+                                            </div>
+                                            <div class="text-center pt-2">
+                                                <h6>– Nirmala Devi, Tamil Nadu</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center p-5">
+                <h2 class="fw-bold">Join the Future of Farming</h2>
+                <p>Become a Smart Farmer Today</p>
+                <p class="pb-3">Join India’s next wave of tech-enabled farmers.Get your fields connected, your data analyzed, 
+                    and your yields optimized — all through AGRIVERSE.</p>
+                <button class="btn btn-primary p-3 px-5 rounded-5">Start Smart Farming</button>
+                <button class="btn btn-primary p-3 px-5 rounded-5">Join AGRIVERSE Community</button>
+            </div>
+        </div>
+    </div>
+    <!--success stories section ended-->
+
+    <!--footer section starts-->
+    <footer>
+        <div class="p-5">
+            <div class="footer_div1 row pb-3 text-center ">
+                <div class="ft_div_1 col-lg-3">
+                    <div class="logo_div p-3">
+                        <div>
+                        <a href="index.html" class="navbar-brand"><img src="Assets/logo-removebg-preview.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p>Your one-stop platform for seeds, plants, fertilizers, machinery, and all farming needs. 
+                        Empowering farmers with products, knowledge, and support for a better tomorrow.</p>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 ">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Quick Links</h5>
+                        
+                        <a href=""><p>Home</p></a>
+                        <a href=""><p>About Us</p></a>
+                        <a href=""><p>Agri Essentials</p></a>
+                        <a href=""><p>Agri Techniques</p></a>
+                        <a href=""><p>Agri Services</p></a>
+                        <a href=""><p>Agri Gyaan</p></a>
+                        <a href=""><p>Farmer Forum</p></a>
+                        <a href=""><p>Agri Articles</p></a>
+                        <a href=""><p>Get Support</p></a>
+                        
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2">
+                    <div>
+                        <div>
+                            <h5 class="text-decoration-underline pb-3">Products & Solutions</h5>
+                            <p>Seeds & Plants</p>
+                            <p>Fertilizers</p>
+                            <p>Machinery & Tools</p>
+                            <p>Irrigation Solutions</p>
+                            <p>Farming Ways</p>
+                            <p>Animal Husbandry Essentials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2"> 
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Knowledge Hub</h5>
+                        <p>Articles & Guides</p>
+                        <p>Announcements & Updates</p>
+                        <p>Success Stories</p>
+                        <p>Farming Methods</p>
+                        <p>Best Practices</p>
+                        <p>Market Updates & Insights</p>
+                        <p>Farmer Training & Workshops</p>
+                        <p>Govt Schemes Guidance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-start p-5 pt-0">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Get Support</h5>
+                        <div>
+                            <p><i class="bi bi-telephone"></i>  <a href="">1800-555-6666</a></p>
+                            <p><i class="bi bi-whatsapp"></i>   <a href="">+91-8666555444</a></p>
+                            <p><i class="bi bi-envelope"></i>   <a href="">Email: support@agriverse.com</a></p>
+                            <p><i class="bi bi-alarm"></i>  24/7 availability</p>
+                            <p><i class="bi bi-chat"></i>   <a href="">Chat with Us</a></p>
+                            <p><i class="bi bi-google-play"></i>    <a href="">Download App</a></p>
+                            <p>🌾 <a href=""> Ask Forum</a></p>
+                            <p><i class="bi bi-geo-alt"></i>    <a href="">Nearest Agriverse center</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="footer_div1 row p-5 pt-0 m-0 p-0">
+                <div class="col-lg-4">
+                    <h5>Follow Us:</h5>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-youtube"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <h5>Download App</h5>
+                        <div class="icons">
+                            <a href="" class="p-3"><i class="bi bi-google-play"></i></a>
+                            <a href="" class="p-3"><i class="bi bi-apple"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <div>
+                            <p>Enter your email to get free farming tips & market updates.</p>
+                            <div class="row">
+                                <div class="col-lg-8 justify-content-end">
+                                    <div >
+                                        <input type="email" placeholder="Enter Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div >
+                                        <button class="btn btn-primary p-2 rounded-5">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="p-4 text-center">
+            <p>&copy;designed and developed by pulluri</p>
+            <a href="" ><div class="whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            </div></a>
+        </div>    
+    </footer>
+    <!--footer section ended-->
+
+
+</body>
+</html>

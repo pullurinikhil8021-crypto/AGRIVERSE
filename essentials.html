@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="essentials.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+</head>
+<body>
+    <header class="container-fluid ">
+        <nav class="navbar navbar-expand-lg mx-auto">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"><img src="Assets/logo-removebg-preview.png" alt="" class="w-100 h-100"></a>
+                </div>
+                <button class="navbar-toggler" data-bs-target="myNav" data-bs-toggle="collapse">
+                    <a href="#more" data-bs-toggle="offcanvas"><span class="navbar-toggler-icon"></span></a>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="myNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link" id="essentials">Essentials <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header1">
+                                <a href="essentials.html">Seeds & Plants</a>
+                                <a href="fertilizers.html">Fertilizers & Pesticides</a>
+                                <a href="irrigation.html">Irrigation</a>
+                                <a href="machinery.html">Machinery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="organic.html" class="nav-link" id="techniques">Techniques <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header2">
+                                <a href="organic.html">Organic Farming</a>
+                                <a href="hydroponics.html">Hydroponics</a>
+                                <a href="aquaponics.html">Aquaponic</a>
+                                <a href="vertical.html">Vertical Farming</a>
+                                <a href="traditional.html">Traditional Farming</a>
+                                <a href="smartfarming.html">Smart Farming</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="article.html" class="nav-link">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="forum.html" class="nav-link">Farmers Forum</a>
+                        </li>
+                        <li class="nav-item person_icon">
+                            <a href="" class="nav-link" id="person"><i class="bi bi-person-circle" style="font-size: 32px;"></i></a>
+                            <div class="dropdown" id="login">
+                                <a href="">Signup</a>
+                                <a href="">Login</a>
+                            </div>
+                        </li>
+                        <li class="nav-item menu_icon">
+                            <a href="#more" class="nav-link" data-bs-toggle="offcanvas"><i class="bi bi-list" style="font-size: 32px;"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!--script for essentials dropdown starts-->
+    <script>
+        $('#header1').hide();
+
+        $('#essentials').mouseover(() =>{
+            $('#header1').slideDown()
+        })
+        $('#header1').mouseover(() =>{
+            $('#header1').stop()
+        })
+
+        $('#essentials, #header1').mouseleave(() =>{
+            $('#header1').slideUp()
+        })
+        $('#header1').click(() =>{
+            $('#header1').slideUp()
+        })
+    </script>
+    <!--script for essentials dropdown ended-->
+
+    <!--script for techniques dropdown starts-->
+    <script>
+        $('#header2').hide();
+
+        $('#techniques').mouseover(() =>{
+            $('#header2').slideDown()
+        })
+        $('#header2').mouseover(() =>{
+            $('#header2').stop()
+        })
+        $('#techniques, #header2').mouseleave(() =>{
+            $('#header2').slideUp()
+        })
+        $('#header2').click(() =>{
+            $('#header2').slideUp()
+        })
+    </script>
+    <!--script for techniques dropdown ended-->
+
+    <!--script for login dropdown starts-->
+    <script>
+        $('#login').hide();
+
+        $('#person').mouseover(() =>{
+            $('#login').slideDown()
+        })
+        $('#login').mouseover(() =>{
+            $('#login').stop()
+        })
+        $('#person, #login').mouseleave(() =>{
+            $('#login').slideUp()
+        })
+        $('#login').click(() =>{
+            $('#login').slideUp()
+        })
+    </script>
+    <!--script for login dropdown ended-->
+
+    <!--offcanvas for menubar starts-->
+    <div class="offcanvas offcanvas-start" id="more" data-bs-backdrop="static">
+        <div class="offcanvas-header" style="border-bottom: 1px solid green;">
+            <div class="row p-2 pt-3" >
+                    <div class="col-5">
+                        <div class="profile_photo">
+                            <img src="Assets/Forum/profile_photo_img.jpg" alt="" class="w-100 h-100" style="border-radius: 60px;">
+                        </div>
+                    </div>
+                    <div class="col-7 p-3">
+                        <p class="fw-bold m-0 p-0">Dr. Kavita Deshmukh</p>
+                        <p class="m-0 p-0">Organic Farming Trainer</p>
+                        <p >Telangana</p>
+                    </div>
+                </div>
+            <button class="btn-close text-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="px-5 py-2">
+                <a href=""><p>Signup</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href=""><p>Login</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="index.html"><p>Home</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Essentials</p></summary>
+                    <a href="essentials.html"><button>Seeds & Plants</button></a>
+                    <a href="fertilizers.html"><button>Fertilizers</button></a>
+                    <a href="irrigation.html"><button>Irrigation</button></a>
+                    <a href="machinery.html"><button>Machinery</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Techniques</p></summary>
+                    <a href="organic.html"><button>Organic Farming</button></a>
+                    <a href="hydroponics.html"><button>Hydroponics</button></a>
+                    <a href="aquaponics.html"><button>Aquaponic </button></a>
+                    <a href="vertical.html"><button>Vertical Farming</button></a>
+                    <a href="traditional.html"><button>Traditional Farming</button></a>
+                    <a href="smartfarming.html"><button>Smart Farming</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <a href="article.html"><p>Articles</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="forum.html"><p>Farmers Forum</p></a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvas for menubar ended-->
+
+
+    <!--seeds and plants section starts-->
+    <div class="row p-3 m-0 p-0 seeds_plants" style="border-top: 1px solid aqua; ">
+        <div class="col-lg-2 text-start p-3 seeds_filter" style="border-right: 1px solid aqua;">
+            <p class="fw-bold">FILTERS</p>
+            <div class="p-2" style="border-bottom: 1px solid aqua; border-top: 1px solid aqua;" >
+                <p class="fw-bold">Brands</p>
+                <div><input type="radio"> <label for="radio">JK Agri Genetics</label></div>
+                <div><input type="radio"> <label for="radio">Kalash Seed</label></div>
+                <div><input type="radio"> <label for="radio">Krishak Bharati</label></div>
+                <div><input type="radio"> <label for="radio">Mangalam Seeds</label></div>
+                <div><input type="radio"> <label for="radio">Krishidhan Seeds</label></div>
+                <div><input type="radio"> <label for="radio">Advanta</label></div>
+                <div><input type="radio"> <label for="radio">Nirmal Seeds</label></div>
+                <div><input type="radio"> <label for="radio">Kaveri Seeds</label></div>
+            </div>
+            <div class="p-2" style=" border-bottom: 1px solid aqua;" >
+                <p class="fw-bold">Crop Type</p>
+                <div><input type="radio"> <label for="radio">Field Crops</label></div>
+                <div><input type="radio"> <label for="radio">Horticultural Crops</label></div>
+                <div><input type="radio"> <label for="radio">Industrial Crops</label></div>
+                <div><input type="radio"> <label for="radio">Fodder Crops</label></div>
+            </div>
+            <div class="p-2" style="border-bottom: 1px solid aqua;" >
+                <p class="fw-bold">Plant Type</p>
+                <div><input type="radio"> <label for="radio">Annuals</label></div>
+                <div><input type="radio"> <label for="radio">Perennials</label></div>
+                <div><input type="radio"> <label for="radio">Biennials</label></div>
+            </div>
+            <div class="p-2" style="border-bottom: 1px solid aqua;" >
+                <p class="fw-bold">Cultivation Method</p>
+                <div><input type="radio"> <label for="radio">Open Field Seeds</label></div>
+                <div><input type="radio"> <label for="radio">Greenhouse Seeds</label></div>
+                <div><input type="radio"> <label for="radio">Hydroponic Seeds</label></div>
+                <div><input type="radio"> <label for="radio">Organic Seeds</label></div>
+                <div><input type="radio"> <label for="radio">Microgreens Seeds</label></div>
+            </div>
+            <div class="p-2" style="border-bottom: 1px solid aqua;" >
+                <p class="fw-bold">Seed Type / Variety</p>
+                <div><input type="radio"> <label for="radio">Hybrid Seeds</label></div>
+                <div><input type="radio"> <label for="radio">Open Pollinated(OPV)</label></div>
+                <div><input type="radio"> <label for="radio">Bio-engineered Seeds</label></div>
+                <div><input type="radio"> <label for="radio">Heirloom Seeds</label></div>
+                <div><input type="radio"> <label for="radio">Tissue Culture Plants</label></div>
+            </div>
+            <div class="p-2" style="border-bottom: 1px solid aqua;" >
+                <p class="fw-bold">Seasonal</p>
+                <div><input type="radio"> <label for="radio">Kharif Crops</label></div>
+                <div><input type="radio"> <label for="radio">Rabi Crops</label></div>
+                <div><input type="radio"> <label for="radio">Zaid Crops</label></div>
+            </div>
+            <div class="p-2" style="border-bottom: 1px solid aqua;" >
+                <p class="fw-bold">Use / Purpose</p>
+                <div><input type="radio"> <label for="radio">Food Crops</label></div>
+                <div><input type="radio"> <label for="radio">Medicinal & Aromatic</label></div>
+                <div><input type="radio"> <label for="radio">Floriculture Seeds</label></div>
+                <div><input type="radio"> <label for="radio">Tree & Forestry Seeds</label></div>
+                <div><input type="radio"> <label for="radio">Herbal / Spice Seeds</label></div>
+            </div>
+
+        </div>
+        <div class="col-lg-10">
+            <div>
+                <div class="row py-3">
+                    <h2>Field Crops</h2>
+        <!--wheat seeds product section starts-->            
+                    <div class="col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/seeds_and_plants/wheat.jpg" alt="" class="w-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-0 m-0">Wheat</h5>
+                                <p class="fs-6 p-0 m-0">Agri Seeds & Plants</p>
+                                <p>Starts From  ₹ 800/-</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#wheat_seeds" data-bs-toggle="modal" class="card_btn"><button class="w-100" style="background-color: transparent; border: transparent;">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--wheat seeds modal section starts-->
+                    <div class="modal fade" id="wheat_seeds">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Product details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3" style="border-bottom: 1px solid gray;">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/seeds_and_plants/wheat.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <h5>Wheat Seeds 10kg by Agriverse</h5>
+
+                                            <div>
+                                                <p class="m-0 p-0"><span style="font-size: 30px; color: green;"> -20%</span> <span style="font-size: 36px;"> ₹640</span> <span style="font-size: 12px;">(₹64/1kg)</span>  </p>
+                                                <p class="m-0 text-decoration-line-through" style="font-size: 12px;">M.R.P:₹800 </p>
+                                                <p class="m-0" style="font-size: 12px;">Inclusive of all taxes</p>
+                                            </div>
+                                            <p style="color: green;">In stock</p>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Add to cart</button>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Buy Now</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-decoration-underline">About this item</h5>
+                                        <p>High Germination & Crop Yield – Specially selected seeds for successful farming.</p>
+
+                                        <p class="m-0">Brand - Agriverse pvt ltd</p>
+                                        <p>Type - Hybrid</p>
+                                        <p class="m-0">Net Quantity - 1.0 count</p>
+                                        <p class="m-0">Item Weight - 10 Kilograms</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--wheat seeds modal section ended-->
+        <!--wheat seeds product section ended-->            
+        
+        <!--paddy seeds product section starts-->            
+                    <div class="col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/seeds_and_plants/rice_img.jpg" alt="" class="w-100 h-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-0 m-0">Paddy seeds</h5>
+                                <p class="fs-6 p-0 m-0">Agri Seeds & Plants</p>
+                                <p>Starts From  ₹ 350/-</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#paddy_seeds" data-bs-toggle="modal" class="card_btn"><button class="w-100" style="background-color: transparent; border: transparent;">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--paddy seeds modal section starts-->
+                    <div class="modal fade" id="paddy_seeds">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Product details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3" style="border-bottom: 1px solid gray;">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/seeds_and_plants/rice_img.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <h5>Natural Paddy Seeds by Agriverse</h5>
+
+                                            <div>
+                                                <p class="m-0 p-0"><span style="font-size: 30px; color: green;"> -22%</span> <span style="font-size: 36px;"> ₹273</span> <span style="font-size: 12px;">(₹27.3/1kg)</span>  </p>
+                                                <p class="m-0 text-decoration-line-through" style="font-size: 12px;">M.R.P:₹350 </p>
+                                                <p class="m-0" style="font-size: 12px;">Inclusive of all taxes</p>
+                                            </div>
+                                            <p style="color: green;">In stock</p>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Add to cart</button>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Buy Now</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-decoration-underline">About this item</h5>
+                                        <p>High Germination & Crop Yield – Specially selected seeds for successful farming.</p>
+
+                                        <p class="m-0">Brand - Agriverse pvt ltd</p>
+                                        <p>Type - Natural</p>
+                                        <p class="m-0">Net Quantity - 1.0 count</p>
+                                        <p class="m-0">Item Weight - 10 Kilograms</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--paddy seeds modal section ended-->
+        <!--paddy seeds product section ended-->            
+
+        <!--Sunflower seeds product section starts-->            
+                    <div class="col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/seeds_and_plants/sunflower.jpg" alt="" class="w-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-0 m-0">Sunflower</h5>
+                                <p class="fs-6 p-0 m-0">Agri Seeds & Plants</p>
+                                <p>Starts From  ₹ 1800/-</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#sunflower_seeds" data-bs-toggle="modal" class="card_btn"><button class="w-100" style="background-color: transparent; border: transparent;">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Sunflower seeds modal section starts-->
+                    <div class="modal fade" id="sunflower_seeds">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Product details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3" style="border-bottom: 1px solid gray;">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/seeds_and_plants/rice_img.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <h5>Hybrid Sunflower Seeds by Agriverse</h5>
+
+                                            <div>
+                                                <p class="m-0 p-0"><span style="font-size: 28px; color: green;"> -25%</span> <span style="font-size: 32px;"> ₹1350</span> <span style="font-size: 12px;">(₹135/1kg)</span>  </p>
+                                                <p class="m-0 text-decoration-line-through" style="font-size: 12px;">M.R.P:₹1800 </p>
+                                                <p class="m-0" style="font-size: 12px;">Inclusive of all taxes</p>
+                                            </div>
+                                            <p style="color: green;">In stock</p>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Add to cart</button>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Buy Now</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-decoration-underline">About this item</h5>
+                                        <p>High Germination & Crop Yield – Specially selected seeds for successful farming.</p>
+
+                                        <p class="m-0">Brand - Agriverse pvt ltd</p>
+                                        <p>Type - Natural</p>
+                                        <p class="m-0">Net Quantity - 1.0 count</p>
+                                        <p class="m-0">Item Weight - 10 Kilograms</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--paddy seeds modal section ended-->
+        <!--Sunflower seeds product section ended-->            
+        <!--Chilli seeds product section starts-->            
+                    <div class="col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/seeds_and_plants/chilli.jpg" alt="" class="w-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-0 m-0">Chilli</h5>
+                                <p class="fs-6 p-0 m-0">Agri Seeds & Plants</p>
+                                <p>Starts From  ₹ 300/-</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#chilli_seeds" class="card_btn" data-bs-toggle="modal"><button class="w-100" style="background-color: transparent; border: transparent;">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--chilli seeds modal section starts-->
+                    <div class="modal fade" id="chilli_seeds">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Product details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3" style="border-bottom: 1px solid gray;">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/seeds_and_plants/chilli.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <h5>Hybrid Sunflower Seeds by Agriverse</h5>
+
+                                            <div>
+                                                <p class="m-0 p-0"><span style="font-size: 30px; color: green;"> -15%</span> <span style="font-size: 32px;"> ₹255</span> <span style="font-size: 12px;">(₹2.55/1g)</span>  </p>
+                                                <p class="m-0 text-decoration-line-through" style="font-size: 12px;">M.R.P:₹300 </p>
+                                                <p class="m-0" style="font-size: 12px;">Inclusive of all taxes</p>
+                                            </div>
+                                            <p style="color: green;">In stock</p>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Add to cart</button>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Buy Now</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-decoration-underline">About this item</h5>
+                                        <p>High Germination & Crop Yield – Specially selected seeds for successful farming.</p>
+
+                                        <p class="m-0">Brand - Agriverse pvt ltd</p>
+                                        <p>Type - Hybrid</p>
+                                        <p class="m-0">Net Quantity - 1.0 count</p>
+                                        <p class="m-0">Item Weight - 100 Grams</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--chilli seeds modal section ended-->
+        <!--Chilli seeds product section ended-->            
+                </div>    
+            </div>
+
+
+            <div>
+                <div class="row py-3">
+                    <h2 class="py-3">Vegetables</h2>
+        <!--Beans seeds product section starts-->
+        
+                    <div class="col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/seeds_and_plants/beans.jpg" alt="" class="w-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-0 m-0">Beans</h5>
+                                <p class="fs-6 p-0 m-0">Agri Seeds & Plants</p>
+                                <p>Starts From  ₹ 495/-</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#beans_seeds" class="card_btn" data-bs-toggle="modal"><button class="w-100" style="background-color: transparent; border: transparent;">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--beans seeds modal section starts-->
+                    <div class="modal fade" id="beans_seeds">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Product details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3" style="border-bottom: 1px solid gray;">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/seeds_and_plants/beans.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <h5>Hybrid Beans Seeds by Agriverse</h5>
+
+                                            <div>
+                                                <p class="m-0 p-0"><span style="font-size: 30px; color: green;"> -15%</span> <span style="font-size: 32px;"> ₹420.75</span> <span style="font-size: 12px;">(₹4.2/1g)</span>  </p>
+                                                <p class="m-0 text-decoration-line-through" style="font-size: 12px;">M.R.P:₹495 </p>
+                                                <p class="m-0" style="font-size: 12px;">Inclusive of all taxes</p>
+                                            </div>
+                                            <p style="color: green;">In stock</p>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Add to cart</button>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Buy Now</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-decoration-underline">About this item</h5>
+                                        <p>High Germination & Crop Yield – Specially selected seeds for successful farming.</p>
+
+                                        <p class="m-0">Brand - Agriverse pvt ltd</p>
+                                        <p>Type - Hybrid</p>
+                                        <p class="m-0">Net Quantity - 1.0 count</p>
+                                        <p class="m-0">Item Weight - 100 Grams</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--chilli seeds modal section ended-->
+        <!--Beans seeds product section ended-->
+
+        <!--Tamato seeds product section ended-->
+                    <div class="col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/seeds_and_plants/tamato.jpg" alt="" class="w-100 h-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-0 m-0">Tamato</h5>
+                                <p class="fs-6 p-0 m-0">Agri Seeds & Plants</p>
+                                <p>Starts From  ₹ 250/-</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#tamato_seeds" class="card_btn" data-bs-toggle="modal"><button class="w-100" style="background-color: transparent; border: transparent;">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Tamato seeds modal section starts-->
+                    <div class="modal fade" id="tamato_seeds">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Product details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3" style="border-bottom: 1px solid gray;">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/seeds_and_plants/tamato.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <h5>Tamato Seeds 100g by Agriverse</h5>
+
+                                            <div>
+                                                <p class="m-0 p-0"><span style="font-size: 30px; color: green;"> -25%</span> <span style="font-size: 36px;"> ₹108.75</span> <span style="font-size: 12px;">(₹1.08/1g)</span>  </p>
+                                                <p class="m-0 text-decoration-line-through" style="font-size: 12px;">M.R.P:₹145 </p>
+                                                <p class="m-0" style="font-size: 12px;">Inclusive of all taxes</p>
+                                            </div>
+                                            <p style="color: green;">In stock</p>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Add to cart</button>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Buy Now</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-decoration-underline">About this item</h5>
+                                        <p>High Germination & Crop Yield – Specially selected seeds for successful farming.</p>
+
+                                        <p class="m-0">Brand - Agriverse pvt ltd</p>
+                                        <p>Type - Hybrid</p>
+                                        <p class="m-0">Net Quantity - 1.0 count</p>
+                                        <p class="m-0">Item Weight - 100 Grams</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Tamato seeds modal section ended-->
+        <!--Tamato seeds product section ended-->
+        
+        <!--Cabbage seeds product section started-->
+                    <div class="col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/seeds_and_plants/cabbage.jpg" alt="" class="w-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-0 m-0">Cabbage</h5>
+                                <p class="fs-6 p-0 m-0">Agri Seeds & Plants</p>
+                                <p>Starts From  ₹ 150/-</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#cabbage_seeds" class="card_btn" data-bs-toggle="modal"><button class="w-100" style="background-color: transparent; border: transparent;">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Cabbage seeds modal section starts-->
+                    <div class="modal fade" id="cabbage_seeds">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Product details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3" style="border-bottom: 1px solid gray;">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/seeds_and_plants/cabbage.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <h5>Tamato Seeds 100g by Agriverse</h5>
+
+                                            <div>
+                                                <p class="m-0 p-0"><span style="font-size: 30px; color: green;"> -33%</span> <span style="font-size: 36px;"> ₹335</span> <span style="font-size: 12px;">(₹3.35/1g)</span>  </p>
+                                                <p class="m-0 text-decoration-line-through" style="font-size: 12px;">M.R.P:₹500 </p>
+                                                <p class="m-0" style="font-size: 12px;">Inclusive of all taxes</p>
+                                            </div>
+                                            <p style="color: green;">In stock</p>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Add to cart</button>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Buy Now</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-decoration-underline">About this item</h5>
+                                        <p>High Germination & Crop Yield – Specially selected seeds for successful farming.</p>
+
+                                        <p class="m-0">Brand - Agriverse pvt ltd</p>
+                                        <p>Type - Hybrid</p>
+                                        <p class="m-0">Net Quantity - 1.0 count</p>
+                                        <p class="m-0">Item Weight - 100 Grams</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Cabbage seeds modal section ended-->
+        <!--Cabbage seeds product section ended-->
+        <!--Broccoli seeds product section ended-->
+        
+                    <div class="col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/seeds_and_plants/brocoli.jpg" alt="" class="w-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-0 m-0">Broccoli</h5>
+                                <p class="fs-6 p-0 m-0">Agri Seeds & Plants</p>
+                                <p>Starts From  ₹ 250/-</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#broccoli_seeds" class="card_btn" data-bs-toggle="modal"><button class="w-100" style="background-color: transparent; border: transparent;">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Broccoli seeds modal section starts-->
+                    <div class="modal fade" id="broccoli_seeds">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Product details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3" style="border-bottom: 1px solid gray;">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/seeds_and_plants/brocoli.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <h5>Tamato Seeds 100g by Agriverse</h5>
+
+                                            <div>
+                                                <p class="m-0 p-0"><span style="font-size: 30px; color: green;"> -26%</span> <span style="font-size: 36px;"> ₹185</span> <span style="font-size: 12px;">(₹1.85/1g)</span>  </p>
+                                                <p class="m-0 text-decoration-line-through" style="font-size: 12px;">M.R.P:₹250 </p>
+                                                <p class="m-0" style="font-size: 12px;">Inclusive of all taxes</p>
+                                            </div>
+                                            <p style="color: green;">In stock</p>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Add to cart</button>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Buy Now</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-decoration-underline">About this item</h5>
+                                        <p>High Germination & Crop Yield – Specially selected seeds for successful farming.</p>
+
+                                        <p class="m-0">Brand - Agriverse pvt ltd</p>
+                                        <p>Type - Hybrid</p>
+                                        <p class="m-0">Net Quantity - 1.0 count</p>
+                                        <p class="m-0">Item Weight - 100 Grams</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Broccoli seeds modal section ended-->
+        <!--Broccoli seeds product section ended-->
+        
+                </div>  
+            </div>
+            <div>
+                <div class="row py-3">
+                    <h2 class="py-3">Fruits</h2>
+        <!--Strawberry seeds product section starts-->
+                    <div class="col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/seeds_and_plants/strawberry.jpg" alt="" class="w-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-0 m-0">Strawberry</h5>
+                                <p class="fs-6 p-0 m-0">Agri Seeds & Plants</p>
+                                <p>Starts From  ₹ 800/-</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#strawberry_seeds" class="card_btn" data-bs-toggle="modal"><button class="w-100" style="background-color: transparent; border: transparent;">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Strawberry seeds modal section starts-->
+                    <div class="modal fade" id="strawberry_seeds">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Product details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3" style="border-bottom: 1px solid gray;">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/seeds_and_plants/strawberry.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <h5>Tamato Seeds 10g by Agriverse</h5>
+
+                                            <div>
+                                                <p class="m-0 p-0"><span style="font-size: 30px; color: green;"> -26%</span> <span style="font-size: 36px;"> ₹592</span> <span style="font-size: 12px;">(₹59/1g)</span>  </p>
+                                                <p class="m-0 text-decoration-line-through" style="font-size: 12px;">M.R.P:₹800 </p>
+                                                <p class="m-0" style="font-size: 12px;">Inclusive of all taxes</p>
+                                            </div>
+                                            <p style="color: green;">In stock</p>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Add to cart</button>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Buy Now</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-decoration-underline">About this item</h5>
+                                        <p>High Germination & Crop Yield – Specially selected seeds for successful farming.</p>
+
+                                        <p class="m-0">Brand - Agriverse pvt ltd</p>
+                                        <p>Type - Hybrid</p>
+                                        <p class="m-0">Net Quantity - 1.0 count</p>
+                                        <p class="m-0">Item Weight - 10 Grams</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Strawberry seeds modal section ended-->
+        <!--Strawberry seeds product section ended-->
+        <!--Blackberry seeds product section starts-->
+                    <div class="col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/seeds_and_plants/blackberry.jpg" alt="" class="w-100 h-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-0 m-0">Blackberry</h5>
+                                <p class="fs-6 p-0 m-0">Agri Seeds & Plants</p>
+                                <p>Starts From  ₹ 1400/-</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#blackberry_seeds" class="card_btn" data-bs-toggle="modal"><button class="w-100" style="background-color: transparent; border: transparent;">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Blackberry seeds modal section starts-->
+                    <div class="modal fade" id="blackberry_seeds">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Product details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3" style="border-bottom: 1px solid gray;">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/seeds_and_plants/strawberry.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <h5>Tamato Seeds 10g by Agriverse</h5>
+
+                                            <div>
+                                                <p class="m-0 p-0"><span style="font-size: 30px; color: green;"> -22%</span> <span style="font-size: 36px;"> ₹1092</span> <span style="font-size: 12px;">(₹109/1g)</span>  </p>
+                                                <p class="m-0 text-decoration-line-through" style="font-size: 12px;">M.R.P:₹1400 </p>
+                                                <p class="m-0" style="font-size: 12px;">Inclusive of all taxes</p>
+                                            </div>
+                                            <p style="color: green;">In stock</p>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Add to cart</button>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Buy Now</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-decoration-underline">About this item</h5>
+                                        <p>High Germination & Crop Yield – Specially selected seeds for successful farming.</p>
+
+                                        <p class="m-0">Brand - Agriverse pvt ltd</p>
+                                        <p>Type - Hybrid</p>
+                                        <p class="m-0">Net Quantity - 1.0 count</p>
+                                        <p class="m-0">Item Weight - 10 Grams</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Blackberry seeds modal section ended-->
+        <!--Blackberry seeds product section ended-->
+        <!--Watermelon seeds product section starts-->
+                    <div class="col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/seeds_and_plants/watermelons.jpg" alt="" class="w-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-0 m-0">Watermelon</h5>
+                                <p class="fs-6 p-0 m-0">Agri Seeds & Plants</p>
+                                <p>Starts From  ₹ 600/-</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#watermelon_seeds" class="card_btn" data-bs-toggle="modal"><button class="w-100" style="background-color: transparent; border: transparent;">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Watermelon seeds modal section starts-->
+                    <div class="modal fade" id="watermelon_seeds">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Product details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3" style="border-bottom: 1px solid gray;">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/seeds_and_plants/strawberry.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <h5>Tamato Seeds 100g by Agriverse</h5>
+
+                                            <div>
+                                                <p class="m-0 p-0"><span style="font-size: 30px; color: green;"> -28%</span> <span style="font-size: 36px;"> ₹432</span> <span style="font-size: 12px;">(₹43/10g)</span>  </p>
+                                                <p class="m-0 text-decoration-line-through" style="font-size: 12px;">M.R.P:₹600 </p>
+                                                <p class="m-0" style="font-size: 12px;">Inclusive of all taxes</p>
+                                            </div>
+                                            <p style="color: green;">In stock</p>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Add to cart</button>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Buy Now</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-decoration-underline">About this item</h5>
+                                        <p>High Germination & Crop Yield – Specially selected seeds for successful farming.</p>
+
+                                        <p class="m-0">Brand - Agriverse pvt ltd</p>
+                                        <p>Type - Hybrid</p>
+                                        <p class="m-0">Net Quantity - 1.0 count</p>
+                                        <p class="m-0">Item Weight - 100 Grams</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Watermelon seeds modal section ended-->
+        <!--Watermelon seeds product section ended-->
+        <!--ElderBerry seeds product section starts-->
+        
+                    <div class="col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/seeds_and_plants/elderberry.jpg" alt="" class="w-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-0 m-0">ElderBerry</h5>
+                                <p class="fs-6 p-0 m-0">Agri Seeds & Plants</p>
+                                <p>Starts From  ₹ 600/-</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#elderBerry_seeds" class="card_btn" data-bs-toggle="modal"><button class="w-100" style="background-color: transparent; border: transparent;">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--ElderBerry seeds modal section starts-->
+                    <div class="modal fade" id="elderBerry_seeds">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Product details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3" style="border-bottom: 1px solid gray;">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/seeds_and_plants/strawberry.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <h5>Tamato Seeds 100g by Agriverse</h5>
+
+                                            <div>
+                                                <p class="m-0 p-0"><span style="font-size: 30px; color: green;"> -28%</span> <span style="font-size: 36px;"> ₹432</span> <span style="font-size: 12px;">(₹43/10g)</span>  </p>
+                                                <p class="m-0 text-decoration-line-through" style="font-size: 12px;">M.R.P:₹600 </p>
+                                                <p class="m-0" style="font-size: 12px;">Inclusive of all taxes</p>
+                                            </div>
+                                            <p style="color: green;">In stock</p>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Add to cart</button>
+                                            <button class="btn btn-primary p-2 px-3 rounded-3">Buy Now</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-decoration-underline">About this item</h5>
+                                        <p>High Germination & Crop Yield – Specially selected seeds for successful farming.</p>
+
+                                        <p class="m-0">Brand - Agriverse pvt ltd</p>
+                                        <p>Type - Hybrid</p>
+                                        <p class="m-0">Net Quantity - 1.0 count</p>
+                                        <p class="m-0">Item Weight - 100 Grams</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--ElderBerry seeds modal section ended-->
+        <!--ElderBerry seeds product section ended-->
+
+                </div>  
+            </div>
+            <div>
+                <div class="row py-3">
+                    <h2 class="py-3">Flowers</h2>
+                    <div class="col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/seeds_and_plants/bellflower.jpg" alt="" class="w-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-0 m-0">Bell Flower</h5>
+                                <p class="fs-6 p-0 m-0">Agri Seeds & Plants</p>
+                                <p>Starts From  ₹ 250/-</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="" class="card_btn"><button class="w-100" style="background-color: transparent; border: transparent;">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/seeds_and_plants/cynoglosm.jpg" alt="" class="w-100 h-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-0 m-0">Cynoglosom</h5>
+                                <p class="fs-6 p-0 m-0">Agri Seeds & Plants</p>
+                                <p>Starts From  ₹ 250/-</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="" class="card_btn"><button class="w-100" style="background-color: transparent; border: transparent;">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/seeds_and_plants/bachelors button.jpg" alt="" class="w-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-0 m-0">Bachelors Button</h5>
+                                <p class="fs-6 p-0 m-0">Agri Seeds & Plants</p>
+                                <p>Starts From  ₹ 250/-</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="" class="card_btn"><button class="w-100" style="background-color: transparent; border: transparent;">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="card">
+                            <img src="Assets/seeds_and_plants/ecualyptus.jpg" alt="" class="w-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-0 m-0">Eucalyptus</h5>
+                                <p class="fs-6 p-0 m-0">Agri Seeds & Plants</p>
+                                <p>Starts From  ₹ 250/-</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="" class="card_btn"><button class="w-100" style="background-color: transparent; border: transparent;">View Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <!--seeds and plants section ended-->
+
+    <!--modal for products starts-->
+    <div class="modal fade" id="seedproduct">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Product Details</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img src="Assets/seeds_and_plants/wheat.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="col-lg-6">
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal for products ended-->
+
+    <!--footer section starts-->
+    <footer>
+        <div class="p-5">
+            <div class="footer_div1 row pb-3 text-center ">
+                <div class="ft_div_1 col-lg-3 col-sm-3">
+                    <div class="logo_div p-3">
+                        <div class="p-0 m-0">
+                        <a href="index.html" class="navbar-brand"><img src="Assets/logo-removebg-preview.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p>Your one-stop platform for seeds, plants, fertilizers, machinery, and all farming needs. 
+                        Empowering farmers with products, knowledge, and support for a better tomorrow.</p>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 col-sm-2">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Quick Links</h5>
+                        
+                        <a href=""><p>Home</p></a>
+                        <a href=""><p>About Us</p></a>
+                        <a href=""><p>Essentials</p></a>
+                        <a href=""><p>Techniques</p></a>
+                        <a href=""><p>Services</p></a>
+                        <a href=""><p>Farmer Forum</p></a>
+                        <a href=""><p>Articles</p></a>
+                        <a href=""><p>Get Support</p></a>
+                        
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 col-sm-2">
+                    <div>
+                        <div>
+                            <h5 class="text-decoration-underline pb-3">Products & Solutions</h5>
+                            <p>Seeds & Plants</p>
+                            <p>Fertilizers</p>
+                            <p>Machinery & Tools</p>
+                            <p>Irrigation Solutions</p>
+                            <p>Farming Ways</p>
+                            <p>Animal Husbandry Essentials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 col-sm-2"> 
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Knowledge Hub</h5>
+                        <p>Articles & Guides</p>
+                        <p>Announcements & Updates</p>
+                        <p>Success Stories</p>
+                        <p>Farming Methods</p>
+                        <p>Best Practices</p>
+                        <p>Market Updates & Insights</p>
+                        <p>Farmer Training & Workshops</p>
+                        <p>Govt Schemes Guidance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-3 text-start p-5 pt-0">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Get Support</h5>
+                        <div>
+                            <p><i class="bi bi-telephone"></i>  <a href="">1800-555-6666</a></p>
+                            <p><i class="bi bi-whatsapp"></i>   <a href="">+91-8666555444</a></p>
+                            <p><i class="bi bi-envelope"></i>   <a href="">Email: support@agriverse.com</a></p>
+                            <p><i class="bi bi-alarm"></i>  24/7 availability</p>
+                            <p><i class="bi bi-chat"></i>   <a href="">Chat with Us</a></p>
+                            <p><i class="bi bi-google-play"></i>    <a href="">Download App</a></p>
+                            <p>🌾 <a href=""> Ask Forum</a></p>
+                            <p><i class="bi bi-geo-alt"></i>    <a href="">Nearest Agriverse center</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="footer_div1 row p-5 pt-0 m-0 p-0">
+                <div class="col-lg-4">
+                    <h5>Follow Us:</h5>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-youtube"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <h5>Download App</h5>
+                        <div class="icons">
+                            <a href="" class="p-3"><i class="bi bi-google-play"></i></a>
+                            <a href="" class="p-3"><i class="bi bi-apple"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <div>
+                            <p>Enter your email to get free farming tips & market updates.</p>
+                            <div class="row">
+                                <div class="col-lg-8 justify-content-end mb-3">
+                                    <div >
+                                        <input type="email" placeholder="Enter Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div >
+                                        <button class="btn btn-primary p-2 rounded-5">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="p-4 text-center">
+            <p>&copy;designed and developed by Pulluri Govardhan</p>
+            <a href="" ><div class="whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            </div></a>
+        </div>    
+    </footer>
+    <!--footer section ended-->
+
+    
+</body>
+</html>

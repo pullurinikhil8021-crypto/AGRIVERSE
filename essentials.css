@@ -1,0 +1,213 @@
+/*seeds page*/
+@media(max-width:600px){
+    .seeds_filter{
+    display: none;
+}
+
+}
+ .card{
+    box-shadow: 0 5px 15px lightblue;
+}
+ .card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 128, 0, 0.877);
+}
+
+/* FERTILIZERS PAGE*/
+.background_img{
+    width: 100%; height: 85vh;
+    background-image: url(Assets/fertilizers/background_blur.jpg); object-fit: fill;
+    background-repeat: no-repeat; background-size: cover; background-position: center;
+}
+.ferti_banner1{
+    
+    background-image: url(Assets/fertilizers/fertilizer_banner_img.jpg); object-fit: fill;
+    background-repeat: no-repeat; background-size: cover; background-position: center;
+}
+.ferti_banner2{
+    height: 77vh;
+    background-image: url(Assets/fertilizers/pesticides_banner_img1.jpg); object-fit: fill;
+    background-repeat: no-repeat; background-size: cover; background-position: center;
+
+}
+
+.banner_img{
+    width: 100%;
+    height: 100%;
+}
+@media(max-width:600px){
+    .background_img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.ferti_card, .guide{
+    box-shadow: 0 5px 15px lightblue;
+}
+.ferti_card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 128, 0, 0.877);
+}
+.guidelines .guide:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(6, 107, 6, 0.781);
+}
+ /* RENTAL PAGE*/
+.rental_banner{
+    width: 100%; height: 85vh;
+    background-image: linear-gradient(to bottom,  rgba(100, 136, 184, 0.322), rgba(3, 122, 3, 0.384)), url(Assets/Machinary/rental_banner_img.jpg);
+    object-fit: fill; background-repeat: no-repeat; background-size: cover; background-position: bottom;
+    animation-name: bgZoom;
+    animation-duration: 30s; animation-iteration-count: infinite; animation-direction: alternate;
+}
+@keyframes bgZoom{
+    0%{
+        background-size: 100%;
+    }
+    100%{
+        background-size: 150%;
+    }
+}
+.rental_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.benefits_div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; align-items: center;
+}
+@media(max-width:600px)
+{
+    .benefits_div{
+        flex-direction: column;
+        padding: 10px;
+    }
+
+}.benefits1, .benefits2, .benefits3, .benefits4, .benefits5{
+    width: 200px; height: 220px;
+    background-color: rgb(196, 216, 216);
+    border-radius: 60px 0px 60px 0px;  
+}
+.benefits1{
+    box-shadow: 20px -20px 1px rgb(78, 78, 206);
+}
+.benefits2{
+    box-shadow: 20px -20px 1px rgb(44, 156, 95);
+}
+.benefits3{
+    box-shadow: 20px -20px 1px rgb(215, 226, 63);
+}
+.benefits4{
+    box-shadow: 20px -20px 1px rgb(240, 96, 12);
+}
+.benefits5{
+    box-shadow: 20px -20px 1px rgb(42, 159, 238);
+}
+.safety1{
+    background-color: #836a3b;
+}
+.safety_div1, .safety_div2, .safety_div3, .safety_div4{
+    border-radius: 0px 50px 50px 0px;
+    font-size: 54px;
+}
+.safety_div1{
+    background-color: #6b5325;
+}
+.safety2{
+    background-color: #5b921c;
+}
+.safety_div2{
+    background-color: #3c6e03;
+}
+.safety3{
+    background-color: #544aaf;
+}
+.safety_div3{
+    background-color: #2c2280;
+}
+.safety4{
+    background-color: #c77c36;
+}
+.safety_div4{
+    background-color: #ac611b;
+}
+.rental_bg_img{
+    background-image: url(Assets/Machinary/farmer_with_money_img.jpg); background-repeat: no-repeat; 
+    background-size: cover; background-position: center;
+    height: 400px; width: 100%;
+}
+.join_agri{
+    width: 100%; height: 400px; padding: 0%; margin: 0%;
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.432), rgba(0, 0, 6, 0.37) ), url(Assets/Machinary/rental_cta_banner_img.jpg);
+    background-repeat: no-repeat; background-size: cover; background-position: center;
+}
+@media(max-width:600px) {
+    .join_agri{
+        height: 700px;
+        padding: 0%;
+    }
+    .table thead{
+        display: none;
+    }
+    .table, .table tbody, .table tr, .table td{
+        display: block;
+        width: 100%;
+    }
+    .table tr{
+        margin-bottom: 15px;
+    }
+    .table tbody tr td{
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+
+    }
+    .table td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        text-align: left;
+        font-weight: 700;
+    }
+
+}
+@media(max-width:768px) {
+    .join_agri{
+        height: 600px;
+        padding: 0%;
+    }
+    
+}
+.abt_rentals .rental:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px green;
+}
+
+
+/* IRRIGATIN PAGE*/
+
+.irri_banner{
+    width: 100%; height: 85vh;
+    background-image:linear-gradient(to bottom, rgba(65, 136, 65, 0.473), rgba(85, 85, 192, 0.466)), url(Assets/irrigation/irrigation_banner_img.jpg);
+    background-repeat: no-repeat; background-size: cover; background-position: center;
+}
+.protext_icons i{
+    font-size: 30px; color: green;
+}
+.steps_box, .rental{
+    box-shadow: 0 5px 15px lightblue;
+}
+.steps_box:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px green;
+}
+
+@media(max-width:600px){
+    .irri_banner2{
+        display: none;
+}
+}

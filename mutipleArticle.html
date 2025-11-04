@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="articles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        h2{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+   
+<body>
+    <header class="container-fluid ">
+        <nav class="navbar navbar-expand-lg mx-auto">
+            <div class="container  ">
+                <div class="logo">
+                    <a href="index.html"><img src="Assets/logo-removebg-preview.png" alt="" class="w-100 h-100"></a>
+                </div>
+                <button class="navbar-toggler" data-bs-target="myNav" data-bs-toggle="collapse">
+                    <a href="#more" data-bs-toggle="offcanvas"><span class="navbar-toggler-icon"></span></a>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="myNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link" id="essentials">Essentials <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header1">
+                                <a href="essentials.html">Seeds & Plants</a>
+                                <a href="fertilizers.html">Fertilizers & Pesticides</a>
+                                <a href="irrigation.html">Irrigation</a>
+                                <a href="machinery.html">Machinery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="organic.html" class="nav-link" id="techniques">Techniques <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header2">
+                                <a href="organic.html">Organic Farming</a>
+                                <a href="hydroponics.html">Hydroponics</a>
+                                <a href="aquaponics.html">Aquaponic</a>
+                                <a href="vertical.html">Vertical Farming</a>
+                                <a href="traditional.html">Traditional Farming</a>
+                                <a href="smartfarming.html">Smart Farming</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="article.html" class="nav-link">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="forum.html" class="nav-link">Farmers Forum</a>
+                        </li>
+                        <li class="nav-item person_icon" >
+                            <a href="" class="nav-link" id="person"><i class="bi bi-person-circle" style="font-size: 32px;"></i></a>
+                            <div class="dropdown" id="login">
+                                <a href="">Signup</a>
+                                <a href="">Login</a>
+                            </div>
+                        </li>
+                        <li class="nav-item menu_icon">
+                            <a href="#more" class="nav-link" data-bs-toggle="offcanvas"><i class="bi bi-list" style="font-size: 32px;"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!--script for essentials dropdown starts-->
+    <script>
+        $('#header1').hide();
+
+        $('#essentials').mouseover(() =>{
+            $('#header1').slideDown()
+        })
+        $('#header1').mouseover(() =>{
+            $('#header1').stop()
+        })
+
+        $('#essentials, #header1').mouseleave(() =>{
+            $('#header1').slideUp()
+        })
+        $('#header1').click(() =>{
+            $('#header1').slideUp()
+        })
+    </script>
+    <!--script for essentials dropdown ended-->
+
+    <!--script for techniques dropdown starts-->
+    <script>
+        $('#header2').hide();
+
+        $('#techniques').mouseover(() =>{
+            $('#header2').slideDown()
+        })
+        $('#header2').mouseover(() =>{
+            $('#header2').stop()
+        })
+        $('#techniques, #header2').mouseleave(() =>{
+            $('#header2').slideUp()
+        })
+        $('#header2').click(() =>{
+            $('#header2').slideUp()
+        })
+    </script>
+    <!--script for techniques dropdown ended-->
+
+    <!--script for login dropdown starts-->
+    <script>
+        $('#login').hide();
+
+        $('#person').mouseover(() =>{
+            $('#login').slideDown()
+        })
+        $('#login').mouseover(() =>{
+            $('#login').stop()
+        })
+        $('#person, #login').mouseleave(() =>{
+            $('#login').slideUp()
+        })
+        $('#login').click(() =>{
+            $('#login').slideUp()
+        })
+    </script>
+    <!--script for login dropdown ended-->
+
+    <!--offcanvas for menubar starts-->
+    <div class="offcanvas offcanvas-start" id="more" data-bs-backdrop="static">
+        <div class="offcanvas-header" style="border-bottom: 1px solid green;">
+            <div class="row p-2 pt-3" >
+                    <div class="col-5">
+                        <div class="profile_photo">
+                            <img src="Assets/Forum/profile_photo_img.jpg" alt="" class="w-100 h-100" style="border-radius: 60px;">
+                        </div>
+                    </div>
+                    <div class="col-7 p-3">
+                        <p class="fw-bold m-0 p-0">Dr. Kavita Deshmukh</p>
+                        <p class="m-0 p-0">Organic Farming Trainer</p>
+                        <p >Telangana</p>
+                    </div>
+                </div>
+            <button class="btn-close text-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="px-5 py-2">
+                <a href=""><p>Signup</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href=""><p>Login</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="index.html"><p>Home</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Essentials</p></summary>
+                    <a href="essentials.html"><button>Seeds & Plants</button></a>
+                    <a href="fertilizers.html"><button>Fertilizers</button></a>
+                    <a href="irrigation.html"><button>Irrigation</button></a>
+                    <a href="machinery.html"><button>Machinery</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Techniques</p></summary>
+                    <a href="organic.html"><button>Organic Farming</button></a>
+                    <a href="hydroponics.html"><button>Hydroponics</button></a>
+                    <a href="aquaponics.html"><button>Aquaponic </button></a>
+                    <a href="vertical.html"><button>Vertical Farming</button></a>
+                    <a href="traditional.html"><button>Traditional Farming</button></a>
+                    <a href="smartfarming.html"><button>Smart Farming</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <a href="article.html"><p>Articles</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="forum.html"><p>Farmers Forum</p></a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvas for menubar ended-->
+
+    <!--vegetables prices article page starts-->
+    <div class="container text-bg-light p-5" id="vegetable_prices_article">
+        <h1 class="p-3" style="font-family: Georgia, 'Times New Roman', Times, serif;">Indians want more vegetables, this continues pushing inflation higher</h1>
+        <div class="row ">
+            <div class="col-lg-6 p-3">
+                <img src="Assets/articles/popular/vegetableprices_article_img.jpg" alt="" class="w-100">
+            </div>
+            <div class="col-lg-6 p-3">
+                <h3>The Reserve Bank of India and government officials may brush aside the seasonal bumps in vegetable 
+                    prices terming it 'transient'. Yet, structural issues mean that the instances of such spikes have only 
+                    increased in recent times, forcing the policymakers to focus on the short-term, analysts said on Monday.</h3>
+            </div>
+        </div>
+        <p>Higher incomes have meant that Indians now prefer higher consumption of non-cereal products like meat, pulses, 
+            fruits and vegetables. Demand in India for vegetables has been far outpacing the supply, data shows.
+        </p>
+        <p>Seasonal spike in vegetable prices have become commonplace in recent years owing to a high volatility in production and prices 
+            supply-demand mismatches, research firm CRISIL said in a report. The most volatile component, vegetables form a 15.5 per cent 
+            weight in the food index, which is the highest after cereals and milk.
+        </p>
+        <p>
+            Every year, food inflation comes back to 'haunt' the Indian economy as the prices of oft-used vegetables like onions 
+            and tomatoes surge due to weather imbalances. Monsoon in 2023 was delayed in June followed by excess rain in July, a 
+            deficit in August and excess yet again September.
+
+        </p>
+        <p>
+            These imbalances sent the prices of tomatoes and onions through the top, triggering a rise in headline inflation and a pain point
+             for Indian households for whom these vegetables are staple.
+        </p>
+        <h2 class="pt-3" >Seedbed Preparation</h2>
+        <p>As per analysts at CRISIL, while vegetables inflation averaged 0 per cent during FY16-19, the number rose to 5.7 per cent between FY20-23.
+        </p>
+        <p>
+            Furthermore, the frequency of spikes in vegetables' prices has also increased. "In the past 100 months, CPI vegetable inflation was above its period average of 3.8 per cent in 49 months. It was above 7 per cent in 35 months, above 10 per cent in 30 months and above 20 per cent in 13 months," the report said.
+             Data points suggest volatility in vegetable inflation too has seen an increase in the last three financial years.
+        </p>
+        <h2 class="pt-3" >Structural problems</h2>
+        <p>
+            The nature of the production of vegetables makes it difficult to predict. "Vegetables are grown throughout the year, 
+            are more vulnerable to weather shocks and pest attacks, and have no price signalling mechanism (such as minimum support price)
+             or any assured offtake by the government. This is unlike cereals and pulses which are cultivated during two major 
+             cropping seasons and have more predictability regarding production and prices," CRISIL said.
+
+        </p>
+        <p>
+            Alongside, another big factor that leads to spike in vegetable prices is the demand-supply mismatch. This is despite India 
+            being the second biggest producer of vegetables in the world, second only to China. Vegetable production in India grew 2.5 
+            times between FY03-23. Yet, per capita vegetable production has risen less than 2 times, highlighting the gulf between demand and supply.
+        </p>
+        <p>
+            Even as vegetable acreage and producton have picked up in absolute terms, growth has slowed and yields have stagnated. Further, total losses on account of harvesting, packaging, transporting, storing and marketing 'significant and high', CRISIL says.
+        </p>
+        <p>
+            Vegetables like potatoes could've seen lesser losses, provided the nation had increased cold storage. "This underscores the importance of technological interventions and infrastructure improvements to mitigate losses. This could increase vegetable supply, reducing the shortfall with respect to demand, thus mitigating spikes in inflation," CRISIL said.
+        </p>
+        <p>
+            Sudden surges in vegetable prices not only has policy implications, it takes a toll on consumers, denting their purchasing power for discretionary items. "For farmers, the uncertainty on prices amid absence of price signalling affects production decisions. Production of vegetables can, as a result, fall prey to a cobweb pattern wherein prices in one cropping season guide sowing decisions in the following season," the report says.
+        </p>
+        <p>
+            Analysts suggest improving efficiency in vegetable production in India to spur profitability and reduce risks for growers. On the infrastructure side, improving efficiency in supply chains may reduce losses occuring in cold storage, transportation and marketing.
+        </p>
+
+    </div>
+    <!--vegetables prices article page ended-->
+    <!--footer section starts-->
+    <footer>
+        <div class="p-5">
+            <div class="footer_div1 row pb-3 text-center ">
+                <div class="ft_div_1 col-lg-3 col-sm-3">
+                    <div class="logo_div p-3">
+                        <div class="p-0 m-0">
+                        <a href="index.html" class="navbar-brand"><img src="Assets/logo-removebg-preview.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p>Your one-stop platform for seeds, plants, fertilizers, machinery, and all farming needs. 
+                        Empowering farmers with products, knowledge, and support for a better tomorrow.</p>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 col-sm-2">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Quick Links</h5>
+                        
+                        <a href=""><p>Home</p></a>
+                        <a href=""><p>About Us</p></a>
+                        <a href=""><p>Essentials</p></a>
+                        <a href=""><p>Techniques</p></a>
+                        <a href=""><p>Services</p></a>
+                        <a href=""><p>Farmer Forum</p></a>
+                        <a href=""><p>Articles</p></a>
+                        <a href=""><p>Get Support</p></a>
+                        
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 col-sm-2">
+                    <div>
+                        <div>
+                            <h5 class="text-decoration-underline pb-3">Products & Solutions</h5>
+                            <p>Seeds & Plants</p>
+                            <p>Fertilizers</p>
+                            <p>Machinery & Tools</p>
+                            <p>Irrigation Solutions</p>
+                            <p>Farming Ways</p>
+                            <p>Animal Husbandry Essentials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 col-sm-2"> 
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Knowledge Hub</h5>
+                        <p>Articles & Guides</p>
+                        <p>Announcements & Updates</p>
+                        <p>Success Stories</p>
+                        <p>Farming Methods</p>
+                        <p>Best Practices</p>
+                        <p>Market Updates & Insights</p>
+                        <p>Farmer Training & Workshops</p>
+                        <p>Govt Schemes Guidance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-3 text-start p-5 pt-0">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Get Support</h5>
+                        <div>
+                            <p><i class="bi bi-telephone"></i>  <a href="">1800-555-6666</a></p>
+                            <p><i class="bi bi-whatsapp"></i>   <a href="">+91-8666555444</a></p>
+                            <p><i class="bi bi-envelope"></i>   <a href="">Email: support@agriverse.com</a></p>
+                            <p><i class="bi bi-alarm"></i>  24/7 availability</p>
+                            <p><i class="bi bi-chat"></i>   <a href="">Chat with Us</a></p>
+                            <p><i class="bi bi-google-play"></i>    <a href="">Download App</a></p>
+                            <p>🌾 <a href=""> Ask Forum</a></p>
+                            <p><i class="bi bi-geo-alt"></i>    <a href="">Nearest Agriverse center</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="footer_div1 row p-5 pt-0 m-0 p-0">
+                <div class="col-lg-4">
+                    <h5>Follow Us:</h5>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-youtube"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <h5>Download App</h5>
+                        <div class="icons">
+                            <a href="" class="p-3"><i class="bi bi-google-play"></i></a>
+                            <a href="" class="p-3"><i class="bi bi-apple"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <div>
+                            <p>Enter your email to get free farming tips & market updates.</p>
+                            <div class="row">
+                                <div class="col-lg-8 justify-content-end mb-3">
+                                    <div >
+                                        <input type="email" placeholder="Enter Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div >
+                                        <button class="btn btn-primary p-2 rounded-5">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="p-4 text-center">
+            <p>&copy;designed and developed by Pulluri Govardhan</p>
+            <a href="" ><div class="whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            </div></a>
+        </div>    
+    </footer>
+    <!--footer section ended-->
+
+</body>
+</html>

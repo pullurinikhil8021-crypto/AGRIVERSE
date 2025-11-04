@@ -1,0 +1,421 @@
+header{
+    background-color: lightblue;
+    position: sticky; top: 0%; z-index: 99;
+    
+}
+.offcanvas a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo{
+    width: 20%;
+}
+.nav-link{
+    padding: 10px 20px !important;
+}
+.nav-item{
+    font-size: 18px;
+    padding: 10px 0px;
+}
+.person_icon, .menu_icon{
+    padding-top: 0%;
+}
+
+.dropdown {
+    position: absolute;
+    top: 60px;  
+    background-color: rgb(104, 143, 104);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    overflow: hidden;
+    min-width: 160px;
+    z-index: 10;
+}
+
+.dropdown a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: 1000s;
+}
+.profile_photo{
+    width: 120px;
+    height: 120px; 
+    border-radius: 60px ;
+    border-bottom: 5px solid blue; border-right: 5px solid blue ; border-top:5px solid blue ; border-left:5px solid green ;
+}
+.offcanvas{
+    background-image: linear-gradient(to bottom, rgb(0,0, 17), rgb(16, 90, 16));
+    color: white;
+}
+.offcanvas-header button{
+    background-color: lightgreen; color: white;
+}
+.offcanvas-body button{
+    width: 100%;
+    background-color: transparent; color: white; border: none; 
+    padding: 10px;
+}
+.nav-link{
+    height: 100%;
+}
+.home_banner{
+    height: 85vh;
+    background-image: url(Assets/articles/mainpage_banner_img.jpg);
+    background-repeat: no-repeat; background-size: cover; background-size: cover; object-fit: fill;
+}
+.home_banner_text{
+    display: flex;
+    justify-content: start; align-items: center;
+}
+.title_text{
+    padding-left: 120px;
+}
+.home_banner h1::after{
+    content: 'Universe';
+    font-size: 36px; color: gold;
+    font-family: myFont;
+    animation-name: words;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    margin: 0%; padding: 0%;
+    text-align: end;
+}
+
+@keyframes words {
+    0%{
+        content: 'Ecosystem';
+    }
+    10%{
+        content: 'Marketplace';
+    }
+    20%{
+        content: 'Community';  
+    }
+    30%{
+        content: 'Network';  
+    }
+    40%{
+        content: 'Platform'; 
+    }
+    50%{
+        content: 'Smart';
+    }
+    60%{
+        content: 'Innovative';
+    }
+    70%{
+        content: 'Cultivate';
+    }
+    80%{
+        content: 'Revolution';
+    }
+    90%{
+        content: 'Efficient';
+    }
+    100%{
+        content: 'Empowering';
+    }
+}
+@font-face {
+    font-family: myFont;
+    src: url(Karina.ttf);
+}
+@media(max-width:600px){
+    .home_banner{
+        width: 100%;
+        height: 100% ;
+        padding-top: 0px !important;
+    }
+    .home_banner h1{
+        font-size: 32px;
+        padding: 0;
+    }
+    .home_title{
+        padding: 0;
+    }
+    .home_banner_text{
+    display: flex;
+    justify-content: center; align-items: center;
+}
+    .aboutus img{
+        width: 80%;
+        
+    }
+    .review{
+        height: 600px;
+    }
+    .farmer1, .farmer2, .farmer3, .farmer4{
+       height: 200px; 
+    }
+    .forums{
+        display: none;
+    }
+    .trust_text{
+        padding: 10px; 
+}
+    .trust_text h5{
+        font-size: 20px;
+    }
+    .trust_text h2{
+        font-size: 32px;
+    }
+    .trust1, .trust2{
+    width: 100%; height: 100%;
+    text-align: center;
+   
+    }
+    .trust_text h2{
+        font-size: 42px;
+    }
+     .logo_div{
+        width: 100px;
+        height: 40px;
+        padding: 0%;
+    }
+    .logo_div img{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media(max-media:1200px){
+    .home_banner_text{
+    display: flex;
+    justify-content: center; align-items: center;
+}
+.home_banner{
+        width: 100%;
+        height: 100% ;
+        padding-top: 0px !important;
+    }
+}
+
+.about{
+    padding: 10px;
+    background-color: rgb(215, 221, 221);
+}
+.aboutus{
+    background-color: #d6d5cf;
+}
+
+.categories img{
+    border-radius: 10px;
+}
+.category{
+    background-color: aliceblue;
+}
+.farm_img_1{
+    background-image: url(Assets/organic-farming.jpg); padding: 120px 50px 20px 50px!important;
+    background-repeat: no-repeat; background-size: cover; background-position: center; border-radius: 10px;
+}
+.farm_img_2{
+    background-image: url(Assets/hydroponic-farming.jpg); padding: 120px 50px 20px 50px!important;
+    background-repeat: no-repeat; background-size: cover; background-position: center; border-radius: 10px;
+}
+.farm_img_3{
+    background-image: url(Assets/aquaponics-farming.jpg); padding: 120px 50px 20px 50px!important;
+    background-repeat: no-repeat; background-size: cover; background-position: center; border-radius: 10px;
+}
+.farm_img_4{
+    background-image: url(Assets/vertical-farming.jpg); padding: 120px 50px 20px 50px!important;
+    background-repeat: no-repeat; background-size: cover; background-position: center; border-radius: 10px;
+}
+.farm_img_5{
+    background-image: url(Assets/traditional-farming.jpg); padding: 120px 50px 20px 50px!important;
+    background-repeat: no-repeat; background-size: cover; background-position: center; border-radius: 10px;
+}
+.farm_img_6{
+    background-image: url(Assets/smart-farming.jpg); padding: 120px 50px 20px 50px!important;
+    background-repeat: no-repeat; background-size: cover; background-position: center; border-radius: 10px;
+}
+.service1{
+    background-color: rgb(250, 252, 252);
+    height: 500px;
+}
+.service2{
+    background-color: rgb(250, 252, 252);
+    height: 500px;
+}
+.service3{
+    background-color: rgb(250, 252, 252);
+    height: 500px;
+}
+.service_img1{
+    height: 200px;
+}
+.service_img1 img{
+    width: 100%;
+    height: 100%;
+}
+.article_home_card{
+    height: 500px;
+}
+@media(max-width:768px){
+    .service_img1 img{
+    width: 100%;
+    height: 100%;
+}
+}
+.services button{
+    width: 100%; height: 30px;
+    background-color: purple; color: white; border-radius: 10px;
+}
+.services button:hover{
+    transform: scaleX(1.05);
+}
+
+.articles_btn1{
+    padding: 0px;
+}
+.articles_btn2{
+     padding-top: 22px;
+}
+.articles_btn3{
+    padding-top: 22px;
+}
+.article_btn a button{
+    width: 100%; height: 30px;
+    background-color: purple; color: white; border-radius: 10px;
+}
+.article_guides .card{
+    box-shadow: 0 5px 15px lightblue;
+}
+.article_guides .card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px green;
+}
+
+.review{
+    height: 400px;
+}
+.farmer1{
+    background-image: url(Assets/stories_farmer1-img.jpg); background-position: left; background-repeat: no-repeat; background-size: cover;
+    width: 80%;
+    height: 80%;
+    border-radius: 30px 0px 10px 60px;
+}
+.farmer2{
+    background-image: url(Assets/stories_women_farmer_img.jpg); background-position: right; background-repeat: no-repeat; background-size: cover;
+    width: 80%;
+    height: 80%;
+    border-radius: 30px 0px 10px 60px;
+}
+.farmer3{
+    background-image: url(Assets/stories_farmer4_img.jpg); background-position: left; background-repeat: no-repeat; background-size: cover;
+    width: 80%;
+    height: 80%;
+    border-radius: 30px 0px 10px 60px;
+}
+.farmer4{
+    background-image: url(Assets/women_stories_farmer_img2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;
+    width: 80%;
+    height: 80%;
+    border-radius: 30px 0px 10px 60px;
+}
+
+.forums{
+    border-right: 1px solid black;
+}
+.forums a button{
+    width: 80%;
+    height: 40px;
+    background-color: purple; color: #f5f5f5;
+    border-radius: 10px;
+}
+.forum a button{
+    width: 80%;
+    height: 40px;
+    background-color: purple; color: #f5f5f5;
+    border-radius: 10px;
+}
+.trust1{
+    background-image: url(Assets/stories_farmers_group_img.jpg);
+}
+.trust2{
+    background-image: url(Assets/farmer_queries_img.jpg);
+}
+.trust1, .trust2{
+    width: 100%; height: 420px;
+    background-repeat: no-repeat; 
+    background-size: cover;  background-position: center;
+}
+.trust_text{
+    display: flex; padding: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.trust_text h5{
+    font-size: 34px;
+}
+.trust_text h2{
+    font-size: 88px;
+}
+.contact, .stories{
+    background-color: #b6b4a9;
+}
+.farmerforum, .services{
+    background-color: #b8b396;
+}
+.forum_btn{
+    padding-top: 50px !important;
+}
+.categories{
+    background-color: aqua;
+}
+.logo_div{
+    width: 200px;
+    height: 80px;
+}
+
+.logo_div img{
+    width: 100%; height: 100%;
+}
+footer{
+    background-color: #41403f; color: #f5f5f5;
+}
+.footer_div1{
+    border-bottom: 2px solid rgb(92, 99, 99);
+}
+.icons{
+    font-size: 30px;
+}
+.icons a{
+    padding: 5px;
+}
+.subscribe button{
+    background-color: purple; color: white;
+}
+.ft_div_1{
+    border-right: 1px solid rgb(92, 99, 99);
+}
+.farm_img_1:hover{
+    transform: scale(1.15);
+}
+.farm_img_2:hover{
+    transform: scale(1.15);
+}
+.farm_img_3:hover{
+    transform: scale(1.15);
+}
+.farm_img_4:hover{
+    transform: scale(1.15);
+}
+.farm_img_5:hover{
+    transform: scale(1.15);
+}
+.farm_img_6:hover{
+    transform: scale(1.15);
+}
+.whatsapp{
+    width: 48px; height: 48px;
+    background-color: #25D366; border: none;
+    font-size: 34px; color: white;
+    position: fixed;
+    bottom: 30px; right: 30px;
+    z-index: 100;
+}

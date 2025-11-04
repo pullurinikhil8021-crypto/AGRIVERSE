@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="essentials.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+</head>
+<body>
+    <header class="container-fluid ">
+        <nav class="navbar navbar-expand-lg mx-auto">
+            <div class="container  ">
+                <div class="logo">
+                    <a href="index.html"><img src="Assets/logo-removebg-preview.png" alt="" class="w-100 h-100"></a>
+                </div>
+                <button class="navbar-toggler" data-bs-target="myNav" data-bs-toggle="collapse">
+                    <a href="#more" data-bs-toggle="offcanvas"><span class="navbar-toggler-icon"></span></a>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="myNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link" id="essentials">Essentials <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header1">
+                                <a href="essentials.html">Seeds & Plants</a>
+                                <a href="fertilizers.html">Fertilizers & Pesticides</a>
+                                <a href="irrigation.html">Irrigation</a>
+                                <a href="machinery.html">Machinery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="organic.html" class="nav-link" id="techniques">Techniques <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header2">
+                                <a href="organic.html">Organic Farming</a>
+                                <a href="hydroponics.html">Hydroponics</a>
+                                <a href="aquaponics.html">Aquaponic</a>
+                                <a href="vertical.html">Vertical Farming</a>
+                                <a href="traditional.html">Traditional Farming</a>
+                                <a href="smartfarming.html">Smart Farming</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="article.html" class="nav-link">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="forum.html" class="nav-link">Farmers Forum</a>
+                        </li>
+                        <li class="nav-item person_icon">
+                            <a href="" class="nav-link" id="person"><i class="bi bi-person-circle" style="font-size: 32px;"></i></a>
+                            <div class="dropdown" id="login">
+                                <a href="">Signup</a>
+                                <a href="">Login</a>
+                            </div>
+                        </li>
+                        <li class="nav-item menu_icon">
+                            <a href="#more" class="nav-link" data-bs-toggle="offcanvas"><i class="bi bi-list" style="font-size: 32px;"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!--script for essentials dropdown starts-->
+    <script>
+        $('#header1').hide();
+
+        $('#essentials').mouseover(() =>{
+            $('#header1').slideDown()
+        })
+        $('#header1').mouseover(() =>{
+            $('#header1').stop()
+        })
+
+        $('#essentials, #header1').mouseleave(() =>{
+            $('#header1').slideUp()
+        })
+        $('#header1').click(() =>{
+            $('#header1').slideUp()
+        })
+    </script>
+    <!--script for essentials dropdown ended-->
+
+    <!--script for techniques dropdown starts-->
+    <script>
+        $('#header2').hide();
+
+        $('#techniques').mouseover(() =>{
+            $('#header2').slideDown()
+        })
+        $('#header2').mouseover(() =>{
+            $('#header2').stop()
+        })
+        $('#techniques, #header2').mouseleave(() =>{
+            $('#header2').slideUp()
+        })
+        $('#header2').click(() =>{
+            $('#header2').slideUp()
+        })
+    </script>
+    <!--script for techniques dropdown ended-->
+
+    <!--script for login dropdown starts-->
+    <script>
+        $('#login').hide();
+
+        $('#person').mouseover(() =>{
+            $('#login').slideDown()
+        })
+        $('#login').mouseover(() =>{
+            $('#login').stop()
+        })
+        $('#person, #login').mouseleave(() =>{
+            $('#login').slideUp()
+        })
+        $('#login').click(() =>{
+            $('#login').slideUp()
+        })
+    </script>
+    <!--script for login dropdown ended-->
+
+    <!--offcanvas for menubar starts-->
+    <div class="offcanvas offcanvas-start" id="more" data-bs-backdrop="static">
+        <div class="offcanvas-header" style="border-bottom: 1px solid green;">
+            <div class="row p-2 pt-3" >
+                    <div class="col-5">
+                        <div class="profile_photo">
+                            <img src="Assets/Forum/profile_photo_img.jpg" alt="" class="w-100 h-100" style="border-radius: 60px;">
+                        </div>
+                    </div>
+                    <div class="col-7 p-3">
+                        <p class="fw-bold m-0 p-0">Dr. Kavita Deshmukh</p>
+                        <p class="m-0 p-0">Organic Farming Trainer</p>
+                        <p >Telangana</p>
+                    </div>
+                </div>
+            <button class="btn-close text-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="px-5 py-2">
+                <a href=""><p>Signup</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href=""><p>Login</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="index.html"><p>Home</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Essentials</p></summary>
+                    <a href="essentials.html"><button>Seeds & Plants</button></a>
+                    <a href="fertilizers.html"><button>Fertilizers</button></a>
+                    <a href="irrigation.html"><button>Irrigation</button></a>
+                    <a href="machinery.html"><button>Machinery</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Techniques</p></summary>
+                    <a href="organic.html"><button>Organic Farming</button></a>
+                    <a href="hydroponics.html"><button>Hydroponics</button></a>
+                    <a href="aquaponics.html"><button>Aquaponic </button></a>
+                    <a href="vertical.html"><button>Vertical Farming</button></a>
+                    <a href="traditional.html"><button>Traditional Farming</button></a>
+                    <a href="smartfarming.html"><button>Smart Farming</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <a href="article.html"><p>Articles</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="forum.html"><p>Farmers Forum</p></a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvas for menubar ended-->
+
+    <!--banner section starts-->
+    <div>
+        <div class="rental_banner">
+            <div class="p-5 text-light rental_text">
+                <div class="text-center">
+                    <h1 class="mb-5 " style="font-size: 50px;"><strong>AGRIVERSE</strong> Machinery & Tools Rental</h1>
+                    <p class="pt-3">From tractors to harvesters, <strong>AGRIVERSE</strong> connects you with verified rental partners for efficient, sustainable farming.</p>
+                    <p class="pb-4 pt-4">Farming shouldn’t be limited by access to costly machinery.</p>
+                    <p><strong>AGRIVERSE Machinery & Tools Rental</strong> bridges the gap by providing farmers with a wide range of 
+                        equipment on-demand, helping reduce costs while increasing productivity.</p>
+                    <p class="fst-italic pt-4">Whether it’s land preparation, irrigation, harvesting, or post-harvest processing — rent the right tools for every farming stage.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--banner section ended-->
+
+    <!--about rental section starts-->
+    <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <div class="text-center pt-5">
+                <h2 class="m-0">Modern Machines. Simple Rentals. Bigger Yields</h2>
+                <p>Access advanced farming machinery at affordable rates — anytime, anywhere</p>
+            </div>
+            <div class="p-5">
+                <div class="row abt_rentals">
+                    <div class="col-lg-6 px-5 mb-5">
+                        <div class="row rental p-3">
+                            <div class="col-lg-3">
+                                <div style="font-size: 54px;">
+                                    <i class="bi bi-cash-coin"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 ">
+                                <h5 class="fw-bold">Affordable Pricing</h5>
+                                <p>Pay only for the duration you need.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 px-5 mb-5">
+                        <div class="row rental p-3">
+                            <div class="col-lg-3">
+                                <div style="font-size: 54px;">
+                                    <i class="bi bi-car-front-fill"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 ">
+                                <h5 class="fw-bold">Verified Equipment</h5>
+                                <p>Regularly maintained, fully functional.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 px-5 mb-5">
+                        <div class="row rental p-3">
+                            <div class="col-lg-3">
+                                <div style="font-size: 54px;">
+                                    <i class="bi bi-truck"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 ">
+                                <h5 class="fw-bold">Doorstep Delivery</h5>
+                                <p>Fast delivery and pickup at your location.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 px-5 mb-5">
+                        <div class="row rental p-3">
+                            <div class="col-lg-3">
+                                <div style="font-size: 54px;">
+                                    <i class="bi bi-infinity"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 ">
+                                <h5 class="fw-bold">Flexible Terms</h5>
+                                <p>Hourly, daily, or seasonal rentals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about rental section ended-->
+
+    <!--Equipment categories starts-->
+    <div style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <div class=" pt-5 px-3">
+                <h2 class="fw-bold">Tractors & Power Tillers</h2>
+                <p>Essential for plowing, sowing, and cultivating large or small farms efficiently.</p>
+                <p class="fst-italic">Choose from top brands with high fuel efficiency and power options.</p>
+            </div>
+            <div class="row">
+        <!--Tractor rental product starts-->
+                <div class="col-lg-3 mb-3">
+                    <div class="card ferti_card">
+                        <img src="Assets/Machinary/tractor_equipment_img.jpg" alt="" style="width: 100%; height: 300px;">
+                        <div class="card-body">
+                            <h5 class="fw-bold p-3">Tractors</h5>
+                            <a href="#tractor_rent" data-bs-toggle="modal"><button class="btn btn-primary w-100">Rent Now</button></a>
+                        </div>
+                    </div>
+                </div>
+                <!--tractor rental modal section starts-->
+                    <div class="modal fade" id="tractor_rent">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Rental Details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/Machinary/tractor_equipment_img.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                           <h5>Jhon dheere Tractor 2020 model</h5>
+                                           <p class="m-0"><span style="font-size: 36px;">₹1200/-</span> per Day</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p class="m-0 pt-3">Pick-up date & time</p>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="m-0 pt-3">Drop-off date & time</p>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="pt-3 m-0" style="color: green;">In stock</p>
+                                        <button class="btn btn-primary p-2 px-3 rounded-3">Rent Now</button>
+                                    </div>
+                                    <div>
+                                        <p class="text-decoration-underline">Terms & conditions</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Minimum age is usually 24 years.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Valid driver's license is mandatory.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Inspect the vehicle before rental and document any existing damage.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Late return fees are common.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Return the vehicle in the same condition to avoid extra charges.</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!--tractor rental modal section ended-->
+        <!--Tractor rental product ended-->
+        <!--Plowing rental product starts-->
+                <div class="col-lg-3 mb-3">
+                    <div class="card ferti_card">
+                        <img src="Assets/Machinary/plowing_img.jpg" alt="" style="width: 100%; height: 300px;">
+                        <div class="card-body">
+                            <h5 class="fw-bold p-3">Plowing</h5>
+                            <a href="#plowing_rent" data-bs-toggle="modal"><button class="btn btn-primary w-100">Rent Now</button></a>
+                        </div>
+                    </div>
+                </div>
+                <!--Plowing rental modal section starts-->
+                    <div class="modal fade" id="plowing_rent">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Rental Details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/Machinary/plowing_img.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                           <h5>Plowing Tool of 10 Blades </h5>
+                                           <p class="m-0"><span style="font-size: 36px;">₹800/-</span> per Day</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p class="m-0 pt-3">Pick-up date & time</p>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="m-0 pt-3">Drop-off date & time</p>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="pt-3 m-0" style="color: green;">In stock</p>
+                                        <button class="btn btn-primary p-2 px-3 rounded-3">Rent Now</button>
+                                    </div>
+                                    <div>
+                                        <p class="text-decoration-underline">Terms & conditions</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Minimum age is usually 24 years.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Valid driver's license is mandatory.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Inspect the vehicle before rental and document any existing damage.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Late return fees are common.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Return the vehicle in the same condition to avoid extra charges.</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!--Plowing rental modal section ended-->
+        <!--Plowing rental product ended-->
+        <!--Sowing rental product start-->
+                <div class="col-lg-3 mb-3">
+                    <div class="card ferti_card">
+                        <img src="Assets/Machinary/sowing_img.jpg" alt="" style="width: 100%; height: 300px;">
+                        <div class="card-body">
+                            <h5 class="fw-bold p-3">Sowing</h5>
+                            <a href="#sowing_rent" data-bs-toggle="modal"><button class="btn btn-primary w-100">Rent Now</button></a>
+                        </div>
+                    </div>
+                </div>
+                <!--Sowing rental modal section starts-->
+                    <div class="modal fade" id="sowing_rent">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Rental Details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/Machinary/sowing_img.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                           <h5>Sowing Machine with new Technology</h5>
+                                           <p class="m-0"><span style="font-size: 36px;">₹2500/-</span> per Day</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p class="m-0 pt-3">Pick-up date & time</p>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="m-0 pt-3">Drop-off date & time</p>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="pt-3 m-0" style="color: green;">In stock</p>
+                                        <button class="btn btn-primary p-2 px-3 rounded-3">Rent Now</button>
+                                    </div>
+                                    <div>
+                                        <p class="text-decoration-underline">Terms & conditions</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Minimum age is usually 24 years.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Valid driver's license is mandatory.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Inspect the vehicle before rental and document any existing damage.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Late return fees are common.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Return the vehicle in the same condition to avoid extra charges.</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!--Sowing rental modal section ended-->
+        <!--Sowing rental product ended-->
+
+        <!--Harvestor rental product starts-->
+                <div class="col-lg-3 mb-3">
+                    <div class="card ferti_card">
+                        <img src="Assets/Machinary/harvestor_img.jpg" alt="" style="width: 100%; height: 300px;">
+                        <div class="card-body">
+                            <h5 class="fw-bold p-3">Harvestor</h5>
+                            <a href="#harvestor_rent" data-bs-toggle="modal"><button class="btn btn-primary w-100">Rent Now</button></a>
+                        </div>
+                    </div>
+                </div>
+                <!--Harvestor rental modal section starts-->
+                    <div class="modal fade" id="harvestor_rent">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Rental Details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/Machinary/harvestor_img.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                           <h5>Jhon dheere Harvestor of 2018 model  </h5>
+                                           <p class="m-0"><span style="font-size: 36px;">₹5000/-</span> per Day</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p class="m-0 pt-3">Pick-up date & time</p>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="m-0 pt-3">Drop-off date & time</p>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="pt-3 m-0" style="color: green;">In stock</p>
+                                        <button class="btn btn-primary p-2 px-3 rounded-3">Rent Now</button>
+                                    </div>
+                                    <div>
+                                        <p class="text-decoration-underline">Terms & conditions</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Minimum age is usually 24 years.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Valid driver's license is mandatory.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Inspect the vehicle before rental and document any existing damage.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Late return fees are common.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Return the vehicle in the same condition to avoid extra charges.</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!--Harvestor rental modal section ended-->
+        <!--Harvestor rental product ended-->
+
+            </div>
+            <div>
+                <div class=" pt-5 px-3">
+                <h2 class="fw-bold">Irrigation Systems</h2>
+                <p>Smart irrigation made simple.</p>
+                <p  class="fst-italic">Rent drip lines, sprinklers, and portable water pumps for efficient water usage.</p>
+                </div>
+                <div class="row">
+        <!--Drip rental product starts-->
+                    <div class="col-lg-3 mb-3">
+                        <div class="card ferti_card">
+                            <img src="Assets/Machinary/drip_lines_images.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-3">Drip Lines</h5>
+                                <a href="#drip_rent" data-bs-toggle="modal"><button class="btn btn-primary w-100">Rent Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Drip rental modal section starts-->
+                    <div class="modal fade" id="drip_rent">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Rental Details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/Machinary/harvestor_img.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                           <h5>Drip Lines for 3 acres</h5>
+                                           <p class="m-0"><span style="font-size: 36px;">₹30,000/-</span> for a year</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p class="m-0 pt-3">Pick-up date & time</p>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                       <div class="col-lg-6">
+                                            <p class="m-0 pt-3">Drop-off date & time</p>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="pt-3 m-0" style="color: green;">In stock</p>
+                                        <button class="btn btn-primary p-2 px-3 rounded-3">Rent Now</button>
+                                    </div>
+                                    <div>
+                                        <p class="text-decoration-underline">Terms & conditions</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Minimum age is usually 21 years.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Valid driver's license is not mandatory.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Inspect the product before rental and document any existing damage.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Late return fees are common.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Return the product in the same condition to avoid extra charges.</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!--Drip rental modal section ended-->
+        <!--Drip rental product ended-->
+        <!--Sprinklers rental product ended-->
+        
+                    <div class="col-lg-3 mb-3">
+                        <div class="card ferti_card">
+                            <img src="Assets/Machinary/sprinklers.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-3">Sprinklers</h5>
+                                <a href="#sprinklers_rent" data-bs-toggle="modal"><button class="btn btn-primary w-100">Rent Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Sprinklers rental modal section starts-->
+                    <div class="modal fade" id="sprinklers_rent">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Rental Details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/Machinary/sprinklers.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                           <h5>Drip Lines for 3 acres</h5>
+                                           <p class="m-0"><span style="font-size: 36px;">₹5,000/-</span> for a month</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p class="m-0 pt-3">Pick-up date & time</p>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                       <div class="col-lg-6">
+                                            <p class="m-0 pt-3">Drop-off date & time</p>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="pt-3 m-0" style="color: green;">In stock</p>
+                                        <button class="btn btn-primary p-2 px-3 rounded-3">Rent Now</button>
+                                    </div>
+                                    <div>
+                                        <p class="text-decoration-underline">Terms & conditions</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Minimum age is usually 21 years.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Valid driver's license is not mandatory.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Inspect the product before rental and document any existing damage.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Late return fees are common.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Return the product in the same condition to avoid extra charges.</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Sprinklers rental modal section ended-->
+        <!--Sprinklers rental product ended-->
+        <!--Pivot rental product ended-->
+                    <div class="col-lg-3 mb-3">
+                        <div class="card ferti_card">
+                            <img src="Assets/Machinary/center_pivot_img.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-3">Center Pivot</h5>
+                                <a href="#pivot_rent" data-bs-toggle="modal"><button class="btn btn-primary w-100">Rent Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Pivot rental modal section starts-->
+                    <div class="modal fade" id="pivot_rent">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Rental Details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/Machinary/center_pivot_img.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                           <h5>Center Pivot for 3 acres</h5>
+                                           <p class="m-0"><span style="font-size: 36px;">₹3,000/-</span> for a month</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p class="m-0 pt-3">Pick-up date & time</p>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                       <div class="col-lg-6">
+                                            <p class="m-0 pt-3">Drop-off date & time</p>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="pt-3 m-0" style="color: green;">In stock</p>
+                                        <button class="btn btn-primary p-2 px-3 rounded-3">Rent Now</button>
+                                    </div>
+                                    <div>
+                                        <p class="text-decoration-underline">Terms & conditions</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Minimum age is usually 21 years.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Valid driver's license is not mandatory.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Inspect the product before rental and document any existing damage.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Late return fees are common.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Return the product in the same condition to avoid extra charges.</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Pivot rental modal section ended-->
+        <!--Pivot rental product ended-->
+        <!--Sub rental product ended-->
+                    <div class="col-lg-3 mb-3">
+                        <div class="card ferti_card">
+                            <img src="Assets/Machinary/sub_surface_img.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-3">Sub-Surface</h5>
+                                <a href="#sub_rent" data-bs-toggle="modal"><button class="btn btn-primary w-100">Rent Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Sub rental modal section starts-->
+                    <div class="modal fade" id="sub_rent">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Rental Details</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body p-3" >
+                                    <div >
+                                    <div class="row pb-3">
+                                        <div class="col-lg-5">
+                                            <img src="Assets/Machinary/center_pivot_img.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="col-lg-7">
+                                           <h5>Sub-surface system for 3 acres</h5>
+                                           <p class="m-0"><span style="font-size: 36px;">₹22,000/-</span> for a year</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p class="m-0 pt-3">Pick-up date & time</p>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                       <div class="col-lg-6">
+                                            <p class="m-0 pt-3">Drop-off date & time</p>
+                                            <input type="datetime-local" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="pt-3 m-0" style="color: green;">In stock</p>
+                                        <button class="btn btn-primary p-2 px-3 rounded-3">Rent Now</button>
+                                    </div>
+                                    <div>
+                                        <p class="text-decoration-underline">Terms & conditions</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Minimum age is usually 21 years.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Valid driver's license is not mandatory.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Inspect the product before rental and document any existing damage.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Late return fees are common.</p>
+                                        <p class="m-0"><i class="bi bi-dot"></i> Return the product in the same condition to avoid extra charges.</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Sub rental modal section ended-->
+        <!--Sub rental product ended-->
+
+                </div>
+            </div>
+            <div>
+                <div class=" pt-5 px-3">
+                <h2 class="fw-bold">Soil Preparation Tools</h2>
+                <p>Prepare your land for maximum yield.</p>
+                <p class="fst-italic">Rent rotavators, cultivators, seed drills, and harrows.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 mb-3">
+                        <div class="card ferti_card">
+                            <img src="Assets/Machinary/cultivator_img.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-3">Cultivators</h5>
+                                <a href=""><button class="btn btn-primary w-100">Rent Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="card ferti_card">
+                            <img src="Assets/Machinary/disc_harrows_img.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-3"> Disc Harrows</h5>
+                                <a href=""><button class="btn btn-primary w-100">Rent Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="card ferti_card">
+                            <img src="Assets/Machinary/rotatary_tiller_img.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-3">Rotary Tillers</h5>
+                                <a href=""><button class="btn btn-primary w-100">Rent Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="card ferti_card">
+                            <img src="Assets/Machinary/roatvator_img.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-3">Rotavators</h5>
+                                <a href=""><button class="btn btn-primary w-100">Rent Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class=" pt-5 px-3">
+                    <h2 class="fw-bold">Sprayers & Dusters</h2>
+                    <p>Ensure even pesticide and fertilizer application.</p>
+                    <p class="fst-italic">Available in battery, manual, and tractor-mounted models.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 mb-3">
+                        <div class="card ferti_card">
+                            <img src="Assets/Machinary/drone_sprayers.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-3">Drone Sprayer</h5>
+                                <a href=""><button class="btn btn-primary w-100">Rent Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="card ferti_card">
+                            <img src="Assets/Machinary/3_point_sprayer_img.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-3">3-Point Sprayer</h5>
+                                <a href=""><button class="btn btn-primary w-100">Rent Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="card ferti_card">
+                            <img src="Assets/Machinary/ATV_sprayer_img.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-3 ">ATV Sprayer</h5>
+                                <a href=""><button class="btn btn-primary w-100">Rent Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="card ferti_card">
+                            <img src="Assets/Machinary/tractor_sprayer_img.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-3">Tractor Sprayer</h5>
+                                <a href=""><button class="btn btn-primary w-100">Rent Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <div>
+                <div class=" pt-5 px-3">
+                    <h2 class="fw-bold">Transport & Loading Equipment</h2>
+                    <p>Make movement easier across your farm.</p>
+                    <p class="fst-italic">From farm trolleys to loaders — transport made simple.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 mb-3">
+                        <div class="card ferti_card">
+                            <img src="Assets/Machinary/equipment_transport_.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-3">Transport Tools</h5>
+                                <a href=""><button class="btn btn-primary w-100">Rent Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="card ferti_card">
+                            <img src="Assets/Machinary/grain.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-3">Grain Transport</h5>
+                                <a href=""><button class="btn btn-primary w-100">Rent Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="card ferti_card">
+                            <img src="Assets/Machinary/tractor_trailer_img.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-3 ">Tractor Trailers</h5>
+                                <a href=""><button class="btn btn-primary w-100">Rent Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="card ferti_card">
+                            <img src="Assets/Machinary/container_truck_img.jpg" alt="" style="width: 100%; height: 250px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold p-3">Container Trucks</h5>
+                                <a href=""><button class="btn btn-primary w-100">Rent Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+    <!--Equipment categories ended-->
+
+    <!--farmer benefits section-->
+    <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light pb-3">
+            <div class="text-center p-5">
+                <h1 class="fw-bold">Farmer Benefits</h1>
+                <p>Empowering Farmers with Smart, Affordable Access</p>
+            </div>
+            <div class=" benefits_div mb-3">
+                <div class="px-5 mb-3">
+                    <div class="benefits1">
+                        <div class="px-3 pt-4">
+                            <div class="text-center">
+                                <p class="fs-3"><i class="bi bi-cash-coin"></i></p>
+                            </div>
+                            <h4 class="fw-bold">Save Money</h4>
+                            <Reduce>Rent instead of buying — Reduce upfront costs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-5 mb-3">
+                    <div class="benefits2">
+                        <div class="px-3 pt-4">
+                            <div class="text-center">
+                                <p class="fs-3"><i class="bi bi-alarm"></i></p>
+                            </div>
+                            <h4 class="fw-bold">Save Time</h4>
+                            <Reduce>Machines ready when you need them.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-5 mb-3">
+                    <div class="benefits3">
+                        <div class="px-3 pt-4">
+                            <div class="text-center">
+                                <p class="fs-3"><i class="bi bi-globe-central-south-asia"></i></p>
+                            </div>
+                            <h4 class="fw-bold">Access Anywhere</h4>
+                            <Reduce>Wide network of local rental partners.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" benefits_div pt-5">
+                <div class="px-5 mb-3">
+                    <div class="benefits4">
+                        <div class="px-3 pt-4">
+                            <div class="text-center">
+                                <p class="fs-3"><i class="bi bi-cash-coin"></i></p>
+                            </div>
+                            <h4 class="fw-bold">Flexible Rentals</h4>
+                            <Reduce>Rent instead of buying — Reduce upfront costs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-5 mb-3">
+                    <div class="benefits5">
+                        <div class="px-3 pt-4">
+                            <div class="text-center">
+                                <p class="fs-3"><i class="bi bi-cash-coin"></i></p>
+                            </div>
+                            <h4 class="fw-bold">Save Money</h4>
+                            <Reduce>Short-term or long-term — your choice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--farmer benefits ended-->
+
+    <!--safety assurance section starts-->
+    <div style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light pb-4">
+            <div class="text-center p-5">
+                <h2 class="fw-bold">Safety & Maintenance Assurance</h2>
+                <p>Your safety and satisfaction are our top priorities.</p>
+            </div>
+            <div class="safety1  col-7 shadow mx-auto text-light mb-3">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="h-100 safety_div1 text-center">
+                            <p><i class="bi bi-gear-wide-connected"></i></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 " style="display: flex; justify-content: center; align-items: center;">
+                        <p>All machines are inspected before and after every rental.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="safety2  col-7 shadow mx-auto text-light mb-3">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="h-100 safety_div2 text-center">
+                            <p><i class="bi bi-award"></i></i></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 " style="display: flex; justify-content: center; align-items: center;">
+                        <p>Only certified and trained operators provided for heavy equipment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="safety3  col-7 shadow mx-auto text-light mb-3">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="h-100 safety_div3 text-center">
+                            <p><i class="bi bi-brush"></i></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 " style="display: flex; justify-content: center; align-items: center;">
+                        <p>Sanitized and cleaned before each dispatch.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="safety4  col-7 shadow mx-auto text-light mb-3">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="h-100 safety_div4 text-center">
+                            <p><i class="bi bi-alarm"></i></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 " style="display: flex; justify-content: center; align-items: center;">
+                        <p>24/7 technical support for breakdowns or queries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--safety assurance section ended-->
+
+    <!--rental partner section starts -->
+    <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <div class="p-5 text-center">
+                <h2 class="fw-bold">Become a Rental Partner</h2>
+                <p>Earn More While Helping Farmers Grow</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <img src="Assets/Machinary/tractor_owner_img.jpg" alt="" class="object-fit-fill w-100" style="height: 400px;">
+                </div>
+                <div class="col-lg-6 p-0" >
+                    <div class="rental_bg_img w-100 text-light p-5 text-center">
+                        <div>
+                            <p class="p-2"><i class="bi bi-check-square"></i>   Earn Consistently</p>
+                            <p class="p-2"><i class="bi bi-check-square"></i>   Transparent Payments</p>
+                            <p class="p-2"><i class="bi bi-check-square"></i>   Trusted Network</p>
+                            <p class="p-2"><i class="bi bi-check-square"></i>   Maintenance Support</p>
+                            <p class="p-2"><i class="bi bi-check-square"></i>   Wider Reach</p>
+                            <p class="p-2"><i class="bi bi-check-square"></i>   Smart Alerts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-5 text-center">
+                <h4>It’s that simple — list once, earn for years.</h4>
+                <div class="row p-4">
+                    <div class="col-lg-3 shadow p-3 text-bg-primary">
+                        <h5>Register Equipment</h5>
+                    </div>
+                    <div class="col-lg-3 shadow p-3 text-bg-secondary">
+                        <h5>Verification</h5>
+                    </div>
+                    <div class="col-lg-3 shadow p-3 text-bg-warning">
+                        <h5>Receive Bookings</h5>
+                    </div>
+                    <div class="col-lg-3 shadow p-3 text-bg-success">
+                        <h5>Earn</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--rental partner section ended -->
+
+    <!--join agriverse section starts-->
+    <div style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <div class="join_agri text-center text-light p-0 m-0 w-100">
+                <h2 class="pt-5">Ready to Join the <strong>AGRIVERSE</strong> Partner Network?</h2>
+                <p>Your equipment works for you — even when you’re not using it.</p>
+                <p class="p-4">List your equipment today and unlock new income opportunities with complete transparency and support.</p>
+                <div class="row p-5">
+                    <div class="col-lg-4 mb-3">
+                        <a href=""><button class="btn btn-primary rounded-5 p-3 w-75">Register Now</button></a>
+                    </div>
+                    <div class="col-lg-4 mb-3">
+                        <a href=""><button class="btn btn-primary rounded-5 p-3 w-75">List Your Equipment</button></a>
+                    </div>
+                    <div class="col-lg-4 mb-3">
+                        <a href=""><button class="btn btn-primary rounded-5 p-3 w-75">Contact Our Team</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--join agriverse section ended-->
+
+    <!--FAQ section starts-->
+    <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <div class="p-4">
+                <h2 class="fw-bold">Your Partner Questions, Answered</h2>
+                <p>It’s clean, welcoming, and fits AGRIVERSE’s professional-yet-accessible tone.</p>
+            </div>
+            <div class="p-3 text-light mb-3" style="background-color: rgb(80, 79, 79);">
+                <details >
+                    <summary>Who can become a rental partner on AGRIVERSE?</summary>
+                    <p class="p-3">Anyone who owns agricultural machinery, tools, or equipment — from individual farmers to local dealers and 
+                        agri-service providers — can register and start renting through AGRIVERSE.</p>
+                </details>
+            </div>
+            <div class="p-3 text-light mb-3" style="background-color: rgb(80, 79, 79);">
+                <details >
+                    <summary>How does AGRIVERSE verify listed machines?</summary>
+                    <p class="p-3">Once you register, our team inspects your machinery for condition, functionality, 
+                        and safety compliance before approving your listing. Verified machines get the “AGRIVERSE Certified” badge.</p>
+                </details>
+            </div>
+            <div class="p-3 text-light mb-3" style="background-color: rgb(80, 79, 79);">
+                <details >
+                    <summary>What are the costs or commissions involved?</summary>
+                    <p class="p-3">There are no upfront fees. AGRIVERSE charges a small commission only after a successful rental, 
+                        ensuring full transparency and fair earnings.</p>
+                </details>
+            </div>
+            <div class="p-3 text-light mb-3" style="background-color: rgb(80, 79, 79);">
+                <details >
+                    <summary>How does AGRIVERSE verify listed machines?</summary>
+                    <p class="p-3">Once you register, our team inspects your machinery for condition, functionality, 
+                        and safety compliance before approving your listing. Verified machines get the “AGRIVERSE Certified” badge.</p>
+                </details>
+            </div>
+            <div class="p-3 text-light mb-3" style="background-color: rgb(80, 79, 79);">
+                <details>
+                    <summary>How do I receive payments?</summary>
+                    <p class="p-3">Payments are transferred securely to your registered bank account after each completed rental.
+                        You can also track transactions in your partner dashboard.</p>
+                </details>
+            </div>
+            <div class="p-3 text-light mb-3" style="background-color: rgb(80, 79, 79);">
+                <details>
+                    <summary>What happens if my machine gets damaged during a rental?</summary>
+                    <p class="p-3">AGRIVERSE provides coverage options and assists in resolving any damages 
+                        or disputes through our verified renter policy and support team.</p>
+                </details>
+            </div>
+            <div class="p-3 text-light mb-3" style="background-color: rgb(80, 79, 79);">
+                <details>
+                    <summary>Can I list multiple machines or tools?</summary>
+                    <p class="p-3">Absolutely! You can list as many verified machines as you own — each will have its own profile and rental schedule.</p>
+                </details>
+            </div>
+            <div class="p-3 bg-light">
+                
+            </div>
+        </div>
+    </div>
+    <!--FAQ sectiomn ended-->
+
+    <!--footer section starts-->
+    <footer>
+        <div class=" container-fluid p-5">
+            <div class="footer_div1 row pb-3 text-center ">
+                <div class="ft_div_1 col-lg-3">
+                    <div class="logo_div p-3">
+                        <div>
+                        <a href="index.html" class="navbar-brand"><img src="Assets/logo-removebg-preview.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p>Your one-stop platform for seeds, plants, fertilizers, machinery, and all farming needs. 
+                        Empowering farmers with products, knowledge, and support for a better tomorrow.</p>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 ">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Quick Links</h5>
+                        <nav>
+                        <a href=""><p>Home</p></a>
+                        <a href=""><p>About Us</p></a>
+                        <a href=""><p>Agri Essentials</p></a>
+                        <a href=""><p>Agri Techniques</p></a>
+                        <a href=""><p>Agri Services</p></a>
+                        <a href=""><p>Agri Gyaan</p></a>
+                        <a href=""><p>Farmer Forum</p></a>
+                        <a href=""><p>Agri Articles</p></a>
+                        <a href=""><p>Get Support</p></a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2">
+                    <div>
+                        <div>
+                            <h5 class="text-decoration-underline pb-3">Products & Solutions</h5>
+                            <p>Seeds & Plants</p>
+                            <p>Fertilizers</p>
+                            <p>Machinery & Tools</p>
+                            <p>Irrigation Solutions</p>
+                            <p>Farming Ways</p>
+                            <p>Animal Husbandry Essentials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2"> 
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Knowledge Hub</h5>
+                        <p>Articles & Guides</p>
+                        <p>Announcements & Updates</p>
+                        <p>Success Stories</p>
+                        <p>Farming Methods</p>
+                        <p>Best Practices</p>
+                        <p>Market Updates & Insights</p>
+                        <p>Farmer Training & Workshops</p>
+                        <p>Govt Schemes Guidance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-start p-5 pt-0">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Get Support</h5>
+                        <div>
+                            <p><i class="bi bi-telephone"></i>  <a href="">1800-555-6666</a></p>
+                            <p><i class="bi bi-whatsapp"></i>   <a href="">+91-8666555444</a></p>
+                            <p><i class="bi bi-envelope"></i>   <a href="">Email: support@agriverse.com</a></p>
+                            <p><i class="bi bi-alarm"></i>  <a href="">24/7 availability</a></p>
+                            <p><i class="bi bi-chat"></i>   <a href="">Chat with Us</a></p>
+                            <p><i class="bi bi-google-play"></i>    <a href="">Download App</a></p>
+                            <p>🌾 <a href=""> Ask Forum</a></p>
+                            <p><i class="bi bi-geo-alt"></i>    <a href="">Nearest Agriverse center</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="footer_div1 row p-5 pt-0 m-0 p-0">
+                <div class="col-lg-4">
+                    <h5>Follow Us:</h5>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-youtube"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <h5>Download App</h5>
+                        <div class="icons">
+                            <a href="" class="p-3"><i class="bi bi-google-play"></i></a>
+                            <a href="" class="p-3"><i class="bi bi-apple"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <div>
+                            <p>Enter your email to get free farming tips & market updates.</p>
+                            <div class="row">
+                                <div class="col-lg-8 justify-content-end">
+                                    <div >
+                                        <input type="email" placeholder="Enter Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div >
+                                        <button class="btn btn-primary p-2 rounded-5">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="p-4 text-center">
+            <p>&copy;designed and developed by Pulluri Govardhan</p>
+            <a href="" ><div class="whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            </div></a>
+        </div>    
+    </footer>
+    <!--footer section ended-->
+
+</body>
+</html>
+
+    
+
+
+
+
+
+
+

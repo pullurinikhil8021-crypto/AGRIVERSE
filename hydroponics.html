@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="techniques.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header class="container-fluid ">
+        <nav class="navbar navbar-expand-lg mx-auto">
+            <div class="container  ">
+                <div class="logo">
+                    <a href="index.html"><img src="Assets/logo-removebg-preview.png" alt="" class="w-100 h-100"></a>
+                </div>
+                <button class="navbar-toggler" data-bs-target="myNav" data-bs-toggle="collapse">
+                    <a href="#more" data-bs-toggle="offcanvas"><span class="navbar-toggler-icon"></span></a>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="myNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="essentials.html" class="nav-link" id="essentials">Essentials <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header1">
+                                <a href="essentials.html">Seeds & Plants</a>
+                                <a href="fertilizers.html">Fertilizers & Pesticides</a>
+                                <a href="irrigation.html">Irrigation</a>
+                                <a href="machinery.html">Machinery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="organic.html" class="nav-link" id="techniques">Techniques <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header2">
+                                <a href="organic.html">Organic Farming</a>
+                                <a href="hydroponics.html">Hydroponics</a>
+                                <a href="aquaponics.html">Aquaponic</a>
+                                <a href="vertical.html">Vertical Farming</a>
+                                <a href="traditional.html">Traditional Farming</a>
+                                <a href="smartfarming.html">Smart Farming</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="article.html" class="nav-link">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="forum.html" class="nav-link">Farmers Forum</a>
+                        </li>
+                        <li class="nav-item person_icon">
+                            <a href="" class="nav-link" id="person"><i class="bi bi-person-circle" style="font-size: 32px;"></i></a>
+                            <div class="dropdown" id="login">
+                                <a href="">Signup</a>
+                                <a href="">Login</a>
+                            </div>
+                        </li>
+                        <li class="nav-item menu_icon">
+                            <a href="#more" class="nav-link" data-bs-toggle="offcanvas"><i class="bi bi-list" style="font-size: 32px;"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!--script for essentials dropdown starts-->
+    <script>
+        $('#header1').hide();
+
+        $('#essentials').mouseover(() =>{
+            $('#header1').slideDown()
+        })
+        $('#header1').mouseover(() =>{
+            $('#header1').stop()
+        })
+
+        $('#essentials, #header1').mouseleave(() =>{
+            $('#header1').slideUp()
+        })
+        $('#header1').click(() =>{
+            $('#header1').slideUp()
+        })
+    </script>
+    <!--script for essentials dropdown ended-->
+
+    <!--script for techniques dropdown starts-->
+    <script>
+        $('#header2').hide();
+
+        $('#techniques').mouseover(() =>{
+            $('#header2').slideDown()
+        })
+        $('#header2').mouseover(() =>{
+            $('#header2').stop()
+        })
+        $('#techniques, #header2').mouseleave(() =>{
+            $('#header2').slideUp()
+        })
+        $('#header2').click(() =>{
+            $('#header2').slideUp()
+        })
+    </script>
+    <!--script for techniques dropdown ended-->
+
+    <!--script for login dropdown starts-->
+    <script>
+        $('#login').hide();
+
+        $('#person').mouseover(() =>{
+            $('#login').slideDown()
+        })
+        $('#login').mouseover(() =>{
+            $('#login').stop()
+        })
+        $('#person, #login').mouseleave(() =>{
+            $('#login').slideUp()
+        })
+        $('#login').click(() =>{
+            $('#login').slideUp()
+        })
+    </script>
+    <!--script for login dropdown ended-->
+
+    <!--offcanvas for menubar starts-->
+    <div class="offcanvas offcanvas-start" id="more" data-bs-backdrop="static">
+        <div class="offcanvas-header" style="border-bottom: 1px solid green;">
+            <div class="row p-2 pt-3" >
+                    <div class="col-5">
+                        <div class="profile_photo">
+                            <img src="Assets/Forum/profile_photo_img.jpg" alt="" class="w-100 h-100" style="border-radius: 60px;">
+                        </div>
+                    </div>
+                    <div class="col-7 p-3">
+                        <p class="fw-bold m-0 p-0">Dr. Kavita Deshmukh</p>
+                        <p class="m-0 p-0">Organic Farming Trainer</p>
+                        <p >Telangana</p>
+                    </div>
+                </div>
+            <button class="btn-close text-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="px-5 py-2">
+                <a href=""><p>Signup</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href=""><p>Login</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="index.html"><p>Home</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Essentials</p></summary>
+                    <a href="essentials.html"><button>Seeds & Plants</button></a>
+                    <a href="fertilizers.html"><button>Fertilizers</button></a>
+                    <a href="irrigation.html"><button>Irrigation</button></a>
+                    <a href="machinery.html"><button>Machinery</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Techniques</p></summary>
+                    <a href="organic.html"><button>Organic Farming</button></a>
+                    <a href="hydroponics.html"><button>Hydroponics</button></a>
+                    <a href="aquaponics.html"><button>Aquaponic </button></a>
+                    <a href="vertical.html"><button>Vertical Farming</button></a>
+                    <a href="traditional.html"><button>Traditional Farming</button></a>
+                    <a href="smartfarming.html"><button>Smart Farming</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <a href="article.html"><p>Articles</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="forum.html"><p>Farmers Forum</p></a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvas for menubar ended-->
+
+    <!--banner section starts-->
+    <div class="farm_bg justify-content-center">
+        <div class="row text-light m-0 p-0 text-center">
+            <div class="col-lg-5 col-sm-12 p-4">
+                <h1 class="fw-bold pt-4 m-0 p-0">Hydroponics Farming</h1>
+                <p>Revolutionizing the Way We Grow Food</p>
+                <div class="px-5 pt-3">
+                    <p class=" fst-italic">“Grow More with Less — Soil-Free, Stress-Free, and Sustainable.”</p>
+                    <p>Discover how hydroponic systems enable farmers to cultivate crops without soil — 
+                        using nutrient-rich water and advanced technology for maximum yield, minimal waste, and year-round productivity.</p>
+                    <h5>Cultivate anywhere — rooftops, balconies, or commercial greenhouses</h5>
+                    
+                    
+                    <div class=" pt-4 px-4 text-center">
+                        <a href="" ><button class="btn btn-primary rounded-5 p-2 px-4">Explore Hydroponics Methods</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-sm-12 m-0 p-0">
+                <div class="p-5" style="width: 100%; height: 80vh;">
+                    <img src="Assets/Techniques/hydroponics_banner_img.jpg" alt="" class="w-100 h-100">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--banner section ended-->
+   <!--introduction section starts-->
+   <div style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+    <div class="container text-bg-light">
+        <div class="row m-0 p-0">
+                <div class="col-lg-6 col-sm-12 p-5">
+                    <h2>What Is Hydroponic Farming?</h2>
+                    <p>Hydroponic farming is an innovative method of growing plants without soil, 
+                        using nutrient-enriched water solutions to deliver all essential minerals directly to the plant roots.</p>
+                    <p>This technique allows for faster growth, higher yields, 
+                        and optimal resource utilization, making it ideal for both small-scale urban setups and large commercial farms.</p>
+                    <p>Empowering farmers with soil-free innovation and year-round yields</p>
+                    <p class="fst-italic">"Maximize productivity while conserving every drop of water."</p>
+                </div>
+                <div class="col-lg-6 col-sm-12 p-5">
+                    <div style="width: 100%; height: 100%;">
+                        <img src="Assets/Techniques/hydroponics_intro_img.jpg" alt="" class="w-100 h-100">
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-center">Why Choose Hydroponics?</h2>
+            <div class="row p-4 text-center">
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                    <h5>Faster Growth</h5>
+                    <p>⚡ Plants grow 25–50% faster than soil-based methods.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Higher Yield</h5>
+                        <p>🌿 Controlled nutrition leads to consistent production.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Water Efficient</h5>
+                    <p>💧 Reduced pesticide and fertilizer usage</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Fewer Diseases</h5>
+                    <p>🦠 No soil = less risk of soil-borne pests.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Space Saving</h5>
+                    <p>🏙️ Ideal for urban and rooftop setups.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>All-Year Cultivation</h5>
+                    <p>🌞 Grow fresh crops regardless of season.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--introduction section ended-->
+    <!--types of hydronics farming section starts-->
+    <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light text-center">
+            <h2 class="p-5">Explore Different Types of Hydroponic Systems</h2>
+            <p class="px-5 m-0 p-0">Depending on scale, crop type, and investment, 
+            farmers can choose from several hydroponic setups. </p>
+            <p>Each system has unique advantages suited for different needs.</p>
+            <div class="row p-3">
+                <div class="col-lg-4 p-3">
+                    <div class="card">
+                        <div style="height: 200px;">
+                            <img src="Assets/Techniques/deepwater_hydroponics_img.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Deep Water Culture (DWC)</h5>
+                            <p>Plants are suspended in oxygenated, nutrient-rich water.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 p-3 ">
+                    <div class="card">
+                        <div style="height: 200px;">
+                        <img src="Assets/Techniques/nft_hydroponics_img.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Nutrient Film Technique (NFT)</h5>
+                            <p>Thin nutrient film flows over roots inside sloped channels.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 p-3">
+                    <div class="card">
+                        <div style="height: 200px;">
+                            <img src="Assets/Techniques/drip_hydropnics_img.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Drip System</h5>
+                            <p>Nutrient solution is dripped slowly at the base of each plant.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 p-3">
+                    <div class="card">
+                        <div style="height: 200px;">
+                            <img src="Assets/Techniques/aeroponic_huydroponics_img.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Aeroponics</h5>
+                            <p>Roots hang in air and are misted with nutrient solution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 p-3">
+                    <div class="card">
+                        <div style="height: 200px;">
+                            <img src="Assets/Techniques/ebbflow_hydroponics_img.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Ebb and Flow (Flood & Drain)</h5>
+                            <p>Roots are periodically flooded and drained with nutrient water.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 p-3">
+                    <div class="card">
+                        <div style="height: 200px;">
+                            <img src="Assets/Techniques/wick_hydroponics_img.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Wick System</h5>
+                            <p>Simple, passive setup where nutrients move via wicks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--types of hydronics farming section ended-->
+    <!--table for suitable crops section starts-->
+    <div style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light p-5">
+            <h2 class="text-center pb-3">Best Crops for Hydroponic Systems</h2>
+            <p>Hydroponics is perfect for crops that thrive in controlled environments.</p>
+            <table class="table p-3">
+                <thead class="fw-bold">
+                    <tr>
+                        <th scope="col">Crop Type</th>
+                        <th scope="col">Examples</th>
+                        <th scope="col">Growth Duration</th>
+                        <th scope="col">Suitability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row" class="fw-bold">Leafy Greens</td>
+                        <td>Lettuce, Spinach, Kale</td>
+                        <td>25–35 days</td>
+                        <td>Excellent</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" class="fw-bold">Herbs</td>
+                        <td>Basil, Mint, Parsley</td>
+                        <td>30–45 days</td>
+                        <td>Excellent</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" class="fw-bold">Fruit Vegetables</td>
+                        <td>Tomato, Cucumber, Pepper</td>
+                        <td>50–70 days</td>
+                        <td>Good</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" class="fw-bold">Microgreens</td>
+                        <td>Mustard, Radish, Wheatgrass</td>
+                        <td>7–14 days</td>
+                        <td>Excellent</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--table for suitable crops section ended-->
+
+    <!--getting started section starts-->
+    <div style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light text-center pb-4">
+            <div class="p-5">
+                <h2 class="fw-bold">Getting Started with Hydroponics</h2>
+                <p>Set Up Your Own Hydroponic Farm</p>
+            </div>
+            <div class="col-7 p-3 shadow mx-auto mb-3" style="background-color: rgba(144, 238, 144, 0.747);">
+                <h5 class="fw-bold">Plan Your Space</h5>
+                <p>Choose indoor, rooftop, or greenhouse setup.</p>
+            </div>
+            <div class="col-7 p-3 shadow mx-auto mb-3" style="background-color: rgba(144, 238, 144, 0.747);">
+                <h5 class="fw-bold">Select a System</h5>
+                <p>NFT, DWC, or drip-based depending on your crop.</p>
+            </div>
+            <div class="col-7 p-3 shadow mx-auto mb-3" style="background-color: rgba(144, 238, 144, 0.747);">
+                <h5 class="fw-bold">Prepare Nutrient Mix</h5>
+                <p>Calibrate pH and EC levels.</p>
+            </div>
+            <div class="col-7 p-3 shadow mx-auto mb-3" style="background-color: rgba(144, 238, 144, 0.747);">
+                <h5 class="fw-bold">Add Lighting</h5>
+                <p>Use LED grow lights for indoor setups.</p>
+            </div>
+            <div class="col-7 p-3 shadow mx-auto mb-3" style="background-color: rgba(144, 238, 144, 0.747);">
+                <h5 class="fw-bold">Monitor Growth</h5>
+                <p>sensors or AGRIVERSE tools for data insights.</p>
+            </div>
+            <div class="pt-3 pb-4">
+                <button class="btn btn-primary p-3 px-5 rounded-5">Book Setup Consultation</button>
+            </div>
+        </div>
+    </div>
+    <!--getting started section ended-->
+
+    <!--saftey and maintanance section starts-->
+    <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <div class=" text-center pt-5">
+                <h2 class="m-0 p-0 ">Safety & Maintenance Guidelines</h2>
+                <p>Keep Your Hydroponic System Healthy</p>
+            </div>
+            <div class="p-5">
+                <p>To ensure consistent yields, maintain your system regularly.</p>
+                <p><i class="bi bi-dot" style="font-size: 26px;"></i>✅ Clean water tanks weekly</p>
+                <p><i class="bi bi-dot" style="font-size: 26px;"></i>✅ Test pH and nutrient balance daily</p>
+                <p><i class="bi bi-dot" style="font-size: 26px;"></i>✅ Replace nutrient solution every 10–14 days</p>
+                <p><i class="bi bi-dot" style="font-size: 26px;"></i>✅ Sanitize trays to prevent algae and root rot</p>
+                <p><i class="bi bi-dot" style="font-size: 26px;"></i>✅ Keep temperature and light consistent</p>
+            </div>
+        </div>
+    </div>
+    <!--saftey and maintanance section ended-->
+
+    <!--success stories section starts-->
+    <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <div class="text-center fw-bold pt-4">
+                <h2>Success Stories</h2>
+                <p>Farmers Who Thrived with Hydroponics</p>
+            </div>
+            <div class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg-6 ">
+                                <div class="text-bg-light p-4 review">
+                                    <h3><strong>Turned my terrace into a mini farm</strong></h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-4">  
+                                            <p>Ravi started with a 200 sq. ft. rooftop hydroponic setup growing lettuce and spinach. Within just three months, his harvest tripled compared to soil farming. 
+                                                Today, he supplies fresh greens to local restaurants, saving 90% of water and earning a steady monthly income from his urban farm.</p>
+                                        </div>
+                                        <div class="col-lg-6 p-4">
+                                            <div class="farmer1">
+                                            </div>
+                                            <div class="text-center pt-2">
+                                                <h6>– Ravi Kumar, Maharashtra</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-bg-light p-4 review">
+                                    <h3><strong>I can grow premium herbs all year</strong></h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-4 ">  
+                                            <p>Sunita launched her hydroponic greenhouse with AGRIVERSE guidance in 2023. She cultivates basil, mint, and microgreens, catering to organic stores and cafes. 
+                                                Her small unit now produces over 100 kg of herbs monthly, earning her recognition as a model woman farmer in her district.</p>
+                                        </div>
+                                        <div class="col-lg-6 p-4">
+                                            <div class="farmer2">
+                                            </div>
+                                            <div class="text-center pt-2">
+                                                <h6>– Sunita Devi, Telangana</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="carousel-item ">    
+                        <div class="row">
+                            <div class="col-lg-6 ">
+                                <div class="text-bg-light p-4 review">
+                                    <h3><strong>Hydroponics gave me consistency</strong></h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-4">  
+                                            <p>Sanjay shifted from traditional tomato farming to a drip-fed hydroponic system across 2 acres. He cut pesticide use by 80% and 
+                                                improved yield quality dramatically. His produce is now certified and sold to retail chains under his own “FreshLeaf” brand.</p>
+                                        </div>
+                                        <div class="col-lg-6 p-4">
+                                            <div class="farmer3">
+                                            </div>
+                                            <div class="text-center pt-2">
+                                                <h6>– Sanjay Verma, Madhya Pradesh</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-bg-light p-4 review">
+                                    <h3><strong>aeroponic produces over 30 varieties of greens</strong></h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-4 ">  
+                                            <p>Ritu introduced hydroponics at her agricultural training institute to demonstrate 
+                                                sustainable farming to students. Her aeroponic setup now produces over 30 varieties of greens used in school cafeterias and workshops.</p>
+                                        </div>
+                                        <div class="col-lg-6 p-4">
+                                            <div class="farmer4">
+                                            </div>
+                                            <div class="text-center pt-2">
+                                                <h6>– Ritu Sharma, Rajasthan</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center p-5">
+                <h2 class="fw-bold">Join the Future of Farming</h2>
+                <p>Become a Hydroponic Farmer Today</p>
+                <p class="pb-3">AGRIVERSE supports farmers with training, expert consultation, and equipment supply to start or scale their hydroponic venture.</p>
+                <button class="btn btn-primary p-3 px-5 rounded-5">Get Started</button>
+                <button class="btn btn-primary p-3 px-5 rounded-5">Ask Expert</button>
+            </div>
+        </div>
+    </div>
+    <!--success stories section ended-->
+    <!--footer section starts-->
+    <footer>
+        <div class="p-5">
+            <div class="footer_div1 row pb-3 text-center ">
+                <div class="ft_div_1 col-lg-3">
+                    <div class="logo_div p-3">
+                        <div>
+                        <a href="index.html" class="navbar-brand"><img src="Assets/logo-removebg-preview.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p>Your one-stop platform for seeds, plants, fertilizers, machinery, and all farming needs. 
+                        Empowering farmers with products, knowledge, and support for a better tomorrow.</p>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 ">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Quick Links</h5>
+                        
+                        <a href=""><p>Home</p></a>
+                        <a href=""><p>About Us</p></a>
+                        <a href=""><p>Agri Essentials</p></a>
+                        <a href=""><p>Agri Techniques</p></a>
+                        <a href=""><p>Agri Services</p></a>
+                        <a href=""><p>Agri Gyaan</p></a>
+                        <a href=""><p>Farmer Forum</p></a>
+                        <a href=""><p>Agri Articles</p></a>
+                        <a href=""><p>Get Support</p></a>
+                        
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2">
+                    <div>
+                        <div>
+                            <h5 class="text-decoration-underline pb-3">Products & Solutions</h5>
+                            <p>Seeds & Plants</p>
+                            <p>Fertilizers</p>
+                            <p>Machinery & Tools</p>
+                            <p>Irrigation Solutions</p>
+                            <p>Farming Ways</p>
+                            <p>Animal Husbandry Essentials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2"> 
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Knowledge Hub</h5>
+                        <p>Articles & Guides</p>
+                        <p>Announcements & Updates</p>
+                        <p>Success Stories</p>
+                        <p>Farming Methods</p>
+                        <p>Best Practices</p>
+                        <p>Market Updates & Insights</p>
+                        <p>Farmer Training & Workshops</p>
+                        <p>Govt Schemes Guidance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-start p-5 pt-0">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Get Support</h5>
+                        <div>
+                            <p><i class="bi bi-telephone"></i>  <a href="">1800-555-6666</a></p>
+                            <p><i class="bi bi-whatsapp"></i>   <a href="">+91-8666555444</a></p>
+                            <p><i class="bi bi-envelope"></i>   <a href="">Email: support@agriverse.com</a></p>
+                            <p><i class="bi bi-alarm"></i>  24/7 availability</p>
+                            <p><i class="bi bi-chat"></i>   <a href="">Chat with Us</a></p>
+                            <p><i class="bi bi-google-play"></i>    <a href="">Download App</a></p>
+                            <p>🌾 <a href=""> Ask Forum</a></p>
+                            <p><i class="bi bi-geo-alt"></i>    <a href="">Nearest Agriverse center</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="footer_div1 row p-5 pt-0 m-0 p-0">
+                <div class="col-lg-4">
+                    <h5>Follow Us:</h5>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-youtube"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <h5>Download App</h5>
+                        <div class="icons">
+                            <a href="" class="p-3"><i class="bi bi-google-play"></i></a>
+                            <a href="" class="p-3"><i class="bi bi-apple"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <div>
+                            <p>Enter your email to get free farming tips & market updates.</p>
+                            <div class="row">
+                                <div class="col-lg-8 justify-content-end">
+                                    <div >
+                                        <input type="email" placeholder="Enter Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div >
+                                        <button class="btn btn-primary p-2 rounded-5">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="p-4 text-center">
+            <p>&copy;designed and developed by Pulluri Govardhan</p>
+            <a href="" ><div class="whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            </div></a>
+        </div>    
+    </footer>
+    <!--footer section ended-->
+
+
+</body>
+</html>

@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="forum.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        form p{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container-fluid ">
+        <nav class="navbar navbar-expand-lg mx-auto">
+            <div class="container  ">
+                <div class="logo">
+                    <a href="index.html"><img src="Assets/logo-removebg-preview.png" alt="" class="w-100 h-100"></a>
+                </div>
+                <button class="navbar-toggler" data-bs-target="myNav" data-bs-toggle="collapse">
+                    <a href="#more" data-bs-toggle="offcanvas"><span class="navbar-toggler-icon"></span></a>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="myNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="essentials.html" class="nav-link" id="essentials">Essentials <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header1">
+                                <a href="essentials.html">Seeds & Plants</a>
+                                <a href="fertilizers.html">Fertilizers & Pesticides</a>
+                                <a href="irrigation.html">Irrigation</a>
+                                <a href="machinery.html">Machinery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="organic.html" class="nav-link" id="techniques">Techniques <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header2">
+                                <a href="organic.html">Organic Farming</a>
+                                <a href="hydroponics.html">Hydroponics</a>
+                                <a href="aquaponics.html">Aquaponic</a>
+                                <a href="vertical.html">Vertical Farming</a>
+                                <a href="traditional.html">Traditional Farming</a>
+                                <a href="smartfarming.html">Smart Farming</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="article.html" class="nav-link">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="forum.html" class="nav-link">Farmers Forum</a>
+                        </li>
+                        <li class="nav-item person_icon">
+                            <a href="" class="nav-link" id="person"><i class="bi bi-person-circle" style="font-size: 32px;"></i></a>
+                            <div class="dropdown" id="login">
+                                <a href="">Signup</a>
+                                <a href="">Login</a>
+                            </div>
+                        </li>
+                        <li class="nav-item menu_icon">
+                            <a href="#more" class="nav-link" data-bs-toggle="offcanvas"><i class="bi bi-list" style="font-size: 32px;"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!--script for essentials dropdown starts-->
+    
+    <script>
+        $('#header1').hide();
+
+        $('#essentials').mouseover(() =>{
+            $('#header1').slideDown()
+        })
+        $('#header1').mouseover(() =>{
+            $('#header1').stop()
+        })
+
+        $('#essentials, #header1').mouseleave(() =>{
+            $('#header1').slideUp()
+        })
+        $('#header1').click(() =>{
+            $('#header1').slideUp()
+        })
+    </script>
+    <!--script for essentials dropdown ended-->
+
+    <!--script for techniques dropdown starts-->
+    <script>
+        $('#header2').hide();
+
+        $('#techniques').mouseover(() =>{
+            $('#header2').slideDown()
+        })
+        $('#header2').mouseover(() =>{
+            $('#header2').stop()
+        })
+        $('#techniques, #header2').mouseleave(() =>{
+            $('#header2').slideUp()
+        })
+        $('#header2').click(() =>{
+            $('#header2').slideUp()
+        })
+    </script>
+    <!--script for techniques dropdown ended-->
+
+    <!--script for login dropdown starts-->
+    <script>
+        $('#login').hide();
+
+        $('#person').mouseover(() =>{
+            $('#login').slideDown()
+        })
+        $('#login').mouseover(() =>{
+            $('#login').stop()
+        })
+        $('#person, #login').mouseleave(() =>{
+            $('#login').slideUp()
+        })
+        $('#login').click(() =>{
+            $('#login').slideUp()
+        })
+    </script>
+    <!--script for login dropdown ended-->
+
+    <!--offcanvas for menubar starts-->
+    <div class="offcanvas offcanvas-start" id="more" data-bs-backdrop="static">
+        <div class="offcanvas-header" style="border-bottom: 1px solid green;">
+            <div class="row p-2 pt-3" >
+                    <div class="col-5">
+                        <div class="profile_photo">
+                            <img src="Assets/Forum/profile_photo_img.jpg" alt="" class="w-100 h-100" style="border-radius: 60px;">
+                        </div>
+                    </div>
+                    <div class="col-7 p-3">
+                        <p class="fw-bold m-0 p-0">Dr. Kavita Deshmukh</p>
+                        <p class="m-0 p-0">Organic Farming Trainer</p>
+                        <p >Telangana</p>
+                    </div>
+                </div>
+            <button class="btn-close text-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="px-5 py-2">
+                <a href=""><p>Signup</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href=""><p>Login</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="index.html"><p>Home</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Essentials</p></summary>
+                    <a href="essentials.html"><button>Seeds & Plants</button></a>
+                    <a href="fertilizers.html"><button>Fertilizers</button></a>
+                    <a href="irrigation.html"><button>Irrigation</button></a>
+                    <a href="machinery.html"><button>Machinery</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Techniques</p></summary>
+                    <a href="organic.html"><button>Organic Farming</button></a>
+                    <a href="hydroponics.html"><button>Hydroponics</button></a>
+                    <a href="aquaponics.html"><button>Aquaponic </button></a>
+                    <a href="vertical.html"><button>Vertical Farming</button></a>
+                    <a href="traditional.html"><button>Traditional Farming</button></a>
+                    <a href="smartfarming.html"><button>Smart Farming</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <a href="article.html"><p>Articles</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="forum.html"><p>Farmers Forum</p></a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvas for menubar ended-->
+    <!--banner section starts-->
+    <div class="forum_banner text-light">
+        <div class="text-center p-5 mx-auto" style="width: 80%;">
+            <h1 style="font-size: 70px; margin: 0%;">The complete</h1>
+            <h1 style="font-size: 70px;">Farmers community platform</h1>
+            <h5>Connect. Share. Grow Together.</h5>
+            <p class="fst-italic p-3">A digital community for every farmer, expert, and agri-enthusiast.</p>
+            <div style="display: flex; justify-content: center;" name="joinForum" action="" onsubmit="return join()">
+                <input type="email" placeholder="Enter Your Email Address" name="email" class="form-control rounded-5" style="width: 400px; height: 50px;">
+                <button class="btn btn-primary rounded-5 px-4 fw-bold">Join Now</button>
+            </div>
+            <p id="emailError"></p>
+            <p class="pt-4"> Trusted by 500k+ Farmers across India</p>
+
+            <div class=" review_text ">
+                <div class="col-lg-5 rounded-5 justify-content-center" style="border: 1px solid white; ">
+                    <div class="row">
+                        <div class="col-5 text-end">
+                            <img src="Assets/Forum/appstore.png" alt="">
+                            <img src="Assets/Forum/playstore.png" alt=""> 
+                        </div> 
+                        <div class="col-7 text-start ">
+                            <p class="pt-3">★★★★★  300k+ Reviews</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <!--banner section ended-->
+
+    <!--community photos slides section starts-->
+    <div class="community_bg text-light text-center">
+        <div class="p-5 text-center fw-bold">
+            <h1 style="font-size: 54px;">Voices That Grow the Nation</h1>
+            <h5>Every conversation sows a seed of progress in Indian farming</h5>
+        </div>
+        <p class="fst-italic px-5 ">A chat space for sharing wisdom, solving challenges, and supporting each other</p>
+        <div class="desktop" style="margin: auto;">
+            <div class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item text-center active">
+                        <img src="Assets/Forum/community_homepage_img.jpg" alt="" class="desktop_img w-100 h-100" >
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="Assets/Forum/community_chat_img1.jpg" alt="" class="desktop_img w-100 h-100" >
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="Assets/Forum/community_videocall_img.jpg" alt="" class="desktop_img w-100" style="height: 118vh;" >
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="Assets/Forum/community_audience.jpg" alt="" class="desktop_img w-100 h-100" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--community photos slides section ended-->
+    <!--about farmers forum section starts-->
+    <div class="about_forum">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 m-auto px-3" style="padding: 80px 10px 80px 10px;">
+                    <div class="video_player m-0 p-0" style="width: 90%; height: 100%;">
+                        <video src="Assets/Forum/videos/FamersForum.mp4" class="video w-100 h-100 m-auto" id="forum_video"></video>
+                        <div class="player_controls p-0 m-0 m-auto">
+                            <div class="video_progress">
+                                <div class="video_progress_filled"></div>
+                            </div>
+                            <button class="play_button border-0 bg-transparent text-light fs-4" id="playbtn"> ▶</button>
+                            
+                            <input type="range" class="volume" min="0" max="1" step="0.01" value="1">
+                            <div class="time">
+                                <span class="current">0:00</span> / <span class="duration">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12" style="padding: 80px 10px 80px 10px;">
+                    <div class="text-light">
+                        <h1>What is Farmers Forum?</h1>
+                        <p>A digital community for every farmer, expert, and agri-enthusiast.</p>
+                        <p>Bridging Fields and Knowledge — Bringing Farmers & Experts Face-to-Face</p>
+                        <p>India’s first interactive community platform where farmers from every region come together to connect, 
+                        learn, and collaborate — all in real time.Through video calls, live chats, and discussion rooms, 
+                        AGRIVERSE brings farmers, agri-experts, scientists, and agri-entrepreneurs under one digital roof — to share practical advice, 
+                        solve field challenges, and celebrate farming success stories.</p>
+                        <button class="btn btn-primary rounded-5 px-5 py-2 fw-bold">Join Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about farmers forum section ended-->
+
+    <!--experts section starts-->
+    <div class="expert_bg">
+        <div class="container pt-5 text-center text-light mb-5">
+            <h1 class="fw-bold ">Our Experts, Your Partners in Growth</h1>
+            <p>Meet the specialists who bring knowledge, innovation, and hands-on experience to help farmers grow smarter and stronger.</p>
+            <div class="experts row p-3">
+                <div class="expert col-lg-3">
+                    <div class="expert1_img">
+                        <h5 >Dr. Priya Reddy</h5>
+                        <p class="p-0 m-0">Horticulture Expert</p>
+                        <p class="p-0 m-0">AP & Telangana</p>
+                    </div>                    
+                </div>
+                <div class="expert col-lg-3">
+                    <div class="expert2_img">
+                        <h5 >Dr. Rajesh Sharma</h5>
+                        <p class="p-0 m-0">Soil Scientist</p>
+                        <p class="p-0 m-0">North India</p>
+                    </div>  
+                </div>
+                <div class="expert col-lg-3">
+                    <div class="expert3_img">
+                        <h5 >Dr. Sneha Ghosh</h5>
+                        <p class="p-0 m-0">Plant Pathologist</p>
+                        <p class="p-0 m-0">Telangana</p>
+                    </div>
+                </div>
+                <div class="expert col-lg-3">
+                    <div class="expert4_img">
+                        <h5 >Dr. Ashok Verma</h5>
+                        <p class="p-0 m-0">Irrigation Technologist</p>
+                        <p class="p-0 m-0">Pan India</p>
+                    </div>
+                </div>
+                <div class="expert col-lg-3">
+                    <div class="expert5_img">
+                        <h5 >Dr. Neelima Patil</h5>
+                        <p class="p-0 m-0">Seed Specialist</p>
+                        <p class="p-0 m-0">Telangana</p>
+                    </div>
+                </div>
+                <div class="expert col-lg-3">
+                    <div class="expert6_img">
+                        <h5 >Dr. Vivek Joshi</h5>
+                        <p class="p-0 m-0">Agricultural Economist</p>
+                        <p class="p-0 m-0">Gujarat & Rajasthan</p>
+                    </div>
+                </div>
+                <div class="expert col-lg-3">
+                    <div class="expert7_img">
+                        <h5 >Dr. Anil Chauhan</h5>
+                        <p class="p-0 m-0">Machinery Consultant</p>
+                        <p class="p-0 m-0">Haryana & Punjab</p>
+                    </div>
+                </div>
+                <div class="expert col-lg-3">
+                    <div class="expert8_img">
+                        <h5 >Dr. Kavita Deshmukh</h5>
+                        <p class="p-0 m-0">Organic Farming Trainer</p>
+                        <p class="p-0 m-0">Telangana</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--experts section ended-->
+    <!--discussion section starts-->
+    <div class="px-5 pb-4" style="border-top: 1px solid lightblue; border-bottom: 1px solid lightblue;">
+        <div class="row ">
+            <div class="col-lg-3" style="border-right: 1px solid lightblue;">
+                <div class="p-2" style="border-bottom: 1px solid lightblue;">
+                    <h2>Farmers Forum</h2>
+                    <p>Inbox </p>
+                </div>
+                <div class="pt-3 px-3">
+                    <input type="search" placeholder="Search Here" class="w-100 rounded-3 form-control mb-3" >
+                    <div class="row py-2" style="border-top: 1px solid lightblue; border-bottom: 1px solid lightblue;">
+                        <div class="col-3 ">
+                            <img src="Assets/Forum/chats/chat_img3.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="col-9">
+                            <p class="fw-bold m-0 p-0">Ramesh Nalla <span style="color: gray;"> 10:11</span>  <span style="color: blue;">•</span></p>
+                            <p class=" m-0 p-0">Can anyone share exper</p>
+                        </div>
+                    </div>
+                    <div class="row py-2" style="border-bottom: 1px solid lightblue;">
+                        <div class="col-3 ">
+                            <img src="Assets/Forum/chats/chat_img3.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="col-9">
+                            <p class="fw-bold m-0 p-0">Harish <span style="color: gray;"> 10:45</span> </p>
+                            <p class=" m-0 p-0">Does it really improve</p>
+                        </div>
+                    </div>
+                    <div class="row py-2" style="border-bottom: 1px solid lightblue;">
+                        <div class="col-3 ">
+                            <img src="Assets/Forum/chats/chat_img4.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="col-9">
+                            <p class="fw-bold m-0 p-0">Nandini <span style="color: gray;"> 1:13</span> </p>
+                            <p class=" m-0 p-0">Is rainwater harvesting</p>
+                        </div>
+                    </div>
+                    <div class="row py-2" style="border-bottom: 1px solid lightblue;">
+                        <div class="col-3 ">
+                            <img src="Assets/Forum/chats/chat_img3.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="col-9">
+                            <p class="fw-bold m-0 p-0">Pankaj <span style="color: gray;"> 12:21</span> <span style="color: blue;">•</span></p>
+                            <p class=" m-0 p-0">want to switch from floo</p>
+                        </div>
+                    </div>
+                    <div class="row py-2" style="border-bottom: 1px solid lightblue;">
+                        <div class="col-3 ">
+                            <img src="Assets/Forum/chats/chat_img4.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="col-9">
+                            <p class="fw-bold m-0 p-0">Savita More <span style="color: gray;"> 19:11</span> <span style="color: blue;">•</span></p>
+                            <p class=" m-0 p-0">Has anyone rented a rota</p>
+                        </div>
+                    </div>
+                    <div class="row py-2" style="border-bottom: 1px solid lightblue;">
+                        <div class="col-3 ">
+                            <img src="Assets/Forum/chats/chat_img4.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="col-9">
+                            <p class="fw-bold m-0 p-0">Latha <span style="color: gray;"> 14:44</span></p>
+                            <p class=" m-0 p-0">What’s the safest pesticide</p>
+                        </div>
+                    </div>
+                    <div class="row py-2" style="border-bottom: 1px solid lightblue;">
+                        <div class="col-3 ">
+                            <img src="Assets/Forum/chats/chat_img3.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="col-9">
+                            <p class="fw-bold m-0 p-0">Jayesh <span style="color: gray;"> 19:39</span> <span style="color: blue;">•</span></p>
+                            <p class=" m-0 p-0">Can anyone explain ho</p>
+                        </div>
+                    </div>
+                    <div class="row py-2" style="border-bottom: 1px solid lightblue;">
+                        <div class="col-3 ">
+                            <img src="Assets/Forum/chats/chat_img3.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="col-9">
+                            <p class="fw-bold m-0 p-0">Vijay <span style="color: gray;"> 12:51</span></p>
+                            <p class=" m-0 p-0">Are farm drones useful</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 p-0 px-3" style="border-right: 1px solid lightblue;">
+                <div class="px-3 p-2" style="border-bottom: 1px solid lightblue;">
+                    <div class="row">
+                        <div class="col-10">   
+                            <h5 class="fw-bold">Crop Management <span style="color: green; font-size: 13px;">Live Chat</span> </h5>
+                        </div>
+                        <div class="col-2 text-end">
+                            <button class="btn-close"></button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="text-center p-3">
+                        <p style="font-size: 12px;">FRIDAY Oct-23</p>
+                    </div>
+                    <div class="row px-3" style="background-color: rgba(173, 216, 230, 0.253);" >
+                        <div class="col-1 py-2" style="height: 40px;">
+                            <img src="Assets/Forum/chats/chat_img2.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="col-11">
+                            <p class="fw-bold m-0 p-0">Karthik  <span style="color: rgb(148, 147, 147);" class="fw-normal"> 10:11</span></p>
+                            <p>My paddy crop leaves are turning yellow — is it due to nutrient deficiency or water issue?</p>
+                        </div>
+                    </div>
+                    <div class="row px-3">
+                        <div class="col-1 py-2" style="height: 40px;">
+                            <img src="Assets/Forum/chats/chat_img2.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="col-11">
+                            <p class="fw-bold m-0 p-0">Kiran Patel  <span style="color: rgb(148, 147, 147);" class="fw-normal"> 1:32</span></p>
+                            <p>Which organic manure is best for groundnut cultivation?</p>
+                        </div>
+                    </div>
+                    <div class="row px-3" style="background-color: rgba(144, 238, 144, 0.562);" >
+                        <div class="col-1 py-2" style="height: 40px;">
+                            <img src="Assets/Forum/chats/chat_img4.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="col-11">
+                            <p class="fw-bold m-0 p-0">Dr. Kavita Deshmukh 👨 <span style="color: rgb(148, 147, 147);" class="fw-normal"> 1:35</span></p>
+                            <p> Farmyard Manure, Compost, Green Manure, Vermicompost</p>
+                            <p class="fw-bold">Application Tips: </p> 
+                                <p>• Incorporate these manures into the soil before planting.</p>
+                                <p>• Use a combination for balanced nutrient supply.</p>
+                        </div>
+                    </div>
+                    <div class="row px-3">
+                        <div class="col-1 py-2" style="height: 40px;">
+                            <img src="Assets/Forum/chats/chat_img2.jpg" alt="" class="w-100 h-100">
+                        </div> 
+                        <div class="col-11">
+                            <p class="fw-bold m-0 p-0">Karthik  <span style="color: rgb(148, 147, 147);" class="fw-normal"> 1:41</span></p>
+                            <p>My paddy crop leaves are turning yellow — is it due to nutrient deficiency or water issue?</p>
+                        </div>
+                    </div>
+                    <div class="row px-3" style="background-color: rgba(144, 238, 144, 0.562);" >
+                        <div class="col-1 py-2" style="height: 40px;">
+                            <img src="Assets/Forum/chats/chat_img4.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="col-11">
+                            <p class="fw-bold m-0 p-0">Dr. Sneha Ghosh 👨 <span style="color: rgb(148, 147, 147);" class="fw-normal"> 1:43</span></p>
+                            <p>Dr. Sneha Ghosh is Typing...</p>
+                        </div>
+                    </div>
+                    <div class="p-3 mt-3 rounded-3" style="border: 2px solid gray; background-color: rgba(173, 216, 230, 0.541);">
+                        <p>Message</p>
+                        <div class="row">
+                            <div class="col-10" style="font-size: 22px;">
+                            <i class="bi bi-paperclip px-2"></i> <i class="bi bi-emoji-frown px-2"></i> <i class="bi bi-geo-alt px-2"></i> 
+                            <i class="bi bi-image-fill px-2"></i> <i class="bi bi-camera px-2"></i> <i class="bi bi-mic px-2"></i>
+                            </div>
+                            <div class="col-2">
+                                <i class="bi bi-arrow-up-circle-fill" style=" font-size: 28px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 p-0">
+                <div class="px-3 p-2" style="border-bottom: 1px solid lightblue;">
+                    <h5>Profile</h5>
+                </div>
+                <div class="row p-2" >
+                    <div class="col-5">
+                        <div class="profile_photo">
+                            <img src="Assets/Forum/profile_photo_img.jpg" alt="" class="w-100 h-100" style="border-radius: 60px;">
+                        </div>
+                    </div>
+                    <div class="col-7 p-3">
+                        <p class="fw-bold m-0 p-0">Dr. Kavita Deshmukh</p>
+                        <p class="m-0 p-0">Organic Farming Trainer</p>
+                        <p >Telangana</p>
+                    </div>
+                </div>
+                <div style="border-bottom: 1px solid lightblue;">
+                    <p class="text-center m-0 p-0"> <span style="border-bottom: 2px solid black;">About</span> <span class="px-3">Posts</span>  <span class="px-3">Comments</span> <span class="px-3">spaces</span>  </p>
+                </div>
+                <div class="p-3">
+                    <p><span class="px-2">@</span> kavita@organictrainer.com</p>
+                    <p><i class="bi bi-geo-alt px-2"></i> Hydearbad</p>
+                    <p><i class="bi bi-calendar-check px-2"></i> Member Since Aug 2025</p>
+                    <p class="fw-bold m-0 p-0">Tags</p>
+                    <p>#Trainer <span class="px-3">#Creator</span> <span class="px-3">#Pro</span></p>
+                    <p class="fw-bold m-0 p-0">Bio:</p>
+                    <p>I am Dr. Kavita Deshmukh a renowned agricultural expert with over 15 years of experience in organic and precision farming techniques.
+                        I have worked extensively with small and medium-scale farmers across 
+                        India to promote eco-friendly crop protection, soil fertility improvement, and water-efficient irrigation methods.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--discussion section ended-->
+    <!--Ask expert section starts-->
+    <div class="ask_expert pt-4 text-light">
+        <div class="container p-5 ">
+            <div class="text-center">
+                <h2 class="fw-bold">Ask an Expert </h2>
+                <h5 >Your Farming Questions, Answered by Professionals.</h5>
+                <p>Whether you’re struggling with pest control, crop selection, or irrigation setup — our experts are here to guide you every step of the way.</p>
+            </div>
+        <p>Get reliable, personalized solutions based on your farm’s needs.</p>
+        <div class="pt-4">
+            <div class="col-lg-8 mx-auto mb-3">
+                <div class="p-5 shadow text-bg-success text-center">
+                    <h2 class="fw-bold">Submit Your Query</h2>
+                    <p>Fill out a short form with your question, crop details, and location.</p>
+                    <textarea name="" id="" rows="3" class="form-control mb-3" placeholder="Write Your Query Here"></textarea>
+                    <button class="btn btn-primary px-5 p-2 rounded-5 fw-bold">Submit</button>
+                </div>
+            </div>
+            <div class="col-lg-8 mx-auto mb-3">
+                <div class="p-5 shadow text-bg-success text-center">
+                    <h2 class="fw-bold">Upload Photos (Optional)</h2>
+                    <i class="bi bi-camera py-3" style="font-size: 72px;"></i>
+                    <div class="pt-3">
+                        <button class="btn btn-primary px-5 p-2 rounded-5 fw-bold">Upload</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 mx-auto mb-3">
+                <div class="p-5 shadow text-bg-success text-center">
+                    <h2 class="fw-bold ">Expert Review</h2>
+                    <h5 class="py-3">Our certified agri-specialists analyze your query within 24–48 hours.</h5>
+                    <i class="bi bi-alarm py-3" style="font-size: 72px;"></i>
+                </div>
+            </div>
+            <div class="col-lg-8 mx-auto mb-3">
+                <div class="p-5 shadow text-bg-success text-center">
+                    <h2 class="fw-bold ">Get Your Solution</h2>
+                    <h5 class="py-3">Receive personalized advice, preventive measures, and next steps.</h5>
+                    <i class="bi bi-envelope-at py-3" style="font-size: 72px;"></i>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!--Ask expert section ended-->
+
+    <section class=" py-5">
+        <div class="container">
+            <div class="row align-items-center">
+            <!-- Left Content -->
+            <div class="col-lg-6 mb-4 mb-md-0">
+                <div class="text-bg-light p-4">
+                    <h3 class="pb-3"><strong>How to Reach Us</strong></h3>
+                    <p><i class="bi bi-telephone"></i>  <a href="">1800-555-6666</a></p>
+                    <p><i class="bi bi-whatsapp"></i>   <a href="">+91-8666555444</a></p>
+                    <p><i class="bi bi-envelope"></i>   <a href="">Email: support@agriverse.com</a></p>
+                    <p><i class="bi bi-alarm"></i>  <a href="">24/7 availability</a></p>
+                    <p><i class="bi bi-chat"></i>   <a href="">Chat with Us</a></p>
+                    <p><i class="bi bi-google-play"></i>    <a href="">Download App</a></p>
+                    <p>🌾 <a href=""> Ask Forum</a></p>
+                    <p><i class="bi bi-geo-alt"></i>    <a href="">Nearest Agriverse center</a></p>
+                </div>
+            </div>
+            <div class="col-lg-6 shadow p-3 mx-auto">
+            <h2>Contact Us</h2>
+            <form name="contact" action="submit.html" onsubmit=" return check()">
+                <div class="fw-semibold mb-3">
+                    <label for="name" class="form-label fw-semibold">Full Name</label>
+                    <input type="text" placeholder="Name" name="username" class="form-control">
+                </div>
+                <p id="nameError"></p>
+                <div>
+                    <label for="mobile" class="form-label fw-semibold">Mobile Number</label>
+                    <div class="input-group fw-semibold mb-3">
+                        <select name="countrycode" id="" class="input-group-text">
+                            <option value="10">+91</option>
+                            <option value="9">+55</option>
+                            <option value="8">+1</option>
+                            <option value="7">+33</option>
+                        </select>
+                        <input type="text" placeholder="Mobile Number" name="mobile" class="form-control " >
+                    </div>
+                </div>
+                <p id="mobileError"></p>
+                <div class="fw-semibold mb-3">
+                    <label for="email" class="form-label fw-semibold">Email</label>
+                    <input type="text" placeholder="Email" name="email" class="form-control mb-3" > 
+                </div>
+                <p id="emailError"></p>
+                <div class="row">
+                        <div class="col-md-6 fw-semibold mb-3">
+                            <label for="state" class="form-label fw-semibold">State</label>
+                            <select id="state" class="form-select">
+                            <option>Andhra Pradesh</option>
+                            <option>Telangana</option>
+                            <option>Maharastra</option>
+                            <option>Karnataka</option>
+                            <option>Kerala</option>
+                            <option>Tamil Nadu</option>
+                            <option>Oddisa</option>
+                            <option>Gujarat</option>
+                            <option>Madhya Pradesh</option>
+                            <option>Goa</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="fw-semibold mb-3">
+                                <label for="pincode" class="form-label fw-semibold">Pincode</label>
+                                <input type="text" name="pin" class="form-control" placeholder="Pincode">
+                                
+                            </div>
+                            <p id="pincodeError"></p>
+                        </div>
+                    </div>
+                <input type="submit" class="form-control mb-3">
+                
+            </form>
+            </div>
+            </div>
+        </div>
+        
+    </section>
+    <script src="validate.js"></script>
+
+    <!--footer section starts-->
+    <footer>
+        <div class="p-5">
+            <div class="footer_div1 row pb-3 text-center ">
+                <div class="ft_div_1 col-lg-3">
+                    <div class="logo_div p-3">
+                        <div>
+                        <a href="index.html" class="navbar-brand"><img src="Assets/logo-removebg-preview.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p>Your one-stop platform for seeds, plants, fertilizers, machinery, and all farming needs. 
+                        Empowering farmers with products, knowledge, and support for a better tomorrow.</p>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 ">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Quick Links</h5>
+                        
+                        <a href=""><p>Home</p></a>
+                        <a href=""><p>About Us</p></a>
+                        <a href=""><p>Agri Essentials</p></a>
+                        <a href=""><p>Agri Techniques</p></a>
+                        <a href=""><p>Agri Services</p></a>
+                        <a href=""><p>Agri Gyaan</p></a>
+                        <a href=""><p>Farmer Forum</p></a>
+                        <a href=""><p>Agri Articles</p></a>
+                        <a href=""><p>Get Support</p></a>
+                        
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2">
+                    <div>
+                        <div>
+                            <h5 class="text-decoration-underline pb-3">Products & Solutions</h5>
+                            <p>Seeds & Plants</p>
+                            <p>Fertilizers</p>
+                            <p>Machinery & Tools</p>
+                            <p>Irrigation Solutions</p>
+                            <p>Farming Ways</p>
+                            <p>Animal Husbandry Essentials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2"> 
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Knowledge Hub</h5>
+                        <p>Articles & Guides</p>
+                        <p>Announcements & Updates</p>
+                        <p>Success Stories</p>
+                        <p>Farming Methods</p>
+                        <p>Best Practices</p>
+                        <p>Market Updates & Insights</p>
+                        <p>Farmer Training & Workshops</p>
+                        <p>Govt Schemes Guidance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-start p-5 pt-0">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Get Support</h5>
+                        <div>
+                            <p><i class="bi bi-telephone"></i>  <a href="">1800-555-6666</a></p>
+                            <p><i class="bi bi-whatsapp"></i>   <a href="">+91-8666555444</a></p>
+                            <p><i class="bi bi-envelope"></i>   <a href="">Email: support@agriverse.com</a></p>
+                            <p><i class="bi bi-alarm"></i>  24/7 availability</p>
+                            <p><i class="bi bi-chat"></i>   <a href="">Chat with Us</a></p>
+                            <p><i class="bi bi-google-play"></i>    <a href="">Download App</a></p>
+                            <p>🌾 <a href=""> Ask Forum</a></p>
+                            <p><i class="bi bi-geo-alt"></i>    <a href="">Nearest Agriverse center</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="footer_div1 row p-5 pt-0 m-0 p-0">
+                <div class="col-lg-4">
+                    <h5>Follow Us:</h5>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-youtube"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <h5>Download App</h5>
+                        <div class="icons">
+                            <a href="" class="p-3"><i class="bi bi-google-play"></i></a>
+                            <a href="" class="p-3"><i class="bi bi-apple"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <div>
+                            <p>Enter your email to get free farming tips & market updates.</p>
+                            <div class="row">
+                                <div class="col-lg-8 justify-content-end">
+                                    <div >
+                                        <input type="email" placeholder="Enter Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div >
+                                        <button class="btn btn-primary p-2 rounded-5">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="p-4 text-center">
+            <p>&copy;designed and developed by Pulluri Govardhan</p>
+            <a href="" ><div class="whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            </div></a>
+        </div>    
+    </footer>
+    <!--footer section ended-->
+
+    <script src="video.js"></script>
+</body>
+</html>
+
+
+
+

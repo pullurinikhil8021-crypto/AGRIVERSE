@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="techniques.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+    <header class="container-fluid m-0 p-0">
+        <nav class="navbar navbar-expand-lg mx-auto">
+            <div class="container  ">
+                <div class="logo">
+                    <a href="index.html"><img src="Assets/logo-removebg-preview.png" alt="" class="w-100 h-100"></a>
+                </div>
+                <button class="navbar-toggler" data-bs-target="myNav" data-bs-toggle="collapse">
+                    <a href="#more" data-bs-toggle="offcanvas"><span class="navbar-toggler-icon"></span></a>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="myNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link" id="essentials">Essentials <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header1">
+                                <a href="essentials.html">Seeds & Plants</a>
+                                <a href="fertilizers.html">Fertilizers & Pesticides</a>
+                                <a href="irrigation.html">Irrigation</a>
+                                <a href="machinery.html">Machinery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="organic.html" class="nav-link" id="techniques"> <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header2">
+                                <a href="organic.html">Organic Farming</a>
+                                <a href="hydroponics.html">Hydroponics</a>
+                                <a href="aquaponics.html">Aquaponic</a>
+                                <a href="vertical.html">Vertical Farming</a>
+                                <a href="traditional.html">Traditional Farming</a>
+                                <a href="smartfarming.html">Smart Farming</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="article.html" class="nav-link">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="forum.html" class="nav-link">Farmers Forum</a>
+                        </li>
+                        <li class="nav-item person_icon">
+                            <a href="" class="nav-link" id="person"><i class="bi bi-person-circle" style="font-size: 32px;"></i></a>
+                            <div class="dropdown" id="login">
+                                <a href="">Signup</a>
+                                <a href="">Login</a>
+                            </div>
+                        </li>
+                        <li class="nav-item menu_icon">
+                            <a href="#more" class="nav-link" data-bs-toggle="offcanvas"><i class="bi bi-list" style="font-size: 32px;"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!--script for essentials dropdown starts-->
+    <script>
+        $('#header1').hide();
+
+        $('#essentials').mouseover(() =>{
+            $('#header1').slideDown()
+        })
+        $('#header1').mouseover(() =>{
+            $('#header1').stop()
+        })
+
+        $('#essentials, #header1').mouseleave(() =>{
+            $('#header1').slideUp()
+        })
+        $('#header1').click(() =>{
+            $('#header1').slideUp()
+        })
+    </script>
+    <!--script for essentials dropdown ended-->
+
+    <!--script for techniques dropdown starts-->
+    <script>
+        $('#header2').hide();
+
+        $('#techniques').mouseover(() =>{
+            $('#header2').slideDown()
+        })
+        $('#header2').mouseover(() =>{
+            $('#header2').stop()
+        })
+        $('#techniques, #header2').mouseleave(() =>{
+            $('#header2').slideUp()
+        })
+        $('#header2').click(() =>{
+            $('#header2').slideUp()
+        })
+    </script>
+    <!--script for techniques dropdown ended-->
+
+    <!--script for login dropdown starts-->
+    <script>
+        $('#login').hide();
+
+        $('#person').mouseover(() =>{
+            $('#login').slideDown()
+        })
+        $('#login').mouseover(() =>{
+            $('#login').stop()
+        })
+        $('#person, #login').mouseleave(() =>{
+            $('#login').slideUp()
+        })
+        $('#login').click(() =>{
+            $('#login').slideUp()
+        })
+    </script>
+    <!--script for login dropdown ended-->
+
+    <!--offcanvas for menubar starts-->
+    <div class="offcanvas offcanvas-start" id="more" data-bs-backdrop="static">
+        <div class="offcanvas-header" style="border-bottom: 1px solid green;">
+            <div class="row p-2 pt-3" >
+                    <div class="col-5">
+                        <div class="profile_photo">
+                            <img src="Assets/Forum/profile_photo_img.jpg" alt="" class="w-100 h-100" style="border-radius: 60px;">
+                        </div>
+                    </div>
+                    <div class="col-7 p-3">
+                        <p class="fw-bold m-0 p-0">Dr. Kavita Deshmukh</p>
+                        <p class="m-0 p-0">Organic Farming Trainer</p>
+                        <p >Telangana</p>
+                    </div>
+                </div>
+            <button class="btn-close text-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="px-5 py-2">
+                <a href=""><p>Signup</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href=""><p>Login</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="index.html"><p>Home</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Essentials</p></summary>
+                    <a href="essentials.html"><button>Seeds & Plants</button></a>
+                    <a href="fertilizers.html"><button>Fertilizers</button></a>
+                    <a href="irrigation.html"><button>Irrigation</button></a>
+                    <a href="machinery.html"><button>Machinery</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Techniques</p></summary>
+                    <a href="organic.html"><button>Organic Farming</button></a>
+                    <a href="hydroponics.html"><button>Hydroponics</button></a>
+                    <a href="aquaponics.html"><button>Aquaponic </button></a>
+                    <a href="vertical.html"><button>Vertical Farming</button></a>
+                    <a href="traditional.html"><button>Traditional Farming</button></a>
+                    <a href="smartfarming.html"><button>Smart Farming</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <a href="article.html"><p>Articles</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="forum.html"><p>Farmers Forum</p></a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvas for menubar ended-->
+
+    <!--banner section starts-->
+    <div class="farm_bg justify-content-center">
+        <div class="row text-light m-0 p-0 text-center">
+            <div class="col-lg-5 p-4 tech_banner_text">
+                <h2 class="fw-bold pt-5 px-3 m-0 p-0">The Future of Farming is Organic</h2>
+                <p class=" fst-italic">Grow Naturally. Harvest Sustainability.</p>
+                <div class="px-5">
+                    <p>Empowering farmers to embrace chemical-free cultivation through natural methods, 
+                        organic inputs, and eco-friendly farming techniques that nurture both soil and society.</p>
+                    <p>Discover how sustainable practices, natural fertilizers, and soil-friendly methods 
+                        can help you grow profitable and eco-conscious crops with long-term productivity.</p>
+                    <h5 class="fw-bold m-0 p-0">Learn. Adapt. Cultivate the organic way.</h5>
+                    <p>Because good farming begins with good soil</p>
+                    
+                    <div class=" pt-4 px-4 text-center">
+                        <a href="" ><button class="btn btn-primary rounded-5 p-2 px-3">Explore Organic Methods</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 m-0 p-0">
+                <div class="p-5" style="width: 100%; height: 80vh;">
+                    <img src="Assets/Techniques/organic_farming_banner_img.jpg" alt="" class="w-100 h-100">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--banner section ended-->
+    <!--introduction section starts-->
+    <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <div class="p-5">
+                <h2 class="fw-bold">Introduction</h2>
+                <p class="pt-3">At AGRIVERSE, we recognize and support all types of farming — from small-scale traditional setups to advanced precision agriculture.</p>
+                <p>Each type has its own advantages, and understanding them helps farmers make better, more sustainable choices.</p>
+                <p>At AGRIVERSE, we aim to bridge this gap by helping farmers understand and adopt the method that best fits their land, crop, and goals. 
+                    Whether you follow age-old traditions 
+                    or embrace modern techniques, every method contributes to feeding the world and sustaining the planet.</p>
+                <p>From traditional plowing to AI-powered monitoring, each farming type represents a unique balance between heritage and innovation.</p>
+                <p>Our platform is built to educate, connect, and empower farmers through knowledge, 
+                    equipment, and access to expert support — because smart farming starts with understanding your roots. 🌱</p>
+            </div>
+            <div class="row px-5 pb-4">
+                <div class="col-lg-6 mb-3">
+                    <div class="shadow p-4 fs-5 text-center ">
+                        <p>🌎 Diverse Practices for Every Region</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <div class="shadow p-3 p-4 fs-5 text-center ">
+                        <p>🌿 Sustainability Meets Modern Science</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <div class="shadow p-3 p-4 fs-5 text-center ">
+                        <p>💧 Efficient Use of Land & Water Resources</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <div class="shadow p-3 p-4 fs-5 text-center">
+                        <p>⚙️ Technology-Driven Growth</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--introduction section ended-->
+    <!--what is organic farming section starts-->
+    <div style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <div class="text-center fw-bold px-3">
+                <h2 class="pt-5">Farming Methods That Shape Our Fields</h2>
+                <h6>From Tradition to Innovation — Explore How the World Grows.</h6>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 p-5">
+                    <h2>What Is Organic Farming?</h2>
+                    <p>Organic farming is an eco-friendly agricultural method that focuses on maintaining soil fertility, 
+                        biodiversity, and ecological balance — without relying on synthetic fertilizers or chemical pesticides.</p>
+                    <p>It emphasizes natural processes like composting, crop rotation, and 
+                        biological pest control to produce healthy food while preserving the environment.</p>
+                    <p class="fst-italic">Organic farming isn’t just a technique — it’s a philosophy of     co-existence between humans and nature.</p>
+                </div>
+                <div class="col-lg-6 col-sm-12 p-5">
+                    <div style="width: 90%; height: 90%;">
+                        <img src="Assets/Techniques/organic_farming_img.jpg" alt="" class="w-100 h-100">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-center">Key Principles of Organic Farming</h2>
+                <div class="row pt-4 p-3 text-light">
+                    <div class="col-lg-6 mb-3">
+                        <div style="display: flex; justify-content: center;">
+                            <div style="width: 60px; height: 60px; border-radius: 50px 50px 50px 50px; background-color: rgb(106, 193, 228);">
+                                <p class="text-center pt-2 fs-2">🌱</p>
+                            </div>
+                        </div>
+                        <div class=" text-center p-3" style="background-color: rgb(73, 167, 73);">
+                            <h5 >Soil Health</h5>
+                            <p >Build and maintain rich, living soil through compost, manure, and green cover.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <div style="display: flex; justify-content: center;">
+                            <div style="width: 60px; height: 60px; border-radius: 50px 50px 50px 50px; background-color: rgb(106, 193, 228);">
+                                <p class="text-center pt-2 fs-2">🐝</p>
+                            </div>
+                        </div>
+                        <div class=" text-center p-3"  style="background-color: rgb(73, 167, 73);">
+                            <h5 >Biodiversity</h5>
+                            <p >Encourage multiple crops and natural habitats for pollinators and pest predators.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <div style="display: flex; justify-content: center;">
+                            <div style="width: 60px; height: 60px; border-radius: 50px 50px 50px 50px; background-color: rgb(106, 193, 228);">
+                                <p class="text-center pt-2 fs-2">🔄</p>
+                            </div>
+                        </div>
+                        <div class=" text-center p-3"  style="background-color: rgb(73, 167, 73);">
+                            <h5 >Natural Cycles</h5>
+                            <p >Recycle nutrients through organic waste and crop residues.</p>
+                        </div>
+                    </div>
+                
+                    <div class="col-lg-6 mb-3">
+                        <div style="display: flex; justify-content: center;">
+                            <div style="width: 60px; height: 60px; border-radius: 50px 50px 50px 50px; background-color: rgb(106, 193, 228); ">
+                                <p class="text-center pt-2 fs-2">🚫</p>
+                            </div>
+                        </div>
+                        <div class=" text-center p-3"  style="background-color: rgb(73, 167, 73);">
+                            <h5 >No Synthetic Chemicals</h5>
+                            <p >Avoid artificial fertilizers, GMOs, and chemical pesticides.</p>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <div class="text-center pt-4">
+                <h2 >Natural Methods. Sustainable Practices. Healthier Harvests.</h2>
+                <p>Learn. Apply. Thrive — Organically</p>
+            </div>
+            <p class="px-5 pt-3">Organic farming is all about working with nature, not against it. These core methods ensure 
+            healthy soil, pest-free crops, and long-term sustainability — while reducing dependence on chemicals and synthetic inputs.</p>
+            <div class="row pt-4 px-5 shadow mb-3" >
+                <div class="col-lg-7 ">
+                    <h5 class="fw-bold">Crop Rotation</h5>
+                    <p>Planting different crops in sequence to maintain soil fertility and reduce pest buildup.</p>
+                    <p>Rotating crops season after season helps maintain soil fertility and prevents the buildup of pests and diseases. Farmers alternate 
+                    between legumes, cereals, and root crops to balance nutrients naturally — ensuring long-term soil productivity and healthier yields.</p>
+                    <p>💡 Example: After growing maize, plant legumes like chickpeas or soybeans to replenish nitrogen in the soil.</p>
+                </div>
+                <div class="col-lg-5">
+                    <div class="w-100" style="height: 90%;">
+                        <img src="Assets/Techniques/crop_rotation_img.jpg" alt="" class="rounded-4 w-100 h-100">
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-4 px-5 shadow mb-3" >
+                <div class="col-lg-5">
+                    <div class="w-100" style="height: 90%;">
+                        <img src="Assets/Techniques/green_manure_img.jpg" alt="" class="rounded-4 w-100 h-100">
+                    </div>
+                </div>
+                <div class="col-lg-7 ">
+                    <h5 class="fw-bold">Green Manuring</h5>
+                    <p>Growing cover crops to add organic matter and nitrogen to the soil.</p>
+                    <p>Green manures are crops grown specifically to be plowed back into the soil, enriching it with organic matter.
+                        This practice improves soil structure, boosts moisture retention, and adds essential nutrients — especially nitrogen and carbon</p>
+                    <p>💡 Example: Growing sun hemp or clover before the main crop improves soil fertility without synthetic fertilizers.</p>
+                </div>
+            </div>
+            <div class="row pt-4 px-5 shadow mb-3" >
+                <div class="col-lg-7 ">
+                    <h5 class="fw-bold">Composting</h5>
+                    <p>Turning organic waste into nutrient-rich fertilizer that boosts soil health.</p>
+                    <p>Composting transforms agricultural and household waste into rich, natural fertilizer. 
+                        It restores soil health, encourages microbial activity, and reduces landfill waste — all while cutting down fertilizer costs.</p>
+                    <p>💡 Tip: Combine crop residues, animal dung, and green waste in proper layers to make high-quality compost.</p>
+                </div>
+                <div class="col-lg-5">
+                    <div class="w-100" style="height: 90%;">
+                        <img src="Assets/Techniques/composting_img.jpg" alt="" class="rounded-4 w-100 h-100">
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-4 px-5 shadow mb-3" >
+                <div class="col-lg-5">
+                    <div class="w-100" style="height: 90%;">
+                        <img src="Assets/Techniques/biological_pest_control_img.jpg" alt="" class="rounded-4 w-100 h-100">
+                    </div>
+                </div>
+                <div class="col-lg-7 ">
+                    <h5 class="fw-bold">Biological Pest Control</h5>
+                    <p>Using beneficial insects and bio-pesticides to manage pests naturally.</p>
+                    <p>Instead of chemical sprays, organic farmers use beneficial insects, 
+                        microorganisms, and herbal extracts to manage pests. This method maintains ecological balance and keeps crops naturally protected.</p>
+                    <p>💡 Example: Ladybugs control aphids effectively, while neem oil acts as a natural insect repellent.</p>
+                </div>
+            </div>
+            <div class="row pt-4 px-5 shadow pb-3" >
+                <div class="col-lg-7 ">
+                    <h5 class="fw-bold">Organic Mulching</h5>
+                    <p>Retaining moisture, reducing weeds, and preventing soil erosion with natural mulch.</p>
+                    <p>Mulching involves covering the soil with straw, leaves, or plastic sheets to 
+                        retain moisture, suppress weeds, and regulate temperature. It keeps the soil ecosystem active and prevents erosion.</p>
+                    <p>💡 Tip: Organic mulches decompose over time, adding extra nutrients to the soil.</p>
+                </div>
+                <div class="col-lg-5">
+                    <div class="w-100" style="height: 90%;">
+                        <img src="Assets/Techniques/multching_img.jpg" alt="" class="rounded-4 w-100 h-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--success stories section starts-->
+        <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+            <div class="container text-bg-light">
+                <h2 class="fw-bold text-center pt-5">Success Stories</h2>
+                <div class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active text-center">
+                            <div class="pt-3">
+                                <p>“After switching to organic methods with AGRIVERSE guidance, my soil regained fertility, and my produce fetched better market prices.”</p>
+                                <p class="fst-italic">— Ravi Kumar, Vegetable Farmer, Tamil Nadu</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <div class="pt-3">
+                                <p>“After switching to organic methods with AGRIVERSE guidance, my soil regained fertility, and my produce fetched better market prices.”</p>
+                                <p class="fst-italic">— Sunita Sharma, Maharashtra</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--success stories section ended-->
+    <!--what is organic farming section ended-->
+
+
+    
+    <!--tips section starts-->
+    <div style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light p-5">
+            <h2 class="text-center">Tips for Starting Organic Farming</h2>
+            <div class="pt-3 px-5 protext_icons m-0">
+                <p class="py-3"><i class="bi bi-check2-square"></i>  Start small —> begin with a small plot to understand your soil and ecosystem.</p>
+                <p class="pb-3"><i class="bi bi-check2-square"></i>  Use local compost and farmyard manure.</p>
+                <p class="pb-3"><i class="bi bi-check2-square"></i>  Avoid hybrid seeds —> go for organic-certified varieties.</p>
+                <p class="pb-3"><i class="bi bi-check2-square"></i>  Keep records for certification and traceability.</p>
+                <p class="pb-3 m-0"><i class="bi bi-check2-square"></i>  Stay patient —> soil takes time to heal and balance naturally.</p>
+            </div>
+            <div class="pt-4 text-center">
+                <h2>Ready to Go Organic?</h2>
+                <p class="pt-3">AGRIVERSE helps you start your organic farming journey with the right tools, knowledge, and expert support.</p>
+                <a href="" class="pt-3 px-3 mb-3"><button class="btn btn-primary rounded-5">Talk to an Organic Expert</button></a>
+                <a href="" class="mb-3"> <button class="btn btn-primary rounded-5">Shop Organic Inputs</button></a>
+            </div>
+        </div>
+    </div>
+    <!--tips section eneded-->
+    <!--footer section starts-->
+    <footer>
+        <div class="p-5">
+            <div class="footer_div1 row pb-3 text-center ">
+                <div class="ft_div_1 col-lg-3">
+                    <div class="logo_div p-3">
+                        <div>
+                        <a href="index.html" class="navbar-brand"><img src="Assets/logo-removebg-preview.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p>Your one-stop platform for seeds, plants, fertilizers, machinery, and all farming needs. 
+                        Empowering farmers with products, knowledge, and support for a better tomorrow.</p>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 ">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Quick Links</h5>
+                        <nav>
+                        <a href=""><p>Home</p></a>
+                        <a href=""><p>About Us</p></a>
+                        <a href=""><p>Agri Essentials</p></a>
+                        <a href=""><p>Agri Techniques</p></a>
+                        <a href=""><p>Agri Services</p></a>
+                        <a href=""><p>Agri Gyaan</p></a>
+                        <a href=""><p>Farmer Forum</p></a>
+                        <a href=""><p>Agri Articles</p></a>
+                        <a href=""><p>Get Support</p></a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2">
+                    <div>
+                        <div>
+                            <h5 class="text-decoration-underline pb-3">Products & Solutions</h5>
+                            <p>Seeds & Plants</p>
+                            <p>Fertilizers</p>
+                            <p>Machinery & Tools</p>
+                            <p>Irrigation Solutions</p>
+                            <p>Farming Ways</p>
+                            <p>Animal Husbandry Essentials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2"> 
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Knowledge Hub</h5>
+                        <p>Articles & Guides</p>
+                        <p>Announcements & Updates</p>
+                        <p>Success Stories</p>
+                        <p>Farming Methods</p>
+                        <p>Best Practices</p>
+                        <p>Market Updates & Insights</p>
+                        <p>Farmer Training & Workshops</p>
+                        <p>Govt Schemes Guidance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-start p-5 pt-0">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Get Support</h5>
+                        <div>
+                            <p><i class="bi bi-telephone"></i>  <a href="">1800-555-6666</a></p>
+                            <p><i class="bi bi-whatsapp"></i>   <a href="">+91-8666555444</a></p>
+                            <p><i class="bi bi-envelope"></i>   <a href="">Email: support@agriverse.com</a></p>
+                            <p><i class="bi bi-alarm"></i>  <a href="">24/7 availability</a></p>
+                            <p><i class="bi bi-chat"></i>   <a href="">Chat with Us</a></p>
+                            <p><i class="bi bi-google-play"></i>    <a href="">Download App</a></p>
+                            <p>🌾 <a href=""> Ask Forum</a></p>
+                            <p><i class="bi bi-geo-alt"></i>    <a href="">Nearest Agriverse center</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="footer_div1 row p-5 pt-0 m-0 p-0">
+                <div class="col-lg-4">
+                    <h5>Follow Us:</h5>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-youtube"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <h5>Download App</h5>
+                        <div class="icons">
+                            <a href="" class="p-3"><i class="bi bi-google-play"></i></a>
+                            <a href="" class="p-3"><i class="bi bi-apple"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <div>
+                            <p>Enter your email to get free farming tips & market updates.</p>
+                            <div class="row">
+                                <div class="col-lg-8 justify-content-end">
+                                    <div >
+                                        <input type="email" placeholder="Enter Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div >
+                                        <button class="btn btn-primary p-2 rounded-5">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="p-4 text-center">
+            <p>&copy;designed and developed by Pulluri Govardhan</p>
+            <a href="" ><div class="whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            </div></a>
+        </div>    
+    </footer>
+    <!--footer section ended-->
+
+
+    
+</body>
+</html>

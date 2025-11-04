@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="techniques.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header class="container-fluid ">
+        <nav class="navbar navbar-expand-lg mx-auto">
+            <div class="container  ">
+                <div class="logo">
+                    <a href="index.html"><img src="Assets/logo-removebg-preview.png" alt="" class="w-100 h-100"></a>
+                </div>
+                <button class="navbar-toggler" data-bs-target="myNav" data-bs-toggle="collapse">
+                    <a href="#more" data-bs-toggle="offcanvas"><span class="navbar-toggler-icon"></span></a>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="myNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="essentials.html" class="nav-link" id="essentials">Essentials <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header1">
+                                <a href="essentials.html">Seeds & Plants</a>
+                                <a href="fertilizers.html">Fertilizers & Pesticides</a>
+                                <a href="irrigation.html">Irrigation</a>
+                                <a href="machinery.html">Machinery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="organic.html" class="nav-link" id="techniques">Techniques <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header2">
+                                <a href="organic.html">Organic Farming</a>
+                                <a href="hydroponics.html">Hydroponics</a>
+                                <a href="aquaponics.html">Aquaponic</a>
+                                <a href="vertical.html">Vertical Farming</a>
+                                <a href="traditional.html">Traditional Farming</a>
+                                <a href="smartfarming.html">Smart Farming</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="article.html" class="nav-link">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="forum.html" class="nav-link">Farmers Forum</a>
+                        </li>
+                        <li class="nav-item person_icon">
+                            <a href="" class="nav-link" id="person"><i class="bi bi-person-circle" style="font-size: 32px;"></i></a>
+                            <div class="dropdown" id="login">
+                                <a href="">Signup</a>
+                                <a href="">Login</a>
+                            </div>
+                        </li>
+                        <li class="nav-item menu_icon">
+                            <a href="#more" class="nav-link" data-bs-toggle="offcanvas"><i class="bi bi-list" style="font-size: 32px;"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!--script for essentials dropdown starts-->
+    <script>
+        $('#header1').hide();
+
+        $('#essentials').mouseover(() =>{
+            $('#header1').slideDown()
+        })
+        $('#header1').mouseover(() =>{
+            $('#header1').stop()
+        })
+
+        $('#essentials, #header1').mouseleave(() =>{
+            $('#header1').slideUp()
+        })
+        $('#header1').click(() =>{
+            $('#header1').slideUp()
+        })
+    </script>
+    <!--script for essentials dropdown ended-->
+
+    <!--script for techniques dropdown starts-->
+    <script>
+        $('#header2').hide();
+
+        $('#techniques').mouseover(() =>{
+            $('#header2').slideDown()
+        })
+        $('#header2').mouseover(() =>{
+            $('#header2').stop()
+        })
+        $('#techniques, #header2').mouseleave(() =>{
+            $('#header2').slideUp()
+        })
+        $('#header2').click(() =>{
+            $('#header2').slideUp()
+        })
+    </script>
+    <!--script for techniques dropdown ended-->
+
+    <!--script for login dropdown starts-->
+    <script>
+        $('#login').hide();
+
+        $('#person').mouseover(() =>{
+            $('#login').slideDown()
+        })
+        $('#login').mouseover(() =>{
+            $('#login').stop()
+        })
+        $('#person, #login').mouseleave(() =>{
+            $('#login').slideUp()
+        })
+        $('#login').click(() =>{
+            $('#login').slideUp()
+        })
+    </script>
+    <!--script for login dropdown ended-->
+
+    <!--offcanvas for menubar starts-->
+    <div class="offcanvas offcanvas-start" id="more" data-bs-backdrop="static">
+        <div class="offcanvas-header" style="border-bottom: 1px solid green;">
+            <div class="row p-2 pt-3" >
+                    <div class="col-5">
+                        <div class="profile_photo">
+                            <img src="Assets/Forum/profile_photo_img.jpg" alt="" class="w-100 h-100" style="border-radius: 60px;">
+                        </div>
+                    </div>
+                    <div class="col-7 p-3">
+                        <p class="fw-bold m-0 p-0">Dr. Kavita Deshmukh</p>
+                        <p class="m-0 p-0">Organic Farming Trainer</p>
+                        <p >Telangana</p>
+                    </div>
+                </div>
+            <button class="btn-close text-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="px-5 py-2">
+                <a href=""><p>Signup</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href=""><p>Login</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="index.html"><p>Home</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Essentials</p></summary>
+                    <a href="essentials.html"><button>Seeds & Plants</button></a>
+                    <a href="fertilizers.html"><button>Fertilizers</button></a>
+                    <a href="irrigation.html"><button>Irrigation</button></a>
+                    <a href="machinery.html"><button>Machinery</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Techniques</p></summary>
+                    <a href="organic.html"><button>Organic Farming</button></a>
+                    <a href="hydroponics.html"><button>Hydroponics</button></a>
+                    <a href="aquaponics.html"><button>Aquaponic </button></a>
+                    <a href="vertical.html"><button>Vertical Farming</button></a>
+                    <a href="traditional.html"><button>Traditional Farming</button></a>
+                    <a href="smartfarming.html"><button>Smart Farming</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <a href="article.html"><p>Articles</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="forum.html"><p>Farmers Forum</p></a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvas for menubar ended-->->
+
+    <!--banner section starts-->
+    <div class="farm_bg justify-content-center">
+        <div class="row text-light m-0 p-0 text-center">
+            <div class="col-lg-5 p-4">
+                <h1 class="fw-bold pt-4 m-0 p-0">TRADITIONAL FARMING</h1>
+                <p>Where generations of experience meet sustainable growth</p>
+                <div class="px-5 pt-3">
+                    <p class=" fst-italic">“Honoring time-tested wisdom, nurturing the land with tradition.”</p>
+                    <p>At AGRIVERSE, we celebrate the farmers who continue to nurture their land through natural methods, ancestral wisdom, and time-honored care. 
+                        Join us as we journey through the roots of Indian agriculture — a world where nature, knowledge, and nourishment come together.</p>
+                    <p>Traditional farming is not just about cultivating crops — it’s about cultivating values.</p>
+                    
+                    
+                    <div class=" pt-4 px-4 text-center">
+                        <a href="" ><button class="btn btn-primary rounded-5 p-2 px-4">Explore Traditional Methods</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 m-0 p-0">
+                <div class="p-5" style="width: 100%; height: 80vh;">
+                    <img src="Assets/Techniques/traditional_banner_img.jpg" alt="" class="w-100 h-100">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--banner section ended-->
+   <!--introduction section starts-->
+   <div style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+    <div class="container text-bg-light">
+        <div class="row m-0 p-0">
+                <div class="col-lg-6 p-5">
+                    <h2>The Heartbeat of Indian Agriculture</h2>
+                    <p>Traditional farming isn’t just a method — it’s a legacy passed down through generations. Rooted in natural cycles, 
+                        indigenous seeds, and organic manures, this practice embodies the deep relationship between farmers and their land.</p>
+                    <p>Even in today’s age of mechanization, traditional methods remind us that sustainability begins with simplicity. By using cow dung manure, composting, natural pest control, 
+                        and mixed cropping, farmers continue to produce nutrient-rich, chemical-free yields that protect both soil and people.</p>
+                    <p class="fst-italic">“Our ancestors farmed with their hands, hearts, and harmony — AGRIVERSE helps preserve that spirit.”</p>
+                </div>
+                <div class="col-lg-6 p-5">
+                    <div style="width: 100%; height: 100%;">
+                        <img src="Assets/Techniques/traditional_intro_img.jpg" alt="" class="w-100 h-100">
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-center">Benefits of Traditional Farming</h2>
+            <div class="row p-4 text-center">
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                    <h5>soil fertility</h5>
+                    <p>🌱 Maintains long-term soil fertility</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>chemicals</h5>
+                        <p>🌾 Reduces chemical dependency</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Water sources</h5>
+                    <p>💧 Conserves natural water sources</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Biodiversity</h5>
+                    <p>🦋 Supports biodiversity</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Cultural</h5>
+                    <p>👨‍🌾 Builds community and cultural identity</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>eco-friendly</h5>
+                    <p>🌎 Promotes eco-friendly and sustainable living</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--introduction section ended-->
+
+    <!--principles sectiojn starts-->
+    <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <h2 class="text-center p-5">Core Principles of Traditional Farming</h2>
+            <div class="p-3 row pb-5">
+                <div class="col-lg-3 p-3 text-center">
+                    <div class="principle pb-5 pt-3 p-3 rounded-3">
+                        <div class="icons p-3">
+                            <div class="princi_icon pb-3">
+                                <p>🌱</p>
+                            </div>
+                        </div>
+                        <h5>Respect for Nature</h5>
+                        <p>Farmers follow the rhythm of seasons, rain patterns, and moon phases to decide planting and harvesting.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 x p-3 text-center">
+                    <div class="principle pb-5 pt-3 p-3 rounded-3">
+                        <div class="icons p-3">
+                            <div class="princi_icon pb-3">
+                                <p>🐄</p>
+                            </div>
+                        </div>
+                        <h5>Use of Natural Inputs</h5>
+                        <p>Organic fertilizers like cow dung, compost, and green manure enrich the soil without harming ecosystems.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 p-3 text-center">
+                    <div class="principle pb-5 pt-3 p-3 rounded-3">
+                        <div class="icons p-3">
+                            <div class="princi_icon pb-3">
+                                <p>🌾</p>
+                            </div>
+                        </div>
+                        <h5>Crop Diversity</h5>
+                        <p>Mixed and intercropping maintain soil fertility, control pests naturally, and ensure food security.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3  p-3 text-center">
+                    <div class="principle pb-5 pt-3 p-3 rounded-3">
+                        <div class="icons p-3">
+                            <div class="princi_icon pb-3">
+                                <p>💧</p>
+                            </div>
+                        </div>
+                        <h5>Water Wisdom</h5>
+                        <p>Traditional irrigation methods like canals, tanks, and rainwater harvesting reflect deep local knowledge.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--principles sectiojn ended-->
+
+    <!--table for suitable crops section starts-->
+    <div style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light p-5">
+            <h2 class="text-center pb-3">Traditional Farming Methods Across India</h2>
+            
+            <table class="table">
+                <thead class="fw-bold">
+                    <tr>
+                        <th scope="col">Region</th>
+                        <th scope="col">Method</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row" class="fw-bold">Punjab & Haryana</td>
+                        <td>Crop Rotation</td>
+                        <td>Farmers alternate crops like wheat and legumes to restore nutrients.</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" class="fw-bold">Rajasthan</td>
+                        <td>Dryland Farming</td>
+                        <td>Efficient use of scarce water with drought-resistant crops like bajra and moong.</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" class="fw-bold">Kerala</td>
+                        <td>Mixed Cropping</td>
+                        <td>Coconut, banana, and pepper grown together in harmony.</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" class="fw-bold">West Bengal</td>
+                        <td>Wet Rice Cultivation</td>
+                        <td>Terraced fields retain water naturally for sustainable paddy growth.</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" class="fw-bold">Northeast</td>
+                        <td>Jhum (Shifting) Cultivation</td>
+                        <td>Rotational use of land allows soil to rejuvenate naturally.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--table for suitable crops section ended-->
+
+    <!--saftey and maintanance section starts-->
+    <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <div class=" text-center pt-5">
+                <h2 class="m-0 p-0 ">Safety & Maintenance Guidelines</h2>
+                <p>Keep Your Hydroponic System Healthy</p>
+            </div>
+            <div class="p-5">
+                <p>To ensure consistent yields, maintain your system regularly.</p>
+                <p><i class="bi bi-dot" style="font-size: 26px;"></i>✅ Clean water tanks weekly</p>
+                <p><i class="bi bi-dot" style="font-size: 26px;"></i>✅ Test pH and nutrient balance daily</p>
+                <p><i class="bi bi-dot" style="font-size: 26px;"></i>✅ Replace nutrient solution every 10–14 days</p>
+                <p><i class="bi bi-dot" style="font-size: 26px;"></i>✅ Sanitize trays to prevent algae and root rot</p>
+                <p><i class="bi bi-dot" style="font-size: 26px;"></i>✅ Keep temperature and light consistent</p>
+            </div>
+        </div>
+    </div>
+    <!--saftey and maintanance section ended-->
+
+    <!--success stories section starts-->
+    <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <div class="text-center fw-bold pt-4">
+                <h2>Success Stories</h2>
+                <p>Farmers Who Thrived with Hydroponics</p>
+            </div>
+            <div class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg-6 ">
+                                <div class="text-bg-light p-4 review">
+                                    <h3><strong>The Legacy of the Land</strong></h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-4">  
+                                            <p>For generations, the Yadav family has practiced mixed cropping and compost-based soil enrichment on their ancestral farmland. When Ramesh took over, he resisted switching to chemicals despite local trends. 
+                                            Instead, he enhanced traditional composting with modern soil testing insights from AGRIVERSE.</p>
+                                        </div>
+                                        <div class="col-lg-6 p-4">
+                                            <div class="farmer1">
+                                            </div>
+                                            <div class="text-center pt-2">
+                                                <h6>– Ramesh Yadav, Uttar Pradesh</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-bg-light p-4 review">
+                                    <h3><strong>Empowering Women Through Traditional Seeds</strong></h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-4 ">  
+                                            <p>Lalita started with just half an acre, relying solely on indigenous paddy varieties and cow dung manure. She joined the AGRIVERSE community and 
+                                            learned how to package and sell her traditional seeds online. Within two years, she became a local seed ambassador.</p>
+                                        </div>
+                                        <div class="col-lg-6 p-4">
+                                            <div class="farmer2">
+                                            </div>
+                                            <div class="text-center pt-2">
+                                                <h6>– Lalita Devi, Odisha</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="carousel-item ">    
+                        <div class="row">
+                            <div class="col-lg-6 ">
+                                <div class="text-bg-light p-4 review">
+                                    <h3><strong>Combining Tradition with Technology</strong></h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-4">  
+                                            <p>Rajesh’s farm had been following natural pest control using neem and garlic sprays for decades. After joining AGRIVERSE, he learned to document and promote his
+                                             methods using digital tools and connect with other farmers. His family’s natural cotton cultivation now attracts buyers.</p>
+                                        </div>
+                                        <div class="col-lg-6 p-4">
+                                            <div class="farmer3">
+                                            </div>
+                                            <div class="text-center pt-2">
+                                                <h6>– Rajesh Patel, Gujarat</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-bg-light p-4 review">
+                                    <h3><strong>Reviving Ancient Millets</strong></h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-4 ">  
+                                            <p>Droughts had made farming nearly impossible in Bhavna’s village. Instead of giving up, she researched her grandparents’ millet-based dryland farming techniques. 
+                                            With support from AGRIVERSE’s resource guides, she revived traditional crops like bajra and jowar, reducing water usage by 60%.</p>
+                                        </div>
+                                        <div class="col-lg-6 p-4">
+                                            <div class="farmer4">
+                                            </div>
+                                            <div class="text-center pt-2">
+                                                <h6>– Bhavna Sharma, Rajasthan</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center p-5">
+                <h2 class="fw-bold">Keep the Tradition Alive</h2>
+                <p>Join the AGRIVERSE Movement</p>
+                <p class="pb-3">Be a part of India’s agricultural heritage. Share your farming techniques, learn from others, and help keep traditional wisdom alive for the next generation.</p>
+                <button class="btn btn-primary p-3 px-5 rounded-5">Share Your Farming Story</button>
+                <button class="btn btn-primary p-3 px-5 rounded-5">Join the Farmer Forum</button>
+            </div>
+        </div>
+    </div>
+    <!--success stories section ended-->
+    <!--footer section starts-->
+    <footer>
+        <div class="p-5">
+            <div class="footer_div1 row pb-3 text-center ">
+                <div class="ft_div_1 col-lg-3">
+                    <div class="logo_div p-3">
+                        <div>
+                        <a href="index.html" class="navbar-brand"><img src="Assets/logo-removebg-preview.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p>Your one-stop platform for seeds, plants, fertilizers, machinery, and all farming needs. 
+                        Empowering farmers with products, knowledge, and support for a better tomorrow.</p>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 ">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Quick Links</h5>
+                        
+                        <a href=""><p>Home</p></a>
+                        <a href=""><p>About Us</p></a>
+                        <a href=""><p>Agri Essentials</p></a>
+                        <a href=""><p>Agri Techniques</p></a>
+                        <a href=""><p>Agri Services</p></a>
+                        <a href=""><p>Agri Gyaan</p></a>
+                        <a href=""><p>Farmer Forum</p></a>
+                        <a href=""><p>Agri Articles</p></a>
+                        <a href=""><p>Get Support</p></a>
+                        
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2">
+                    <div>
+                        <div>
+                            <h5 class="text-decoration-underline pb-3">Products & Solutions</h5>
+                            <p>Seeds & Plants</p>
+                            <p>Fertilizers</p>
+                            <p>Machinery & Tools</p>
+                            <p>Irrigation Solutions</p>
+                            <p>Farming Ways</p>
+                            <p>Animal Husbandry Essentials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2"> 
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Knowledge Hub</h5>
+                        <p>Articles & Guides</p>
+                        <p>Announcements & Updates</p>
+                        <p>Success Stories</p>
+                        <p>Farming Methods</p>
+                        <p>Best Practices</p>
+                        <p>Market Updates & Insights</p>
+                        <p>Farmer Training & Workshops</p>
+                        <p>Govt Schemes Guidance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-start p-5 pt-0">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Get Support</h5>
+                        <div>
+                            <p><i class="bi bi-telephone"></i>  <a href="">1800-555-6666</a></p>
+                            <p><i class="bi bi-whatsapp"></i>   <a href="">+91-8666555444</a></p>
+                            <p><i class="bi bi-envelope"></i>   <a href="">Email: support@agriverse.com</a></p>
+                            <p><i class="bi bi-alarm"></i>  24/7 availability</p>
+                            <p><i class="bi bi-chat"></i>   <a href="">Chat with Us</a></p>
+                            <p><i class="bi bi-google-play"></i>    <a href="">Download App</a></p>
+                            <p>🌾 <a href=""> Ask Forum</a></p>
+                            <p><i class="bi bi-geo-alt"></i>    <a href="">Nearest Agriverse center</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="footer_div1 row p-5 pt-0 m-0 p-0">
+                <div class="col-lg-4">
+                    <h5>Follow Us:</h5>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-youtube"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <h5>Download App</h5>
+                        <div class="icons">
+                            <a href="" class="p-3"><i class="bi bi-google-play"></i></a>
+                            <a href="" class="p-3"><i class="bi bi-apple"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <div>
+                            <p>Enter your email to get free farming tips & market updates.</p>
+                            <div class="row">
+                                <div class="col-lg-8 justify-content-end">
+                                    <div >
+                                        <input type="email" placeholder="Enter Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div >
+                                        <button class="btn btn-primary p-2 rounded-5">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="p-4 text-center">
+            <p>&copy;designed and developed by Pulluri Govardhan</p>
+            <a href="" ><div class="whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            </div></a>
+        </div>    
+    </footer>
+    <!--footer section ended-->
+
+
+</body>
+</html>

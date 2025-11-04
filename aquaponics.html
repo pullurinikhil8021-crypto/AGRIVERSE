@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="techniques.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header class="container-fluid ">
+        <nav class="navbar navbar-expand-lg mx-auto">
+            <div class="container  ">
+                <div class="logo">
+                    <img src="Assets/logo-removebg-preview.png" alt="" class="w-100 h-100">
+                </div>
+                <button class="navbar-toggler" data-bs-target="myNav" data-bs-toggle="collapse">
+                    <a href="#more" data-bs-toggle="offcanvas"><span class="navbar-toggler-icon"></span></a>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="myNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="essentials.html" class="nav-link" id="essentials">Essentials <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header1">
+                                <a href="essentials.html">Seeds & Plants</a>
+                                <a href="fertilizers.html">Fertilizers & Pesticides</a>
+                                <a href="irrigation.html">Irrigation</a>
+                                <a href="machinery.html">Machinery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="organic.html" class="nav-link" id="techniques">Techniques <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header2">
+                                <a href="organic.html">Organic Farming</a>
+                                <a href="hydroponics.html">Hydroponics</a>
+                                <a href="aquaponics.html">Aquaponic</a>
+                                <a href="vertical.html">Vertical Farming</a>
+                                <a href="traditional.html">Traditional Farming</a>
+                                <a href="smartfarming.html">Smart Farming</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="article.html" class="nav-link">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="forum.html" class="nav-link">Farmers Forum</a>
+                        </li>
+                        <li class="nav-item person_icon">
+                            <a href="" class="nav-link" id="person"><i class="bi bi-person-circle" style="font-size: 32px;"></i></a>
+                            <div class="dropdown" id="login">
+                                <a href="">Signup</a>
+                                <a href="">Login</a>
+                            </div>
+                        </li>
+                        <li class="nav-item menu_icon">
+                            <a href="#more" class="nav-link" data-bs-toggle="offcanvas"><i class="bi bi-list" style="font-size: 32px;"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!--script for essentials dropdown starts-->
+    <script>
+        $('#header1').hide();
+
+        $('#essentials').mouseover(() =>{
+            $('#header1').slideDown()
+        })
+        $('#header1').mouseover(() =>{
+            $('#header1').stop()
+        })
+
+        $('#essentials, #header1').mouseleave(() =>{
+            $('#header1').slideUp()
+        })
+        $('#header1').click(() =>{
+            $('#header1').slideUp()
+        })
+    </script>
+    <!--script for essentials dropdown ended-->
+
+    <!--script for techniques dropdown starts-->
+    <script>
+        $('#header2').hide();
+
+        $('#techniques').mouseover(() =>{
+            $('#header2').slideDown()
+        })
+        $('#header2').mouseover(() =>{
+            $('#header2').stop()
+        })
+        $('#techniques, #header2').mouseleave(() =>{
+            $('#header2').slideUp()
+        })
+        $('#header2').click(() =>{
+            $('#header2').slideUp()
+        })
+    </script>
+    <!--script for techniques dropdown ended-->
+
+    <!--script for login dropdown starts-->
+    <script>
+        $('#login').hide();
+
+        $('#person').mouseover(() =>{
+            $('#login').slideDown()
+        })
+        $('#login').mouseover(() =>{
+            $('#login').stop()
+        })
+        $('#person, #login').mouseleave(() =>{
+            $('#login').slideUp()
+        })
+        $('#login').click(() =>{
+            $('#login').slideUp()
+        })
+    </script>
+    <!--script for login dropdown ended-->
+
+    <!--offcanvas for menubar starts-->
+    <div class="offcanvas offcanvas-start" id="more" data-bs-backdrop="static">
+        <div class="offcanvas-header" style="border-bottom: 1px solid green;">
+            <div class="row p-2 pt-3" >
+                    <div class="col-5">
+                        <div class="profile_photo">
+                            <img src="Assets/Forum/profile_photo_img.jpg" alt="" class="w-100 h-100" style="border-radius: 60px;">
+                        </div>
+                    </div>
+                    <div class="col-7 p-3">
+                        <p class="fw-bold m-0 p-0">Dr. Kavita Deshmukh</p>
+                        <p class="m-0 p-0">Organic Farming Trainer</p>
+                        <p >Telangana</p>
+                    </div>
+                </div>
+            <button class="btn-close text-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="px-5 py-2">
+                <a href=""><p>Signup</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href=""><p>Login</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="index.html"><p>Home</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Essentials</p></summary>
+                    <a href="essentials.html"><button>Seeds & Plants</button></a>
+                    <a href="fertilizers.html"><button>Fertilizers</button></a>
+                    <a href="irrigation.html"><button>Irrigation</button></a>
+                    <a href="machinery.html"><button>Machinery</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Techniques</p></summary>
+                    <a href="organic.html"><button>Organic Farming</button></a>
+                    <a href="hydroponics.html"><button>Hydroponics</button></a>
+                    <a href="aquaponics.html"><button>Aquaponic </button></a>
+                    <a href="vertical.html"><button>Vertical Farming</button></a>
+                    <a href="traditional.html"><button>Traditional Farming</button></a>
+                    <a href="smartfarming.html"><button>Smart Farming</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <a href="article.html"><p>Articles</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="forum.html"><p>Farmers Forum</p></a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvas for menubar ended-->
+    <!--banner section starts-->
+    <div class="farm_bg justify-content-center">
+        <div class="row text-light m-0 p-0 text-center">
+            <div class="col-lg-5 p-4">
+                <h1 class="fw-bold pt-4 m-0 p-0">Aquaponics Farming</h1>
+                <p>The Harmony of Fish and Plants</p>
+                <div class="px-5 pt-3">
+                    <p class=" fst-italic">“Where Aquaculture Meets Agriculture — Naturally.”</p>
+                    <p>Combine <strong> fish farming (aquaculture)</strong> and <strong>hydroponics (soilless plant cultivation)</strong> 
+                        into one eco-balanced system that produces organic vegetables and fish — using 90% less water than traditional methods.</p>
+                    <h5>Aquaponics: The Future of Sustainable Farming</h5>
+                    <div class=" pt-4 px-4 text-center">
+                        <a href="" ><button class="btn btn-primary rounded-5 p-2 px-4">Explore Hydroponics Methods</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 m-0 p-0">
+                <div class="p-5" style="width: 100%; height: 80vh;">
+                    <img src="Assets/Techniques/hydroponics_banner_img.jpg" alt="" class="w-100 h-100">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--banner section ended-->
+   <!--introduction section starts-->
+   <div style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+    <div class="container text-bg-light">
+        <div class="row m-0 p-0">
+                <div class="col-lg-6 col-sm-12 p-5">
+                    <h2>What is Aquaponics?</h2>
+                    <p>Aquaponics is a <strong>closed-loop farming system</strong> that combines fish farming and plant cultivation in one integrated ecosystem.</p>
+                    <p>The <strong>fish waste provides nutrients</strong> for the plants, and the <strong>plants purify the water</strong>, which is recirculated back to the fish tanks.</p>
+                    <p>This <strong>natural symbiosis</strong> results in a clean, efficient, and chemical-free food production system.</p>
+                    <p class="fst-italic">“Let your fish feed your plants, and your plants clean the water — a cycle of sustainability.”</p>
+                </div>
+                <div class="col-lg-6 col-sm-12 p-5">
+                    <div style="width: 100%; height: 100%;">
+                        <img src="Assets/Techniques/aquaponic_intro_img.jpg" alt="" class="w-100 h-100">
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-center">Why Choose Hydroponics?</h2>
+            <h5 class="text-center pt-3">Benefits of Aquaponic Farming</h5>
+            <p class="px-5 pt-3">The aquaponics ecosystem follows a <strong>balanced biological cycle</strong> between fish, bacteria, and plants.</p>
+            <div class="row p-4 text-center">
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                    <h5>Water Efficiency</h5>
+                    <p>💧 Uses up to 95% less water than soil farming.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Chemical-Free</h5>
+                        <p>🌱 No pesticides or synthetic fertilizers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Dual Income</h5>
+                    <p>🐟 Earn from both fish and plants.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Year-Round Growth</h5>
+                    <p>🌞 Controlled environment farming.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Eco-Friendly</h5>
+                    <p>♻️ Recycles resources with zero runoff.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-3">
+                    <div class="p-4 shadow mx-auto mb-3">
+                        <h5>Urban Ready</h5>
+                    <p>🏙️ Compact systems fit in small spaces.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--introduction section ended-->
+    <!--types of hydronics farming section starts-->
+    <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light text-center">
+            <h2 class="p-5">Explore Different Aquaponic System Models</h2>
+            <p class="px-5 m-0 p-0">Farmers can choose system types based on space, crops, and fish variety. </p>
+            <p>Each system has unique advantages suited for different needs.</p>
+            <div class="row p-3">
+                <div class="col-lg-3 p-3">
+                    <div class="card">
+                        <div style="height: 200px;">
+                            <img src="Assets/Techniques/mediabed_aquaponic_img.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Media Bed System</h5>
+                            <p>Plants grow in gravel or clay pebbles that filter the fish water naturally.Best for small farms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 p-3 ">
+                    <div class="card">
+                        <div style="height: 200px;">
+                        <img src="Assets/Techniques/nft_aquaponics_img.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Nutrient Film Technique (NFT)</h5>
+                            <p>A thin nutrient film flows over plant roots using recycled fish water.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 p-3">
+                    <div class="card">
+                        <div style="height: 200px;">
+                            <img src="Assets/Techniques/dwc_aquaponic_img.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Deep Water Culture (DWC)</h5>
+                            <p>Plants float on rafts with roots submerged in nutrient-rich water.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 p-3">
+                    <div class="card">
+                        <div style="height: 200px;">
+                            <img src="Assets/Techniques/hybrid_aquaponic_img.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">Hybrid System</h5>
+                            <p>Combines two or more techniques for higher flexibility and yield.Best for research.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--types of hydronics farming section ended-->
+    <!--table for suitable crops section starts-->
+    <div style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light p-5">
+            <h2 class="text-center pb-3">What You Can Grow with Aquaponics?</h2>
+            <p>Suitable Crops and Fish</p>
+            <table class="table p-3">
+                <thead class="fw-bold">
+                    <tr>
+                        <th scope="col">Crop Type</th>
+                        <th scope="col">Examples</th>
+                        <th scope="col">Best System</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">Leafy Greens</td>
+                        <td>Lettuce, Spinach, Kale</td>
+                        <td>NFT / DWC</td>
+                        
+                    </tr>
+                    <tr>
+                        <td scope="row">Herbs</td>
+                        <td>Basil, Mint, Parsley</td>
+                        <td>NFT / Media Bed</td>
+                        
+                    </tr>
+                    <tr>
+                        <td scope="row">Vegetables</td>
+                        <td>Tomato, Cucumber, Pepper</td>
+                        <td>Media Bed / Hybrid</td>
+                        
+                    </tr>
+                    <tr>
+                        <td scope="row">Aquatic Plants</td>
+                        <td>Watercress, Lemongrass</td>
+                        <td>DWC / Hybrid</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table p-3 pt-4">
+                <thead class="fw-bold">
+                    <tr>
+                        <th scope="col">Fish Type</th>
+                        <th scope="col">Characteristics</th>
+                        <th scope="col">Water Temp (°C)</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">Tilapia</td>
+                        <td>Fast-growing, hardy</td>
+                        <td>25–30°C</td>
+                        
+                    </tr>
+                    <tr>
+                        <td scope="row"> Catfish</td>
+                        <td>Tolerates varying conditions</td>
+                        <td>24–28°C</td>
+                        
+                    </tr>
+                    <tr>
+                        <td scope="row" >Trout</td>
+                        <td>Cold-water fish</td>
+                        <td>14–18°C</td>
+                        
+                    </tr>
+                    <tr>
+                        <td scope="row">Koi / Goldfish</td>
+                        <td>Aesthetic + nutrient producers</td>
+                        <td>20–26°C</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--table for suitable crops section ended-->
+
+    <!--getting started section starts-->
+    <div style="background-color: #b6b4a9; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light text-center pb-4">
+            <div class="p-5">
+                <h2 class="fw-bold">Getting Started with Aquaponic!</h2>
+                <p>How to Set Up an Aquaponic Farm?</p>
+            </div>
+            <div class="col-7 p-3 shadow mx-auto mb-3" style="background-color: rgba(144, 238, 144, 0.747);">
+                <h5 class="fw-bold">Plan Your System</h5>
+                <p>Choose scale, crops, and fish species.</p>
+            </div>
+            <div class="col-7 p-3 shadow mx-auto mb-3" style="background-color: rgba(144, 238, 144, 0.747);">
+                <h5 class="fw-bold">Set Up Tanks & Grow Beds</h5>
+                <p>Connect with pumps and biofilters.</p>
+            </div>
+            <div class="col-7 p-3 shadow mx-auto mb-3" style="background-color: rgba(144, 238, 144, 0.747);">
+                <h5 class="fw-bold">Cycle the System</h5>
+                <p>Introduce bacteria and balance water pH.</p>
+            </div>
+            <div class="col-7 p-3 shadow mx-auto mb-3" style="background-color: rgba(144, 238, 144, 0.747);">
+                <h5 class="fw-bold">Add Fish & Plants</h5>
+                <p>Start small and monitor daily.</p>
+            </div>
+            <div class="col-7 p-3 shadow mx-auto mb-3" style="background-color: rgba(144, 238, 144, 0.747);">
+                <h5 class="fw-bold">Maintain & Monitor</h5>
+                <p>Check ammonia, pH, and nitrate levels.</p>
+            </div>
+            <div class="pt-3 pb-4">
+                <button class="btn btn-primary p-3 px-5 rounded-5">Request a Setup Consultation</button>
+            </div>
+        </div>
+    </div>
+    <!--getting started section ended-->
+
+    <!--saftey and maintanance section starts-->
+    <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <div class=" text-center pt-5">
+                <h2 class="m-0 p-0 ">Safety & Maintenance Guidelines</h2>
+                <p>Keep Your System Balanced and Healthy</p>
+            </div>
+            <div class="p-5">
+                <p>To ensure consistent yields, maintain your system regularly.</p>
+                <p><i class="bi bi-dot" style="font-size: 26px;"></i>✅ Test water pH (6.8–7.2) weekly.</p>
+                <p><i class="bi bi-dot" style="font-size: 26px;"></i>✅ Feed fish 1–2 times daily with balanced feed.</p>
+                <p><i class="bi bi-dot" style="font-size: 26px;"></i>✅ Clean filters and inspect pumps regularly.</p>
+                <p><i class="bi bi-dot" style="font-size: 26px;"></i>✅ Avoid overstocking fish.</p>
+                <p><i class="bi bi-dot" style="font-size: 26px;"></i>✅ Use organic pest control methods only.</p>
+                <p><i class="bi bi-dot" style="font-size: 26px;"></i>✅ Keep temperature and light consistent.</p>
+            </div>
+        </div>
+    </div>
+    <!--saftey and maintanance section ended-->
+
+    <!--success stories section starts-->
+    <div style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        <div class="container text-bg-light">
+            <div class="text-center fw-bold pt-4">
+                <h2>Success Stories</h2>
+                <p>Farmers Who Thrived with Aquaponic</p>
+            </div>
+            <div class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg-6 ">
+                                <div class="text-bg-light p-4 review">
+                                    <h3><strong>The Green Haven – Urban Aquaponics</strong></h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-4">  
+                                            <p>Rohit, an IT professional turned urban farmer, transformed his apartment rooftop into a fully functional aquaponics unit. By integrating tilapia fish with leafy greens like lettuce, 
+                                                spinach, and basil, he now produces over 80 kg of vegetables per month, supplying organic produce to local cafes.</p>
+                                        </div>
+                                        <div class="col-lg-6 p-4">
+                                            <div class="farmer1">
+                                            </div>
+                                            <div class="text-center pt-2">
+                                                <h6>– Rohit Kulkarni, Maharashtra</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-bg-light p-4 review">
+                                    <h3><strong>FreshFlow Farms – Community Aquaponics</strong></h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-4 ">  
+                                            <p>A group of 12 local farmers pooled their resources to establish an aquaponics unit for both fish rearing (catfish) and vegetable production (tomatoes, bell peppers, spinach). 
+                                                The yield per square foot has doubled compared to soil farming, with minimal fertilizer cost.</p>
+                                        </div>
+                                        <div class="col-lg-6 p-4">
+                                            <div class="farmer2">
+                                            </div>
+                                            <div class="text-center pt-2">
+                                                <h6>– Madurai, Tamil Nadu</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="carousel-item ">    
+                        <div class="row">
+                            <div class="col-lg-6 ">
+                                <div class="text-bg-light p-4 review">
+                                    <h3><strong>earns ₹40,000/month from local stores</strong></h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-4">  
+                                            <p>Built a small aquaponic farm with Tilapia and lettuce. Reduced water use by 90% and earns ₹40,000/month from local organic stores.
+                                                producing pesticide-free spinach and mint, supplying city markets.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-6 p-4">
+                                            <div class="farmer3">
+                                            </div>
+                                            <div class="text-center pt-2">
+                                                <h6>– Arun Pillai, Kerala</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-bg-light p-4 review">
+                                    <h3><strong>AquaHarvest Organics</strong></h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-4 ">  
+                                            <p>Agritech entrepreneur Kavita established a state-of-the-art aquaponics farm that produces both fish and high-value greens for supermarkets in Hyderabad. 
+                                                By optimizing nutrient cycling and using solar-powered aeration, her farm saves up to 80% more water than traditional systems.</p>
+                                        </div>
+                                        <div class="col-lg-6 p-4">
+                                            <div class="farmer4">
+                                            </div>
+                                            <div class="text-center pt-2">
+                                                <h6>– Kavita Deshmukh, Telangana</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center p-5">
+                <h2 class="fw-bold m-0 p-0">Join the Aquaponics Revolution</h2>
+                <p>Grow Smart. Grow Sustainable.</p>
+                <p class="pb-3">AGRIVERSE offers complete aquaponic solutions — from system setup and training to equipment and support.</p>
+                <button class="btn btn-primary p-3 px-5 rounded-5">Get Started</button>
+                <button class="btn btn-primary p-3 px-5 rounded-5">Ask Expert</button>
+            </div>
+        </div>
+    </div>
+    <!--success stories section ended-->
+    <!--footer section starts-->
+    <footer>
+        <div class="p-5">
+            <div class="footer_div1 row pb-3 text-center ">
+                <div class="ft_div_1 col-lg-3">
+                    <div class="logo_div p-3">
+                        <div>
+                        <a href="index.html" class="navbar-brand"><img src="Assets/logo-removebg-preview.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p>Your one-stop platform for seeds, plants, fertilizers, machinery, and all farming needs. 
+                        Empowering farmers with products, knowledge, and support for a better tomorrow.</p>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 ">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Quick Links</h5>
+                        
+                        <a href=""><p>Home</p></a>
+                        <a href=""><p>About Us</p></a>
+                        <a href=""><p>Agri Essentials</p></a>
+                        <a href=""><p>Agri Techniques</p></a>
+                        <a href=""><p>Agri Services</p></a>
+                        <a href=""><p>Agri Gyaan</p></a>
+                        <a href=""><p>Farmer Forum</p></a>
+                        <a href=""><p>Agri Articles</p></a>
+                        <a href=""><p>Get Support</p></a>
+                        
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2">
+                    <div>
+                        <div>
+                            <h5 class="text-decoration-underline pb-3">Products & Solutions</h5>
+                            <p>Seeds & Plants</p>
+                            <p>Fertilizers</p>
+                            <p>Machinery & Tools</p>
+                            <p>Irrigation Solutions</p>
+                            <p>Farming Ways</p>
+                            <p>Animal Husbandry Essentials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2"> 
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Knowledge Hub</h5>
+                        <p>Articles & Guides</p>
+                        <p>Announcements & Updates</p>
+                        <p>Success Stories</p>
+                        <p>Farming Methods</p>
+                        <p>Best Practices</p>
+                        <p>Market Updates & Insights</p>
+                        <p>Farmer Training & Workshops</p>
+                        <p>Govt Schemes Guidance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-start p-5 pt-0">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Get Support</h5>
+                        <div>
+                            <p><i class="bi bi-telephone"></i>  <a href="">1800-555-6666</a></p>
+                            <p><i class="bi bi-whatsapp"></i>   <a href="">+91-8666555444</a></p>
+                            <p><i class="bi bi-envelope"></i>   <a href="">Email: support@agriverse.com</a></p>
+                            <p><i class="bi bi-alarm"></i>  24/7 availability</p>
+                            <p><i class="bi bi-chat"></i>   <a href="">Chat with Us</a></p>
+                            <p><i class="bi bi-google-play"></i>    <a href="">Download App</a></p>
+                            <p>🌾 <a href=""> Ask Forum</a></p>
+                            <p><i class="bi bi-geo-alt"></i>    <a href="">Nearest Agriverse center</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="footer_div1 row p-5 pt-0 m-0 p-0">
+                <div class="col-lg-4">
+                    <h5>Follow Us:</h5>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-youtube"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <h5>Download App</h5>
+                        <div class="icons">
+                            <a href="" class="p-3"><i class="bi bi-google-play"></i></a>
+                            <a href="" class="p-3"><i class="bi bi-apple"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <div>
+                            <p>Enter your email to get free farming tips & market updates.</p>
+                            <div class="row">
+                                <div class="col-lg-8 justify-content-end">
+                                    <div >
+                                        <input type="email" placeholder="Enter Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div >
+                                        <button class="btn btn-primary p-2 rounded-5">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="p-4 text-center">
+            <p>&copy;designed and developed by Pulluri Govardhan</p>
+            <a href="" ><div class="whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            </div></a>
+        </div>    
+    </footer>
+    <!--footer section ended-->
+
+
+</body>
+</html>

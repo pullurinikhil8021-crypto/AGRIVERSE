@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header class="container-fluid ">
+        <nav class="navbar navbar-expand-lg mx-auto">
+            <div class="container  ">
+                <div class="logo">
+                    <a href="index.html"><img src="Assets/logo-removebg-preview.png" alt="" class="w-100 h-100"></a>
+                </div>
+                <button class="navbar-toggler" data-bs-target="myNav" data-bs-toggle="collapse">
+                    <a href="#more" data-bs-toggle="offcanvas"><span class="navbar-toggler-icon"></span></a>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="myNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="essentials.html" class="nav-link " id="essentials">Essentials <span class=" fw-bold down_arrow">▼</span></a>
+                            <div class="dropdown" id="header1">
+                                <a href="essentials.html">Seeds & Plants</a>
+                                <a href="fertilizers.html">Fertilizers</a>
+                                <a href="irrigation.html">Irrigation</a>
+                                <a href="machinery.html">Machinery</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="organic.html" class="nav-link" id="techniques">Techniques <span class="fw-bold">▼</span></a>
+                            <div class="dropdown" id="header2">
+                                <a href="organic.html">Organic Farming</a>
+                                <a href="hydroponics.html">Hydroponics</a>
+                                <a href="aquaponics.html">Aquaponic</a>
+                                <a href="vertical.html">Vertical Farming</a>
+                                <a href="traditional.html">Traditional Farming</a>
+                                <a href="smartfarming.html">Smart Farming</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="article.html" class="nav-link">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="forum.html" class="nav-link">Farmers Forum</a>
+                        </li>
+                        <li class="nav-item person_icon">
+                            <a href="" class="nav-link" id="person"><i class="bi bi-person-circle" style="font-size: 32px;"></i></a>
+                            <div class="dropdown" id="login">
+                                <a href="">Signup</a>
+                                <a href="">Login</a>
+                            </div>
+                        </li>
+                        <li class="nav-item menu_icon">
+                            <a href="#more" class="nav-link" data-bs-toggle="offcanvas"><i class="bi bi-list" style="font-size: 32px;"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!--script for essentials dropdown starts-->
+    <script>
+        $('#header1').hide();
+
+        $('#essentials').mouseover(() =>{
+            $('#header1').slideDown()
+        })
+        $('#header1').mouseover(() =>{
+            $('#header1').stop()
+        })
+
+        $('#essentials, #header1').mouseleave(() =>{
+            $('#header1').slideUp()
+        })
+        $('#header1').click(() =>{
+            $('#header1').slideUp()
+        })
+    </script>
+    <!--script for essentials dropdown ended-->
+
+    <!--script for techniques dropdown starts-->
+    <script>
+        $('#header2').hide();
+
+        $('#techniques').mouseover(() =>{
+            $('#header2').slideDown()
+        })
+        $('#header2').mouseover(() =>{
+            $('#header2').stop()
+        })
+        $('#techniques, #header2').mouseleave(() =>{
+            $('#header2').slideUp()
+        })
+        $('#header2').click(() =>{
+            $('#header2').slideUp()
+        })
+    </script>
+    <!--script for techniques dropdown ended-->
+
+    <!--script for login dropdown starts-->
+    <script>
+        $('#login').hide();
+
+        $('#person').mouseover(() =>{
+            $('#login').slideDown()
+        })
+        $('#login').mouseover(() =>{
+            $('#login').stop()
+        })
+        $('#person, #login').mouseleave(() =>{
+            $('#login').slideUp()
+        })
+        $('#login').click(() =>{
+            $('#login').slideUp()
+        })
+    </script>
+    <!--script for login dropdown ended-->
+
+    <!--offcanvas for menubar starts-->
+    <div class="offcanvas offcanvas-start" id="more" data-bs-backdrop="static">
+        <div class="offcanvas-header" style="border-bottom: 1px solid green;">
+            <div class="row p-2 pt-3" >
+                    <div class="col-5">
+                        <div class="profile_photo">
+                            <img src="Assets/Forum/profile_photo_img.jpg" alt="" class="w-100 h-100" style="border-radius: 60px;">
+                        </div>
+                    </div>
+                    <div class="col-7 p-3">
+                        <p class="fw-bold m-0 p-0">Dr. Kavita Deshmukh</p>
+                        <p class="m-0 p-0">Organic Farming Trainer</p>
+                        <p >Telangana</p>
+                    </div>
+                </div>
+            <button class="btn-close text-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="px-5 py-2">
+                <a href=""><p>Signup</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href=""><p>Login</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="index.html"><p>Home</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Essentials</p></summary>
+                    <a href="essentials.html"><button>Seeds & Plants</button></a>
+                    <a href="fertilizers.html"><button>Fertilizers</button></a>
+                    <a href="irrigation.html"><button>Irrigation</button></a>
+                    <a href="machinery.html"><button>Machinery</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Techniques</p></summary>
+                    <a href="organic.html"><button>Organic Farming</button></a>
+                    <a href="hydroponics.html"><button>Hydroponics</button></a>
+                    <a href="aquaponics.html"><button>Aquaponic </button></a>
+                    <a href="vertical.html"><button>Vertical Farming</button></a>
+                    <a href="traditional.html"><button>Traditional Farming</button></a>
+                    <a href="smartfarming.html"><button>Smart Farming</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <a href="article.html"><p>Articles</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="forum.html"><p>Farmers Forum</p></a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvas for menubar ended-->
+
+    <!--banner section starts-->
+    <div class="home_banner ">
+        <div class="home_banner_text p-5 text-light m-0 p-0 home_title">
+            <div class="col-lg-7 m-0 p-0">
+                <div class="title_text">
+                    <h5 class="pt-5 text-start  m-0 p-0">welcome to </h5>
+                    <h1 class="m-0 p-0 m-0 p-0 " style="font-size: 54px;">AGRIVERSE </h1>
+                    <h5 class="text-start m-0 p-0">Your Farm, Your Universe</h5>
+                </div>
+                <div class="text-center">
+                    <p class="pt-5">Seeds, tools, guidance, and community – everything a farmer needs, all in one place</p>
+                    <p class="pb-3">AGRIVERSE connects farmers to quality seeds, fertilizers, machinery, 
+                    modern farming techniques, and expert advice. Learn, shop, and grow smarter with the power of knowledge and community at your fingertips</p>
+                    <a href="essentials.html"><button class="btn btn-primary rounded-5 px-4 p-2 mb-3">Explore Products</button></a>
+                    <a href="forum.html"><button class="btn btn-primary rounded-5 px-4 p-2 mb-3">Join Community</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--banner section ended-->
+
+    <!--aboutus section starts-->
+    <section class="aboutus">
+        <div class="text-center p-5">
+            <img src="Assets/logo-name-cut.png" alt="">
+        </div>
+        <div class="about container text-center">
+            <p>At Agriverse, we understand that farming is more than just a livelihood – <strong>it’s a way of life.</strong></p>
+            <p>Our goal is to empower farmers, agribusinesses, and agriculture enthusiasts with quality products,
+                modern solutions, and reliable knowledge to make farming more sustainable and profitable.</p>
+            <p>We bring together everything you need under one roof – high-quality seeds, healthy plants, fertilizers, advanced machinery, 
+                irrigation systems, and farm supplies. But we don’t stop there. We also provide access to different farming methods, expert resources,
+                and innovative technologies that help farmers stay ahead in today’s fast-changing agricultural landscape.</p>
+            <div class="row p-0 m-0">
+                <div class="col-lg-6 p-4 p-0 m-0">
+                    <h3 class="pt-3 text-decoration-underline"><strong>Our Mission</strong></h3>
+                    <p>To make farming <strong>accessible, efficient</strong> and <strong>sustainable</strong> by providing farmers with the right tools,
+                    products, and knowledge at their fingertips.</p>
+                </div>
+                <div class="col-lg-6 p-4 p-0 m-0">
+                    <h3 class="p-3 pb-0 text-decoration-underline"><strong>Our Vision</strong></h3>
+                    <p class="pb-5">To become the most trusted <strong>all-in-one agriculture platform</strong> that connects farmers, suppliers,
+                    and experts while promoting modern and traditional farming practices side by side.</p>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+    <!--aboutus section ended-->
+
+    <!--categories section starts-->
+    <section class="categories pt-4">
+        <div class="text-center pb-5">
+            <h2>From Seeds to Harvest</h2>
+            <h2 >Shop Smarter, Farm Better</h2>
+        </div>
+        <div class="categories">
+            <div class="p-3 p-0">
+                <div class="category container  p-3">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="p-0">
+                                <img src="Assets/category-seeds.jpg" alt="" class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <h2>Seeds 🌱</h2>
+                            <p>Start strong with high-quality seeds that ensure better yields. From <strong>vegetables and fruits to grains, pulses, 
+                            and hybrid varieties,</strong> our seeds are carefully selected for maximum germination and productivity.</p>
+                            <p>Our seeds are sourced from trusted suppliers to ensure healthy crops. 
+                            Whether you’re a small farmer or managing large-scale cultivation, we provide the right seeds for every need.</p>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <div class="p-3">
+                <div class=" category container p-3">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h2>🌳 Plants</h2>
+                            <p>Grow healthier farms and gardens with our <strong>disease-resistant saplings, nursery plants, medicinal herbs, and fruit-bearing trees.</strong> 
+                            Whether you’re farming commercially or gardening at home, we’ve got the perfect plants for you.</p>
+                            <p>Each plant is nurtured under expert care to guarantee healthy growth and resilience against diseases. 
+                            From small gardens to commercial farms, our wide selection helps you grow with confidence..</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <div>
+                                <img src="Assets/category-plants.jpg" alt="" class="w-100">
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <div class="p-3">
+                <div class=" category container p-3">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div>
+                                <img src="Assets/category-fertilizers.jpg" alt="" class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <h2>Fertilizers & Crop Care</h2>
+                            <p>Keep your soil fertile and crops protected. Explore <strong>organic fertilizers, bio-fertilizers, pesticides, 
+                            and growth enhancers</strong> designed to boost productivity while keeping farming sustainable.</p>
+                            <p>Formulated to enrich soil and protect crops, our solutions strike the balance between yield and sustainability. 
+                            Safe, effective, and easy to use – everything your crops need to thrive.</p>
+                        </div>   
+                    </div>   
+                </div>
+            </div>
+            <div class="p-3">
+                <div class=" category container p-3">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h2>Machinery & Tools 🚜</h2>
+                            <p>Save time and effort with modern farming equipment. 
+                            From <strong>tractors and harvesters to sprayers, pumps, and smart agri-devices,</strong> our machinery helps you farm smarter, not harder.</p>
+                            <p>Durable, efficient, and farmer-friendly, our tools are designed to handle everyday farm challenges. From manual tools to advanced agri-tech, we help you save time and increase productivity.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <div>
+                                <img src="Assets/category-machinery.jpg" alt="" class="w-100">
+                            </div>
+                        </div>   
+                    </div>   
+                </div>
+            </div>
+            <div class="p-3">
+                <div class=" category container p-3">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div>
+                                <img src="Assets/category-irrigation.jpg" alt="" class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <h2>Irrigation & Water Solutions 💧</h2>
+                            <p>Ensure every drop counts with efficient irrigation systems. 
+                            Choose from <strong>drip irrigation kits, sprinklers, pumps, and water storage solutions</strong> that maximize water use and improve crop health.</p>
+                            <p>Engineered for efficiency, our systems help you optimize water use and reduce costs. 
+                            With our smart irrigation options, you can keep crops healthy even in challenging climates.</p>
+                        </div>    
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--categories section ended-->
+
+    <!--types of farming section starts-->
+    <section>
+        <div class="container">
+            <div class="text-center p-5">
+                <h2>From Traditional Roots to Modern Growth</h2>
+                <p>Different Farms. Different Methods. One Destination.</p>
+            </div> 
+            <div>
+                <h3>Different Ways to Farm, One Place to Learn</h3>
+                <div class="row text-light">
+                    <div class="col-lg-4 p-3">
+                        <a href="organic.html" class="text-decoration-none text-light">
+                        <div class="farm_img_1 ">
+                            <h3 class="justify-content-end align-items-end">Organic Farming</h3>
+                            <p >Grow naturally with eco-friendly</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 p-3">
+                        <a href="hydroponics.html"class="text-decoration-none text-light">
+                            <div class="farm_img_2 ">
+                                <h3>Hydroponics</h3>
+                                <p>Experience soil-less farming</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 p-3">
+                        <a href="aquaponics.html"class="text-decoration-none text-light">
+                        <div class="farm_img_3 ">
+                            <h3>Aquaponics</h3>
+                            <p>Both aquaculture & hydroponics</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 p-3">
+                        <a href="vertical.html"class="text-decoration-none text-light">
+                        <div class="farm_img_4 ">
+                            <h3>Vertical Farming</h3>
+                            <p>Use limited space wisely</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 p-3">
+                        <a href="traditional.html"class="text-decoration-none text-light">
+                        <div class="farm_img_5 ">
+                            <h3>Traditional Farming</h3>
+                            <p>Time-tested techniques</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 p-3">
+                        <a href="smartfarming.html"class="text-decoration-none text-light">
+                        <div class="farm_img_6 ">
+                            <h3>Smart Farming</h3>
+                            <p>Adopt modern technologies</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!--types of farming section ended-->
+
+    <!--our services section starts-->
+    <section class="services">
+        <div class="container">
+            <div class="text-center pt-5 pb-3">
+                <h1>Our Services</h1>
+                <p>Beyond Products – Complete Support for Every Farmer</p>
+            </div>
+            <div class="p-3">
+                <p>At Agriverse, we know farming is more than sowing and harvesting. 
+                That’s why we offer services that help you grow smarter, reduce costs, and get better results. Agriculture is evolving, and so are we. 
+                Our services combine traditional wisdom with modern expertise to help every farmer grow better.</p>
+            </div>
+            <div >
+                <div class="row">
+                    <div class="col-lg-4 mb-3">
+                        <div class="service1 p-3">
+                            <div class="service_img1"><img src="Assets/services_soil_testing.jpg" alt="" class="w-100"></div>
+                            <h2 class="pt-3">Soil Testing & Analysis</h2>
+                            <p>Understand your soil before you sow. Our soil testing services provide 
+                            accurate insights on fertility, nutrients, and pH levels, helping you choose the right crops and fertilizers for maximum yield.</p>
+                            <div>
+                                <a href="services.html"><button>Book Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-3">
+                        <div class="service2 p-3">
+                            <div class="service_img1"><img src="Assets/services_farm_consultancy.jpg" alt="" class="w-100"></div>
+                            <h2 class="pt-3">Farm Consultancy</h2>
+                            <p>Get expert advice tailored to your land, crops, and climate. 
+                            Our agricultural consultants guide you through modern techniques, government schemes, and best practices to improve productivity and profits.</p>
+                            <div>
+                                <a href="services.html"><button>Book Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-3">
+                        <div class="service3 p-3">
+                            <div class="service_img1"><img src="Assets/services_rental_equipments.jpg" alt="" class="w-100"></div>
+                            <h2 class="pt-3">Equipment Rental</h2>
+                            <p>Farming machinery can be costly – but we make it accessible. 
+                            Rent tractors, harvesters, sprayers, and other essential equipment at affordable rates, reducing investment costs while boosting efficiency.</p>
+                            <div>
+                                <a href="services.html"><button>Book Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--servies review section starts-->
+    <section class="services  text-center">
+        <div class="container">
+            <h2 class="p-4"><strong>What Farmers Say About Our Services</strong></h2>
+            <div class="carousel slide" data-bs-ride="carousel" style="background-color: aqua;">
+                <div class="carousel-inner">
+                    <div class="carousel-item p-3 active ">
+                        <p>💬 “After getting my soil tested, I realized I was using the wrong fertilizer for years. 
+                            With the right inputs, my crop yield increased by 30%.”</p>
+                        <p><strong>— Ramesh Patil, Maharashtra</strong></p>
+                    </div>
+                    <div class="carousel-item p-3">
+                        <p>💬 “The consultancy team helped me plan my crops according to the season and guided me on pest control. 
+                            I saved money and grew healthier crops.”</p>
+                        <p><strong>— Kavita Sharma, Punjab</strong></p>
+                    </div>
+                    <div class="carousel-item p-3">
+                        <p>💬 “Buying a tractor was too expensive, but renting one through this platform made farming affordable. 
+                            It saved time and reduced my workload.”</p>
+                        <p><strong>— Manoj Yadav, Uttar Pradesh</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--servies review section ended-->
+    <!--our services section ended-->
+
+    <!--expert articles section starts -->
+    <section class=" pt-4">
+        <div class="container">
+            <div class="p-5 text-center">
+                <h2 >Grow Smarter with Expert Insights</h2>
+            </div>
+            <div class="text-bg-light p-3">
+                <div class="row">
+                    <div class="article_home_card col-lg-3 col-md-6 col-sm-12 p-3 mb-3">
+                        <div>
+                        <div style="border-bottom: 1px solid black;"><h5>Announcement</h5></div>
+                        </div>
+                        <h6 class="pt-3">What’s New in Farming Today?</h6>
+                        <div class="carousel slide pt-3" data-bs-ride="carousel" id="articleslider">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <h4><strong>Government Subsidy Alert:</strong></h4>
+                                    <p class="m-0">The Agriculture Ministry has launched a new <strong>Seed Subsidy Scheme 2025</strong> to help farmers access high-quality seeds at reduced prices. 
+                                    Eligible farmers can apply online or through local Krishi Kendras. The last date for registration is <strong>15 October 2025.</strong> 
+                                    Don’t miss out on this opportunity to lower your input costs.</p>
+                                    <a href=""><p>➔ Read More</p></a>
+                                </div>
+                                <div class="carousel-item">
+                                    <h4><strong>💧Weather Advisory</strong></h4>
+                                    <p class="m-0">According to the Meteorological Department, <strong>heavy rainfall is expected across Northern India next week.</strong> 
+                                    Farmers are advised to protect stored grains, ensure proper drainage in fields, and delay harvesting where possible to avoid losses. 
+                                    Crop insurance claim deadlines have also been extended in some regions.</p>
+                                    <a href=""><p>➔ Read More</p></a>
+                                </div>
+                                <div class="carousel-item">
+                                    <h4><strong>🚜Machinery Update</strong></h4>
+                                    <p class="m-0">A new <strong>Tractor and Farm Equipment Rental Program</strong> has been launched to make machinery more affordable. 
+                                    Farmers can now book tractors, harvesters, and other equipment online at 
+                                    <strong>discounted hourly rates</strong>, reducing the burden of ownership and maintenance costs.</p>
+                                    <a href=""><p>➔ Read More</p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article_home_card col-lg-3 col-md-6 col-sm-12 mb-3">
+                        <div class="card ">
+                            <img src="Assets/article_cotton_farming.jpg" alt="">
+                            <div class="card-body article_btn">
+                                <h5><strong>Best Practices for High-Yield Cotton Farming</strong></h5>
+                                <p class="m-0">Cotton, often called “white gold,” is one of the most widely grown commercial crops. To achieve higher yields and better fiber quality, 
+                                farmers must focus on....</p>
+                                <a href="" class="m-0 p-0"><p>➔ Read More.</p></a>
+                               <div class="articles_btn1"><a href="cottonfarming_article.html"><button>Read Article</button></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article_home_card col-lg-3 col-md-6 col-sm-12 mb-3">
+                        <div class="card">
+                            <img src="Assets/article_pm_kissan.jpg" alt="">
+                            <div class="card-body article_btn">
+                                <h5><strong>PM-Kisan Yojana 2025:</strong></h5>
+                                <h5 class="m-0">Benefits & Application Process</h5>
+                                <p class="m-0">The Pradhan Mantri Kisan Samman Nidhi (PM-Kisan) is one of the 
+                                Government of India’s flagship schemes designed...</p>
+                                <a href="" class="m-0 p-0"><p>➔ Read More.</p></a>
+                                <div class="articles_btn2"><a href=""><button>Open Link</button></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article_home_card col-lg-3 col-md-6 col-sm-12 mb-3">
+                        <div class="card">
+                            <img src="Assets/article_veggi_seasonal.jpg" alt="">
+                            <div class="card-body article_btn">
+                                <h5><strong>How Seasonal Demand Affects Vegetable Pricing</strong></h5>
+                                <p class="m-0">Vegetable prices in India (and globally) change frequently – not just because of production levels, 
+                                but also due to seasonal demand patterns...</p>
+                                <a href="" class="m-0 p-0"><p>➔ Read More.</p></a>
+                                <div class="articles_btn3"><a href="mutipleArticle.html"><button>Read Article</button></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container pt-5 pb-5">
+            <div>
+                <h2>Farming Articles & Guides</h2>
+                <p>Helping Farmers with Simple Solutions</p>
+            </div>
+            <div class="row">
+                
+                <div class="col-lg-3 mb-3 article_guides">
+                    <div class="card ">
+                        <a href="cropmanagment_articles.html"><img src="Assets/article_crop_guide_img1.jpg" alt="" class="w-100"></a>
+                        <div class="card-body ">
+                            <a href="cropmanagment_articles.html"><h5><strong>Crop Guides</strong></h5></a>
+                            <p>Practical guides that walk farmers through the <strong>entire lifecycle of major crops.</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-3 article_guides">  
+                    <div class="card ">
+                        <a href=""><img src="Assets/article_farming_techniques_img.jpg" alt="" class="w-100"></a>
+                        <div class="card-body ">
+                            <a href=""><h5><strong>Farming Techniques</strong></h5></a>
+                            <p>Learn <strong>traditional, modern, & innovative farming practices</strong> that improve efficiency.</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-3 article_guides"> 
+                    <div class="card ">
+                        <a href=""><img src="Assets/article_schemes_img.jpg" alt="" class="w-100"></a>
+                        <div class="card-body ">
+                            <a href=""><h5><strong>Government Schemes & Subsidies</strong></h5></a>
+                            <p>Timely updates on Government Schemes & Subsidies.</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-3 article_guides">
+                    <div class="card">
+                        <a href=""><img src="Assets/article_market_update_img.jpg" alt="" class="w-100"></a>
+                        <div class="card-body">
+                            <a href=""><h5><strong>Market Updates</strong></h5></a>
+                            <p>Daily and weekly updates on <strong>mandi prices, demand trends, and export opportunities.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--expert articles section ended -->
+
+    <!--success stories section starts -->
+    <section class="stories  pb-5">
+        <div class="container">
+            <div class="text-center pt-5 pb-4">
+                <h2><strong>Together, We Grow Stronger</strong></h2>
+            </div>
+            <div>
+                <h3>Building a Stronger Farming Family Together</h3>
+                <p>Real Farmers. Real Results.</p>
+            </div>
+            <div>
+                <div class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-lg-6 ">
+                                    <div class="text-bg-light p-4 review">
+                                        <h3><strong>Drip Irrigation Doubled Tomato Yield</strong></h3>
+                                        <div class="row">
+                                            <div class="col-lg-6 p-4">  
+                                                <p>Raju Patel from Gujarat struggled with water scarcity on his 2-acre tomato farm. 
+                                                After adopting drip irrigation with guidance from our experts, he reduced water usage by 40% and doubled his tomato yield 
+                                                in just one season.Today, he supplies produce to local mandis and earns 1.5x more income than before.</p>
+                                            </div>
+                                            <div class="col-lg-6 p-4">
+                                                <div class="farmer1">
+                                                </div>
+                                                <div class="text-center pt-2">
+                                                    <h6>– Raju Patel, Gujarat</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-bg-light p-4 review">
+                                        <h3><strong>Tractor Rental Transformed Harvesting</strong></h3>
+                                        <div class="row">
+                                            <div class="col-lg-6 p-4 ">  
+                                                <p>Sunita Devi, a small farmer from Bihar, couldn’t afford a tractor. 
+                                                Through our equipment rental service, she accessed modern machinery at affordable rates. 
+                                                Harvesting that once took a week was completed in two days – saving labor costs and increasing profits. Agriverse is so helpfull.</p>
+                                            </div>
+                                            <div class="col-lg-6 p-4">
+                                                <div class="farmer2">
+                                                </div>
+                                                <div class="text-center pt-2">
+                                                    <h6>– Sunita Devi, Bihar</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="carousel-item ">    
+                            <div class="row">
+                                <div class="col-lg-6 ">
+                                    <div class="text-bg-light p-4 review">
+                                        <h3><strong>Organic Cotton Fetching Better Prices</strong></h3>
+                                        <div class="row">
+                                            <div class="col-lg-6 p-4">  
+                                                <p>Mahesh Yadav from Maharashtra switched from chemical to organic cotton farming. With proper training and natural pest management, 
+                                                his input costs reduced, and his cotton now sells at premium rates in urban markets. His profit margins have increased by 25%.</p>
+                                            </div>
+                                            <div class="col-lg-6 p-4">
+                                                <div class="farmer3">
+                                                </div>
+                                                <div class="text-center pt-2">
+                                                    <h6>– Mahesh Yadav, Maharashtra</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-bg-light p-4 review">
+                                        <h3><strong>drip irrigation and mulching techniques.</strong></h3>
+                                        <div class="row">
+                                            <div class="col-lg-6 p-4 ">  
+                                                <p>Meena from Uttar Pradesh faced severe water scarcity during dry months, affecting her vegetable crops. 
+                                                Through AGRIVERSE’s Irrigation & Water Management sessions, she adopted drip irrigation and mulching techniques.
+                                                I’ve learned to grow more with less water.</p>
+                                            </div>
+                                            <div class="col-lg-6 p-4">
+                                                <div class="farmer4">
+                                                </div>
+                                                <div class="text-center pt-2">
+                                                    <h6>– Meena, Uttar Pradesh</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!--success stories section ended -->
+
+    <!--farmers forum section starts-->
+    <section class="farmerforum">
+        <div class="container text-bg-light pt-3 ">
+            <div class=" text-center">
+                <h2><strong>👨 Farmer Forum</strong></h2>
+                <p>Ask. Share. Learn from Fellow Farmers</p>
+            </div>
+            <div>
+                <div class="p-3 text-center">
+                    <h3><strong>Connect, Share, and Solve Farming Challenges Together</strong></h3>
+                    <p>Your farm questions, insights, and experiences matter. Join thousands of farmers nationwide to learn, teach, and grow together.</p>
+                <div class="row text-center">
+                    <div class="forums col-lg-4 p-4 ">
+                        <h4 class="pb-3 text-decoration-underline"><strong>Ask Questions</strong></h4>
+                        <p><strong>Got a challenge on your farm?</strong></p> 
+                        <p><strong>Need guidance on pests, soil, seeds, or machinery?</strong></p> 
+                        <p>Post your question and get answers from experienced farmers and agricultural experts.</p>
+                        <p>No question is too small – from daily crop care to complex farming techniques, our community is here to help.</p>
+                        <div class="forum_btn">
+                            <a href="" class="pt-3"><button>Ask a Question +</button></a>
+                        </div>
+                    </div>
+                    <div class="forums col-lg-4 p-4">
+                        <h4 class="pb-3 text-decoration-underline"><strong>Share Knowledge</strong></h4>
+                        <p><strong>Have tips, methods, or experiences that helped your farm succeed?</strong></p> 
+                        <p><strong>Share them with the community!</strong></p> 
+                        <p>Post your question and get answers from experienced farmers and agricultural experts.</p>
+                        <p>No question is too small – from daily crop care to complex farming techniques, our community is here to help.</p>
+                        <div class="forum_btn"><a href="" class="pt-3"><button>Share Knowledge</button></a></div>
+                    </div>
+                    <div class="forum col-lg-4 p-4">
+                        <h4 class="pb-3 text-decoration-underline"><strong>Discuss Challenges</strong></h4>
+                        <p><strong>Farming comes with obstacles, from unpredictable weather to market fluctuations.</strong></p> 
+                        <p>Strategies to handle, Managing labor, purchase of fertilizers and reduce costs.</p>
+                        <p>Discuss these challenges openly with fellow farmers to find solutions, share experiences, and even collaborate for better results.</p> 
+                        <p>Community support is the key to overcoming difficulties.”</p>
+                        <div ><a href="" ><button>Start Discussion</button></a></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--farmers forum section ended-->
+
+    <!--contact section starts-->
+    <section class="contact  ">
+        <div class="container">
+        <div class="text-center pt-4">
+            <h2>Help When You Need It – Anytime, Anywhere</h2>
+            <p>Farming can be unpredictable, but you’re never alone. 
+            Our 24/7 support system ensures that expert guidance, assistance, and answers are always just a call or message away.</p>
+        </div>
+        <div >
+            <div class="row ">
+                <div class="col-lg-4 p-3 ">
+                    <div class="text-bg-light p-4">
+                        <h3 class="pb-3"><strong>How to Reach Us</strong></h3>
+                        <p><i class="bi bi-telephone"></i>  <a href="">1800-555-6666</a></p>
+                        <p><i class="bi bi-whatsapp"></i>   <a href="">+91-8666555444</a></p>
+                        <p><i class="bi bi-envelope"></i>   <a href="">Email: support@agriverse.com</a></p>
+                        <p><i class="bi bi-alarm"></i>  <a href="">24/7 availability</a></p>
+                        <p><i class="bi bi-chat"></i>   <a href="">Chat with Us</a></p>
+                        <p><i class="bi bi-google-play"></i>    <a href="">Download App</a></p>
+                        <p>🌾 <a href=""> Ask Forum</a></p>
+                        <p><i class="bi bi-geo-alt"></i>    <a href="">Nearest Agriverse center</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-8 p-3">
+                    <div class="text-bg-light">
+                        <div class="carousel slide" data-bs-ride="carousel" id="farmerslider">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="trust1">
+                                        <div class="trust_text text-light justify-content-center align-items-center">
+                                            <div>
+                                                <h5>Trusted by</h5>
+                                                <h2>5Lakhs+</h2>
+                                                <h5>farmers across India</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item ">
+                                    <div class="trust2">
+                                        <div class="trust_text text-light justify-content-center align-items-center">
+                                            <div>
+                                                <h5>Resolved</h5>
+                                                <h2>98% </h2>
+                                                <h5>queries within 24 hours</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--contact section ended-->
+    <!--numbers section starts-->
+    <div class="p-5 text-center" style="background-color: #b8b396; border-top: 1px solid #b8b396;">
+        
+        <h2 class="text-light">AGRIVERSE in Numbers</h2>
+        <p class="text-light">Empowering Farmers, Growing Futures</p>
+        <div class="row"> 
+            <div class="col-lg-2 p-3 " >
+                <div class="p-3 shadow" style="height: 320px; background-color: lightblue;">
+                    <h6 class="fw-bold">Farmers Connected</h6>
+                    <p class="fw-bold"><span id="farmers" data-target="9" data-duration="2000" style="font-size: 74px; color: green;"></span> Lakhs+</p>
+                    <p>Farmers from across India have joined AGRIVERSE to modernize their farming journey.</p>
+                </div>
+            </div>
+            <div class="col-lg-2 p-3 " >
+                <div class="p-3 shadow" style="height: 320px; background-color: lightblue;">
+                    <h6 class="fw-bold">Agri Products Sold</h6>
+                    <p class="fw-bold"><span id="products" data-target="30" data-duration="2000" style="font-size: 74px; color: green;"></span> Lakhs+</p>
+                    <p>Seeds, plants, fertilizers, and machinery delivered through our platform.</p>
+                </div>
+            </div>
+            <div class="col-lg-2 p-3 " >
+                <div class="p-3 shadow" style="height: 320px; background-color: lightblue;">
+                    <h6 class="fw-bold">Expert Articles</h6>
+                    <p class="fw-bold"><span id="articles" data-target="2500" data-duration="2000" style="font-size: 66px; color: green;"></span>+</p>
+                    <p>Expert guides, crop updates, and farming news empowering farmers</p>
+                </div>
+            </div>
+            <div class="col-lg-2 p-3 " >
+                <div class="p-3 shadow" style="height: 320px; background-color: lightblue;">
+                    <h6 class="fw-bold">Discussions</h6>
+                    <p class="fw-bold"><span id="community" data-target="180" data-duration="2000" style="font-size: 74px; color: green;"></span>K+ Threads</p>
+                    <p>Exchanging experiences, solutions, and success stories.</p>
+                </div>
+            </div>
+            <div class="col-lg-2 p-3 " >
+                <div class="p-3 shadow" style="height: 320px; background-color: lightblue;">
+                    <h6 class="fw-bold">Consultations</h6>
+                    <p class="fw-bold"><span id="experts" data-target="80" data-duration="2000" style="font-size: 74px; color: green;"></span>k+</p>
+                    <p>Real-time Q&A, chat, and video sessions between farmers and agronomists.</p>
+                </div>
+            </div>
+            <div class="col-lg-2 p-3 " >
+                <div class="p-3 shadow" style="height: 320px; background-color: lightblue;">
+                    <h6 class="fw-bold">Agri Rating</h6>
+                    <p class="fw-bold"><span id="rating" data-target="97" data-duration="2000" style="font-size: 74px; color: green;"></span>%</p>
+                    <p>Based on feedback from thousands of verified users across India.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="counterup.js"></script>
+        <script>
+            $('#farmers').counterUp();
+            $('#products').counterUp();
+            $('#articles').counterUp();
+            $('#community').counterUp();
+            $('#experts').counterUp();
+            $('#rating').counterUp();
+
+
+
+
+        </script>
+       
+    <!--numbers section starts-->
+
+    <!--footer section starts-->
+    <footer>
+        <div class="p-5">
+            <div class="footer_div1 row pb-3 text-center ">
+                <div class="ft_div_1 col-lg-3 col-sm-3">
+                    <div class="logo_div p-3">
+                        <div class="p-0 m-0">
+                        <a href="index.html" class="navbar-brand"><img src="Assets/logo-removebg-preview.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <p>Your one-stop platform for seeds, plants, fertilizers, machinery, and all farming needs. 
+                        Empowering farmers with products, knowledge, and support for a better tomorrow.</p>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 col-sm-2">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Quick Links</h5>
+                        
+                        <a href=""><p>Home</p></a>
+                        <a href=""><p>About Us</p></a>
+                        <a href=""><p>Essentials</p></a>
+                        <a href=""><p>Techniques</p></a>
+                        <a href=""><p>Services</p></a>
+                        <a href=""><p>Farmer Forum</p></a>
+                        <a href=""><p>Articles</p></a>
+                        <a href=""><p>Get Support</p></a>
+                        
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 col-sm-2">
+                    <div>
+                        <div>
+                            <h5 class="text-decoration-underline pb-3">Products & Solutions</h5>
+                            <p>Seeds & Plants</p>
+                            <p>Fertilizers</p>
+                            <p>Machinery & Tools</p>
+                            <p>Irrigation Solutions</p>
+                            <p>Farming Ways</p>
+                            <p>Animal Husbandry Essentials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft_div_1 col-lg-2 col-sm-2"> 
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Knowledge Hub</h5>
+                        <p>Articles & Guides</p>
+                        <p>Announcements & Updates</p>
+                        <p>Success Stories</p>
+                        <p>Farming Methods</p>
+                        <p>Best Practices</p>
+                        <p>Market Updates & Insights</p>
+                        <p>Farmer Training & Workshops</p>
+                        <p>Govt Schemes Guidance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-3 text-start p-5 pt-0">
+                    <div>
+                        <h5 class="text-decoration-underline pb-3">Get Support</h5>
+                        <div>
+                            <p><i class="bi bi-telephone"></i>  <a href="">1800-555-6666</a></p>
+                            <p><i class="bi bi-whatsapp"></i>   <a href="">+91-8666555444</a></p>
+                            <p><i class="bi bi-envelope"></i>   <a href="">Email: support@agriverse.com</a></p>
+                            <p><i class="bi bi-alarm"></i>  24/7 availability</p>
+                            <p><i class="bi bi-chat"></i>   <a href="">Chat with Us</a></p>
+                            <p><i class="bi bi-google-play"></i>    <a href="">Download App</a></p>
+                            <p>🌾 <a href=""> Ask Forum</a></p>
+                            <p><i class="bi bi-geo-alt"></i>    <a href="">Nearest Agriverse center</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="footer_div1 row p-5 pt-0 m-0 p-0">
+                <div class="col-lg-4">
+                    <h5>Follow Us:</h5>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-youtube"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <h5>Download App</h5>
+                        <div class="icons">
+                            <a href="" class="p-3"><i class="bi bi-google-play"></i></a>
+                            <a href="" class="p-3"><i class="bi bi-apple"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <div>
+                            <p>Enter your email to get free farming tips & market updates.</p>
+                            <div class="row">
+                                <div class="col-lg-8 justify-content-end mb-3">
+                                    <div >
+                                        <input type="email" placeholder="Enter Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div >
+                                        <button class="btn btn-primary p-2 rounded-5">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="p-4 text-center">
+            <p>&copy;designed and developed by Pulluri Govardhan</p>
+            <a href="" ><div class="whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            </div></a>
+        </div>    
+    </footer>
+    <!--footer section ended-->
+
+
+</body>
+</html>
