@@ -9,7 +9,8 @@ header{
 }
 
 .logo{
-    width: 20%;
+    width: 20%; 
+    
 }
 .nav-link{
     padding: 10px 20px !important;
@@ -71,7 +72,7 @@ header{
     justify-content: start; align-items: center;
 }
 .title_text{
-    padding-left: 120px;
+    text-align: center;
 }
 .home_banner h1::after{
     content: 'Universe';
@@ -141,23 +142,19 @@ header{
     .home_banner_text{
     display: flex;
     justify-content: center; align-items: center;
-}
+    }
     .aboutus img{
-        width: 80%;
-        
+        width: 80%;  
     }
     .review{
-        height: 600px;
-    }
-    .farmer1, .farmer2, .farmer3, .farmer4{
-       height: 200px; 
+    height: 600px !important;
     }
     .forums{
         display: none;
     }
     .trust_text{
         padding: 10px; 
-}
+    }
     .trust_text h5{
         font-size: 20px;
     }
@@ -288,40 +285,31 @@ header{
     transform: translateY(-8px);
     box-shadow: 0 10px 25px green;
 }
-@media(max-width:600px){
-   .review{
-    height: 600px;
-    } 
-    .farmer1, .farmer2, .farmer3, .farmer4{
-        height: 100%; width: 100%;
-        object-fit: cover;
-    }
-}
 .review{
     height: 400px;
 }
 .farmer1{
     background-image: url(Assets/stories_farmer1-img.jpg); background-position: left; background-repeat: no-repeat; background-size: cover;
     width: 80%;
-    height: 80%;
+    height: 200px;
     border-radius: 30px 0px 10px 60px;
 }
 .farmer2{
     background-image: url(Assets/stories_women_farmer_img.jpg); background-position: right; background-repeat: no-repeat; background-size: cover;
     width: 80%;
-    height: 80%;
+    height: 200px;
     border-radius: 30px 0px 10px 60px;
 }
 .farmer3{
     background-image: url(Assets/stories_farmer4_img.jpg); background-position: left; background-repeat: no-repeat; background-size: cover;
     width: 80%;
-    height: 80%;
+    height: 200px;
     border-radius: 30px 0px 10px 60px;
 }
 .farmer4{
     background-image: url(Assets/women_stories_farmer_img2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;
     width: 80%;
-    height: 80%;
+    height: 200px;
     border-radius: 30px 0px 10px 60px;
 }
 
@@ -362,6 +350,14 @@ header{
 }
 .trust_text h2{
     font-size: 88px;
+}
+.reachUS{
+    background-color: green;
+    color: white;
+}
+.reachUS a{
+    text-decoration: none;
+    color: white;
 }
 .contact, .stories{
     background-color: #b6b4a9;
@@ -423,4 +419,8 @@ footer{
     position: fixed;
     bottom: 30px; right: 30px;
     z-index: 100;
+}
+footer a{
+    text-decoration: none;
+    color: white;
 }
