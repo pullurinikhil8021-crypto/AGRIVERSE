@@ -142,3 +142,11 @@
     background-image: url(Assets/Forum/about_forum_bg_img.jpg);
     background-repeat: no-repeat; background-size: cover; background-position: center;
 }
+.reachUS{
+    background-color: green;
+    color: white;
+}
+.reachUS a{
+    text-decoration: none;
+    color: white;
+}
