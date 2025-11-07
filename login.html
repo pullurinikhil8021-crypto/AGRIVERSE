@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRIVERSE:Signup</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+    body{
+    width: 100%; height: 100vh;
+    background-image: url(Assets/signup_bg_img.jpg);
+    background-size: cover;
+    padding-bottom: 30px; background-repeat: no-repeat;
+    }
+    .form_logo{
+        height: 80px;
+    }
+    </style>
+</head>
+<body>
+    
+    <header class="container-fluid bg-transparent mb-3">
+        <nav class="navbar navbar-expand-lg mx-auto">
+            <div class="container  ">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="Assets/logo-name-cut.png" alt="" class="w-100 h-100">
+                    </a>
+                </div>
+                <button class="navbar-toggler" data-bs-target="myNav" data-bs-toggle="collapse">
+                    <a href="#more" data-bs-toggle="offcanvas"><span class="navbar-toggler-icon"></span></a>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="myNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item person_icon ">
+                            <a href="" class="nav-link" id="person"><i class="bi bi-person-circle text-light" style="font-size: 32px;"></i></a>
+                            <div class="dropdown" id="login">
+                                <a href="">Signup</a>
+                                <a href="">Login</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!--script for login dropdown starts-->
+    <script>
+        $('#login').hide();
+
+        $('#person').mouseover(() =>{
+            $('#login').slideDown()
+        })
+        $('#login').mouseover(() =>{
+            $('#login').stop()
+        })
+        $('#person, #login').mouseleave(() =>{
+            $('#login').slideUp()
+        })
+        $('#login').click(() =>{
+            $('#login').slideUp()
+        })
+    </script>
+    <!--script for login dropdown ended-->
+    <div class="col-lg-4 text-bg-light m-auto mb-3 " style="box-shadow: 1px 10px 10px rgb(27, 238, 27);">
+        <div class="form_logo px-5 py-2">
+            <img src="Assets/logo-name-cut.png" alt="" class="w-100 h-100">
+        </div>
+        <h5 class="px-3 py-2 text-success" >Log In to Connect with India’s Agri Network</h5>
+        <div class="p-3 ">
+            <form name="contact" action="submit.html" onsubmit=" return check()">
+                
+                <div class="fw-semibold mb-3">
+                    <input type="text" placeholder="Email" name="email" class="form-control mb-3" > 
+                </div>
+                <p id="emailError" style="color: red;"></p>
+                <div class="fw-semibold mb-3">
+                    <input type="text" placeholder="Password" name="password" class="form-control mb-3" > 
+                </div>
+                <p id="passwordError" style="color: red;"></p>
+                <input type="submit" value="Log in" class="form-control mb-3 text-bg-primary">
+            </form>
+        </div>
+    </div>
+   
+    <div class="col-lg-4 text-bg-light m-auto p-3 text-center " style="box-shadow: 1px 5px 10px rgb(27, 238, 27);">
+        <p>Create a account click <a href="signup.html"><span> signup </span></a>
+        to Join Thousands of Farmers Growing Together.</p>
+    </div>
+
+    <script src="validate.js"></script>

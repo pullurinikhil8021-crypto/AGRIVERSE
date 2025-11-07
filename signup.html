@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRIVERSE:Signup</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    
+    <header class="container-fluid bg-transparent mb-3">
+        <nav class="navbar navbar-expand-lg mx-auto">
+            <div class="container  ">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="Assets/logo-name-cut.png" alt="" class="w-100 h-100">
+                    </a>
+                </div>
+                <button class="navbar-toggler" data-bs-target="myNav" data-bs-toggle="collapse">
+                    <a href="#more" data-bs-toggle="offcanvas"><span class="navbar-toggler-icon"></span></a>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="myNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item person_icon ">
+                            <a href="" class="nav-link" id="person"><i class="bi bi-person-circle text-light" style="font-size: 32px;"></i></a>
+                            <div class="dropdown" id="login">
+                                <a href="">Signup</a>
+                                <a href="">Login</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!--script for login dropdown starts-->
+    <script>
+        $('#login').hide();
+
+        $('#person').mouseover(() =>{
+            $('#login').slideDown()
+        })
+        $('#login').mouseover(() =>{
+            $('#login').stop()
+        })
+        $('#person, #login').mouseleave(() =>{
+            $('#login').slideUp()
+        })
+        $('#login').click(() =>{
+            $('#login').slideUp()
+        })
+    </script>
+    <!--script for login dropdown ended-->
+
+    <!--offcanvas for menubar starts-->
+    <div class="offcanvas offcanvas-start" id="more" data-bs-backdrop="static">
+        <div class="offcanvas-header" style="border-bottom: 1px solid green;">
+            <div class="row p-2 pt-3" >
+                    <div class="col-5">
+                        <div class="profile_photo">
+                            <img src="Assets/Forum/profile_photo_img.jpg" alt="" class="w-100 h-100" style="border-radius: 60px;">
+                        </div>
+                    </div>
+                    <div class="col-7 p-3">
+                        <p class="fw-bold m-0 p-0">Dr. Kavita Deshmukh</p>
+                        <p class="m-0 p-0">Organic Farming Trainer</p>
+                        <p >Telangana</p>
+                    </div>
+                </div>
+            <button class="btn-close text-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="px-5 py-2">
+                <a href=""><p>Signup</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href=""><p>Login</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="index.html"><p>Home</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Essentials</p></summary>
+                    <a href="essentials.html"><button>Seeds & Plants</button></a>
+                    <a href="fertilizers.html"><button>Fertilizers</button></a>
+                    <a href="irrigation.html"><button>Irrigation</button></a>
+                    <a href="machinery.html"><button>Machinery</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <details>
+                    <summary><p>Techniques</p></summary>
+                    <a href="organic.html"><button>Organic Farming</button></a>
+                    <a href="hydroponics.html"><button>Hydroponics</button></a>
+                    <a href="aquaponics.html"><button>Aquaponic </button></a>
+                    <a href="vertical.html"><button>Vertical Farming</button></a>
+                    <a href="traditional.html"><button>Traditional Farming</button></a>
+                    <a href="smartfarming.html"><button>Smart Farming</button></a>
+                </details>
+            </div>
+            <div class="px-5 py-2">
+                <a href="article.html"><p>Articles</p></a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="forum.html"><p>Farmers Forum</p></a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvas for menubar ended-->
+
+    <div class="col-lg-4 text-bg-light m-auto mb-3 " style="box-shadow: 1px 5px 5px rgb(27, 238, 27);">
+        <div class="form_logo px-5 py-2">
+            <img src="Assets/logo-name-cut.png" alt="" class="w-100 h-100">
+        </div>
+        <h5 class="px-3 py-2 text-success" >Step Into the Future of Farming</h5>
+        <div class="p-3 ">
+            <form name="contact" action="submit.html" onsubmit=" return check()">
+                <div class="fw-semibold mb-3">
+                    <input type="text" placeholder="Name" name="username" class="form-control">
+                </div>
+                <p id="nameError" style="color: red;"></p>
+                <div>
+                    <div class="input-group fw-semibold mb-3">
+                        <select name="countrycode" id="" class="input-group-text">
+                            <option value="10">+91</option>
+                            <option value="9">+55</option>
+                            <option value="8">+1</option>
+                            <option value="7">+33</option>
+                        </select>
+                        <input type="text" placeholder="Mobile Number" name="mobile" class="form-control " >
+                    </div>
+                </div>
+                <p id="mobileError" style="color: red;"></p>
+                <div class="fw-semibold mb-3">
+                    <input type="text" placeholder="Email" name="email" class="form-control mb-3" > 
+                </div>
+                <p id="emailError" style="color: red;"></p>
+                <div class="fw-semibold mb-3">
+                    <input type="text" placeholder="Password" name="password" class="form-control mb-3" > 
+                </div>
+                <p id="passwordError" style="color: red;"></p>
+                <p class="pt-3" style="font-size: 12px;">By clicking signup you agree to our Terms & conditions and Privacy poicies</p>
+                <input type="submit" value="Sign up" class="form-control mb-3 text-bg-primary">
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-4 text-bg-light m-auto p-3 text-center" style="box-shadow: 1px 5px 5px rgb(27, 238, 27);">
+        <p>Already had an account click <a href="login.html"><span>login</span></a></p>
+    </div>
+
+    <script src="validate.js"></script>
+
+</body>
+</html>
