@@ -74,6 +74,7 @@
 }
 .player_controls input{
     width: 10%; cursor: pointer;
+    position: relative;
 }
 .video_progress{
     position: relative;

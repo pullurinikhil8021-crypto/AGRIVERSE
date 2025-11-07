@@ -60,3 +60,6 @@
     background-image: url(Assets/articles/article_banner_bg.jpg);
     background-position: center; background-repeat: no-repeat; background-size: cover;
 }
+.article_h_btn{
+    background-color: black !important; color: white !important;
+}
